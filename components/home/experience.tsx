@@ -1,14 +1,15 @@
 "use client";
 
-import { BRANDS } from "@/data/brands";
-import { CERTIFICATIONS } from "@/data/certifications";
 import { experiences } from "@/data/experience";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight, ArrowUpRightFromSquareIcon } from "lucide-react";
-import React, { useEffect, useRef, useState } from "react";
+import { ArrowUpRightFromSquareIcon } from "lucide-react";
+import React, { useRef, useState } from "react";
 import { BrandsCarousel } from "./brands";
 import { CertificatesCarousel } from "./certifications";
+import { TestimonialsCarousel } from "./testimonials";
 import { Button } from "../ui/button";
+import { MetricCards } from "./metrics";
+import { cn } from "@/lib/utils";
 
 export default function Experience() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -29,9 +30,9 @@ export default function Experience() {
             id="experience"
             ref={containerRef}
             onMouseMove={handleMouseMove}
-            className="h-dvh w-full z-10 snap-start bg-zinc-900 relative flex flex-col md:flex-row overflow-hidden"
+            className="md:snap-start w-full flex flex-col md:flex-row mt-0 place-items-center"
         >
-            <div className="relative container h-full overflow-auto mx-auto p-6 flex flex-col">
+            <div className="relative min-h-screen w-full overflow-auto py-10">
                 {/* Mouse Follower Gradient (The "Border" Glow) */}
                 <div
                     className="absolute inset-0 z-0 pointer-events-none blur-3xl"
@@ -39,34 +40,40 @@ export default function Experience() {
                         background: `radial-gradient(400px circle at ${mousePosition.x}px ${mousePosition.y}px, var(--accent), transparent 60%)`
                     }}
                 />
+                <div className="container flex flex-col ">
 
-                <div className="flex flex-col md:flex-row w-full h-full gap-4 relative">
-                    <div className="flex flex-col w-full md:w-1/2 h-full gap-4">
-                        {/* Left Half: Work Experience */}
-                        <WorkExperienceSection />
+                    <div className="flex flex-col md:flex-row w-full h-full gap-3 relative">
+                        <div className="flex flex-col w-full md:w-1/2 h-full gap-3">
+                            {/* Left Half: Work Experience */}
+                            <WorkExperienceSection />
 
-                        <div className="h-1/4 min-h-[100px] w-full bg-black relative overflow-hidden hover:shadow-[0_0_1px_1px] shadow-accent/70 rounded-xl border border-zinc-600 hover:border-accent/70 hover:scale-[0.99] transition">
-                            <BrandsCarousel />
-                            {/* Hover Border Effect */}
-                            <div className="absolute inset-0 border border-transparent group-hover:border-accent/70 group-hover:shadow-md rounded-xl transition-colors duration-300 pointer-events-none" />
-                        </div>
-                    </div>
-
-                    {/* Right Half: Brands & Certificates */}
-                    <div className="flex flex-col w-full md:w-1/2 h-full gap-4">
-                        <div className="h-2/5 min-h-[150px] w-full bg-black relative overflow-hidden hover:shadow-[0_0_1px_1px] shadow-accent/70 rounded-xl border border-zinc-600 hover:border-accent/70 hover:scale-[0.99] transition">
-                            <BrandsCarousel />
-                            {/* Hover Border Effect */}
-                            <div className="absolute inset-0 border border-transparent group-hover:border-accent/70 group-hover:shadow-md rounded-xl transition-colors duration-300 pointer-events-none" />
+                            <div className="md:h-1/4 min-h-[100px] w-full bg-black relative overflow-hidden hover:shadow-[0_0_1px_1px] shadow-accent/70 rounded-xl border border-zinc-600 hover:border-accent/70 hover:scale-[0.99] transition">
+                                <BrandsCarousel />
+                                {/* Hover Border Effect */}
+                                <div className="absolute inset-0 border border-transparent group-hover:border-accent/70 group-hover:shadow-md rounded-xl transition-colors duration-300 pointer-events-none" />
+                            </div>
                         </div>
 
-                        {/* Bottom Right: Certificates*/}
-                        <div className="flex-1 w-full bg-black relative overflow-hidden hover:shadow-[0_0_1px_1px] shadow-accent/70 rounded-xl border border-zinc-600 hover:border-accent/70 hover:scale-[0.99] transition">
-                            <CertificatesCarousel />
-                            <div className="absolute inset-0 border border-transparent group-hover:border-accent/70 group-hover:shadow-md rounded-xl transition-colors duration-300 pointer-events-none" />
+                        <div className="flex flex-col w-full md:w-1/2 gap-3">
+                            <div className="md:h-1/6 w-full ">
+                                <MetricCards />
+                            </div>
+
+                            <div className="md:h-2/6 W-full bg-black relative overflow-hidden hover:shadow-[0_0_1px_1px] shadow-accent/70 rounded-xl border border-zinc-600 hover:border-accent/70 hover:scale-[0.99] transition">
+                                <TestimonialsCarousel />
+                                {/* Hover Border Effect */}
+                                <div className="absolute inset-0 border border-transparent group-hover:border-accent/70 group-hover:shadow-md rounded-xl transition-colors duration-300 pointer-events-none" />
+                            </div>
+
+
+                            <div className="flex-1 md:h-3/6 w-full bg-black relative overflow-hidden hover:shadow-[0_0_1px_1px] shadow-accent/70 rounded-xl border border-zinc-600 hover:border-accent/70 hover:scale-[0.99] transition">
+                                <CertificatesCarousel />
+                                <div className="absolute inset-0 border border-transparent group-hover:border-accent/70 group-hover:shadow-md rounded-xl transition-colors duration-300 pointer-events-none" />
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
     );
@@ -74,7 +81,7 @@ export default function Experience() {
 
 function WorkExperienceSection() {
     return (
-        <div className="w-full h-3/4 bg-black p-4 md:p-6 flex flex-col justify-center rounded-xl border border-zinc-600 hover:shadow-md hover:border-accent/70 hover:scale-[0.99] transition">
+        <div className="w-full h-[75vh] bg-black p-4 md:p-6 flex flex-col justify-center rounded-xl border border-zinc-600 hover:shadow-md hover:border-accent/70 hover:scale-[0.99] transition">
             {/* Hover Border Effect for Main Container */}
             <div className="flex flex-col space-y-5 relative w-full h-full overflow-hidden">
                 <div className="flex items-center justify-between">
@@ -110,21 +117,34 @@ function ExperienceItem({ data }: { data: typeof experiences[0] }) {
         <motion.div
             layout
             onClick={() => setIsOpen(!isOpen)}
-            className="group/item bg-zinc-900/70 rounded-md border border-zinc-800 transition-colors cursor-pointer p-4 relative"
+            className="group/item bg-zinc-900/70 rounded-md border border-zinc-800 transition-colors cursor-pointer relative"
         >
-            <div className="flex justify-between items-baseline">
-                <div className="h-8 w-8 bg-zinc-800 rounded-full">
-                    <img src={data.logo} alt={data.company} className="w-full h-full object-cover" />
+            <div className="relative flex gap-3 justify-between p-3">
+                <div className="flex gap-3">
+                    <div className="w-12 h-12 shrink-0 bg-zinc-800 rounded-sm overflow-hidden">
+                        <img src={data.logo} alt={data.company} className="size-full object-cover" />
+                    </div>
+                    <div className="flex flex-col items-start">
+                        <h3 className="font-bold text-zinc-200 group-hover/item:text-white transition-colors">
+                            {data.role}
+                        </h3>
+                        <h4 className="text-sm font-medium text-zinc-500 group-hover/item:text-zinc-300 transition-colors">
+                            {data.company}
+                        </h4>
+                    </div>
                 </div>
-                <div className="flex items-baseline gap-4">
-                    <h3 className="text-lg font-bold text-zinc-200 group-hover/item:text-white transition-colors">
-                        {data.company}
-                    </h3>
-                    <span className="text-xs font-mono text-zinc-600">{data.period}</span>
+                <div className="flex flex-col grow items-end justify-between">
+                    {
+                        data.period.map((month, idx) => (
+                            <span key={idx} className="text-xs text-nowrap font-mono text-zinc-600">{month}</span>
+                        ))
+                    }
                 </div>
-                <h4 className="text-sm font-medium text-zinc-500 group-hover/item:text-zinc-300 transition-colors text-right">
-                    {data.role}
-                </h4>
+                {
+                    data.period.length > 1 && (
+                        <div className="h-3/5 w-px bg-zinc-600 absolute right-1 rounded-full top-1/2 -translate-y-1/2 pseudo-absolute before:bg-zinc-600 after:bg-zinc-600 after:w-1 before:w-1 after:right-px before:right-px after:h-px before:h-px after:bottom-0 group-hover/item:bg-accent group-hover/item:after:bg-accent group-hover/item:before:bg-accent" />
+                    )
+                }
             </div>
 
             <AnimatePresence>
@@ -135,15 +155,17 @@ function ExperienceItem({ data }: { data: typeof experiences[0] }) {
                         exit={{ height: 0, opacity: 0, marginTop: 0 }}
                         className="overflow-hidden"
                     >
-                        <p className="text-zinc-400 text-sm leading-relaxed mb-4">
-                            {data.description[0]} {/* Showing first point as summary, or loop all */}
-                        </p>
-                        <div className="flex flex-wrap gap-2">
-                            {data.skills.map((skill) => (
-                                <span key={skill} className="px-2 py-1 bg-zinc-900 rounded-md text-[10px] text-zinc-500 uppercase tracking-wider">
-                                    {skill}
-                                </span>
-                            ))}
+                        <div className="px-3 py-2">
+                            <p className="text-zinc-400 text-sm leading-relaxed mb-4">
+                                {data.description[0]} {/* Showing first point as summary, or loop all */}
+                            </p>
+                            <div className="flex flex-wrap gap-2">
+                                {data.skills.map((skill) => (
+                                    <span key={skill} className="px-2 py-1 bg-zinc-900 rounded-md text-[10px] text-zinc-500 uppercase tracking-wider">
+                                        {skill}
+                                    </span>
+                                ))}
+                            </div>
                         </div>
                     </motion.div>
                 )}
