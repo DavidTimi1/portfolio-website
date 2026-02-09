@@ -24,9 +24,9 @@ const services = [
 
 export default function Services() {
     return (
-        <section id="services" className="h-dvh w-full snap-start relative flex items-center justify-center overflow-hidden bg-zinc-900 z-10">
+        <section id="services" className="min-h-screen snap-start w-full relative flex items-center justify-center">
 
-            <div className="relative container h-full overflow-auto mx-auto p-6 flex flex-col gap-12">
+            <div className="relative container h-full mx-auto flex flex-col gap-12">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export default function Services() {
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 justify-center w-full">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 justify-center w-full">
                     <motion.div
                         key="cta"
                         initial={{ opacity: 0, y: 30 }}

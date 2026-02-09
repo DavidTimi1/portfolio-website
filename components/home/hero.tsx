@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { DownloadCloudIcon, GithubIcon, MailIcon, MoveDownIcon, TwitterIcon, ArrowRight } from "lucide-react";
+import { DownloadCloudIcon, GithubIcon, MailIcon, MoveDownIcon, TwitterIcon, ArrowRight, ArrowUpRightFromSquareIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import Image from "next/image";
@@ -33,7 +33,7 @@ export default function Hero() {
         <section
             ref={targetRef}
             id="hero"
-            className="h-dvh w-full bg-zinc-900 flex flex-col items-center justify-center snap-start relative overflow-hidden z-20"
+            className="h-screen w-full snap-start flex flex-col items-center justify-center relative overflow-hidden"
         >
             {/* Background Video/Blurred Effect */}
             {/* todo */}
@@ -56,12 +56,12 @@ export default function Hero() {
                 />
             </div>
 
-            <div className="w-full flex flex-col-reverse md:flex-row gap-6 items-center justify-center">
+            <div className="w-full flex flex-col-reverse md:flex-row gap-6 items-center justify-evenly text-center">
                 <motion.div
                     style={{ opacity, scale }}
-                    className="z-30 flex items-center justify-center px-4 md:w-1/2 shrink-0"
+                    className="z-30 flex items-center justify-center px-4 md:w-1/2 max-w-xl shrink-0"
                 >
-                    <div className="flex flex-col items-center md:items-start justify-center gap-6 w-full relative">
+                    <div className="flex flex-col items-center justify-center gap-6 w-full relative">
 
                         {/* "Trap" Animation Title */}
                         <div className="relative">
@@ -71,7 +71,7 @@ export default function Hero() {
                                 animate={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }}
                                 transition={{ duration: 0.8, ease: "circOut" }}
                             >
-                                <h1 className="text-4xl md:text-6xl min-w-44 text-center font-black tracking-tighter text-white mix-blend-overlay">
+                                <h1 className="text-4xl md:text-6xl font-black text-white mix-blend-overlay">
                                     {name}
                                 </h1>
                             </motion.div>
@@ -83,8 +83,8 @@ export default function Hero() {
 
                         <div className="flex flex-col gap-4 items-center justify-center md:flex-row">
                             <Button className="bg-white text-black hover:bg-zinc-200 border-none rounded-full px-8 py-6 text-lg font-bold">
-                                <DownloadCloudIcon className="mr-2" />
-                                Download Resume
+                                Open Resume
+                                <ArrowUpRightFromSquareIcon/>
                             </Button>
 
                             <Button className="bg-transparent border border-white/20 text-white hover:bg-white/10 rounded-full px-8 py-6 text-lg">
@@ -96,7 +96,8 @@ export default function Hero() {
                     </div>
                 </motion.div>
 
-                <div className="flex items-center justify-center w-64 h-64 z-30 shrink-0">
+                <div className="relative flex items-center justify-center size-64 md:size-96 z-30 shrink-0">
+                    <div className="size-[calc(100%+20px)] absolute border border-dashed border-zinc-400 rounded-full animate-spin"></div>
                     <Image
                         src="/assets/my-avatar.jpg"
                         alt="my profile avatar"
@@ -110,23 +111,30 @@ export default function Hero() {
 
 
             {/* Social Dock */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-4 items-center justify-center z-40 p-2 bg-black/40 backdrop-blur-md rounded-full border border-white/10">
-                <Button asChild size="icon" variant="ghost" className="rounded-full hover:bg-white/10 hover:text-accent">
-                    <Link href={GHLink} target="_blank">
-                        <GithubIcon size={20} />
-                    </Link>
-                </Button>
-                <Button asChild size="icon" variant="ghost" className="rounded-full hover:bg-white/10 hover:text-accent">
-                    <Link href={XLink} target="_blank">
-                        <TwitterIcon size={20} />
-                    </Link>
-                </Button>
-                <Button asChild size="icon" variant="ghost" className="rounded-full hover:bg-white/10 hover:text-accent">
-                    <Link href={MailLink}>
-                        <MailIcon size={20} />
-                    </Link>
-                </Button>
-            </div>
+            <SocialDock />
         </section>
     );
 }
+
+
+const SocialDock = () => (
+    <div className="absolute bottom-5 md:bottom-auto md:top-1/2 md:-translate-y-1/2 left-5 flex md:flex-col gap-4 items-center justify-center h-auto z-20">
+        <Button asChild size="icon" variant="ghost" className="bg-black/40 size-12 border border-white/10 rounded-full hover:bg-white/10 hover:text-accent">
+            <Link href={GHLink} target="_blank">
+                <GithubIcon size={24} />
+            </Link>
+        </Button>
+        <Button asChild size="icon" variant="ghost" className="bg-black/40 size-12 border border-white/10 rounded-full hover:bg-white/10 hover:text-accent">
+            <Link href={XLink} target="_blank">
+                <TwitterIcon size={24} />
+            </Link>
+        </Button>
+        <Button asChild size="icon" variant="ghost" className="bg-black/40 size-12 border border-white/10 rounded-full hover:bg-white/10 hover:text-accent">
+            <Link href={MailLink}>
+                <MailIcon size={24} />
+            </Link>
+        </Button>
+
+        <div className="absolute left-[calc(100%_+_1.25rem)] w-[45vw] h-px md:top-[calc(100%_+_1.25rem)] md:left-auto md:w-px md:h-[25vh] bg-zinc-600" />
+    </div>
+)
