@@ -5,10 +5,10 @@ import { User, Code2, Briefcase, Mail } from "lucide-react";
 import Link from "next/link";
 
 const navItems = [
-    { name: "Home", icon: User, href: "#hero" },
-    { name: "Skills", icon: Code2, href: "#skills" },
-    { name: "Projects", icon: Briefcase, href: "#projects" },
-    { name: "Contact", icon: Mail, href: "#contact" },
+    { name: "Home", icon: User, href: "/" },
+    { name: "Skills", icon: Code2, href: "/skills" },
+    { name: "Projects", icon: Briefcase, href: "/featured-projects" },
+    { name: "Contact", icon: Mail, href: "/contact" },
 ];
 
 export function GlassNav() {
