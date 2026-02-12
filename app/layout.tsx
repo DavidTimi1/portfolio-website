@@ -5,6 +5,7 @@ import { GlassNav } from "@/components/ui/glass-nav";
 import { MobileNav } from "@/components/ui/mobile-nav";
 import { CustomCursor } from "@/components/ui/custom-cursor";
 import { CliWindow } from "@/components/terminal/cli-window";
+import { ActiveSectionProvider } from "@/components/providers/active-section-context";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -38,11 +39,13 @@ export default function RootLayout({
         className={`${inter.variable} ${jetbrainsMono.variable} ${philosopher.variable} antialiased font-sans`}
       >
         <div className="fixed inset-0 z-[-1] bg-zinc-900" />
-        <GlassNav />
-        <MobileNav />
-        <CustomCursor />
-        <CliWindow />
-        {children}
+        <ActiveSectionProvider>
+          <GlassNav />
+          <MobileNav />
+          <CustomCursor />
+          <CliWindow />
+          {children}
+        </ActiveSectionProvider>
       </body>
     </html>
   );
