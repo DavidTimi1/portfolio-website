@@ -17,7 +17,13 @@ export function CliWindow() {
     const [isOpen, setIsOpen] = useState(false);
     const [isFullScreen, setIsFullScreen] = useState(false);
     const [input, setInput] = useState("");
-    const [history, setHistory] = useState<string[]>([]);
+
+    const [commandHistory, setCommandHistory] = useState<string[]>([]);
+    const lastCommand = commandHistory.slice(-1)[0];
+    const [displayTray, setDisplayTray] = useState<string[]>([]);
+    const lastDisplayed = displayTray.slice(-1)[0];
+    const timeTraverser = useRef(0);
+
     const bottomRef = useRef<HTMLDivElement>(null);
     const isMobile = useIsMobile();
 
@@ -48,26 +54,32 @@ export function CliWindow() {
             " v2.0.0 [NEON_SHELL] - System Online",
             " Type 'help' for available commands.",
         ];
-        setHistory([...ASCII_ART]);
+        setDisplayTray([...ASCII_ART]);
+
     }, []);
 
     useEffect(() => {
         if (bottomRef.current) {
             bottomRef.current.scrollIntoView({ behavior: "smooth" });
         }
-    }, [history, isOpen]);
+    }, [lastDisplayed, isOpen]);
 
     const handleCommand = (e: React.FormEvent) => {
         e.preventDefault();
         if (!input.trim()) return;
+        resetTraverser();
 
         const cmd = input.trim().toLowerCase().split(" ")[0];
         const args = input.trim().split(" ").slice(1).join(" ");
-        const newHistory = [...history, `${HOST_DOMAIN}$ ${input}`];
+
+        if (lastCommand !== input.trim()) {
+            setCommandHistory(prev => [...prev, input.trim()]);
+        }
+        const newDisplayTray = [...displayTray, `${HOST_DOMAIN}$ ${input}`];
 
         switch (cmd) {
             case "help":
-                newHistory.push(
+                newDisplayTray.push(
                     "Available commands:",
                     "  help           - Show this help message",
                     "  clear          - Clear terminal",
@@ -79,29 +91,28 @@ export function CliWindow() {
                 );
                 break;
             case "clear":
-                setHistory([]);
+                setDisplayTray([]);
                 setInput("");
                 return;
             case "whoami":
-                newHistory.push("Visitor (You) - Exploring the digital realm of David Uwagbale.");
+                newDisplayTray.push("Visitor (You) - Exploring the digital realm of David Uwagbale.");
                 break;
             case "ls":
-                newHistory.push("Detected Directories:", "  projects/", "  skills/", "  experience/", "  contact/");
+                newDisplayTray.push("Detected Directories:", "  projects/", "  skills/", "  experience/", "  contact/");
                 break;
             case "cd":
-                newHistory.push(`Navigate to ${args} (Feature in progress...)`);
+                newDisplayTray.push(`Navigate to ${args} (Feature in progress...)`);
                 break;
             case "rm":
                 if (args.includes("-rf") && args.includes("/")) {
-                    newHistory.push("CRITICAL ERROR: KERNEL PANIC.", "Just kidding. Opening contact form...");
-                    window.location.href = "mailto:duwagbale07@gmail.com";
+                    triggerCriticalError()
                 }
                 break;
             default:
-                newHistory.push(`ERROR Command not found: ${cmd}. Type 'help' for assistance.`);
+                newDisplayTray.push(`ERROR Command not found: ${cmd}. Type 'help' for assistance.`);
         }
 
-        setHistory(newHistory);
+        setDisplayTray(newDisplayTray);
         setInput("");
     };
 
@@ -142,7 +153,7 @@ export function CliWindow() {
                         <div className="flex items-center justify-between px-4 py-2 bg-zinc-900/50 border-b border-zinc-800 font-mono">
                             <div className="flex items-center gap-2">
                                 <Terminal size={16} className="text-zinc-500" />
-                                <span className="text-sm text-blue-400"> {HOST_DOMAIN} </span>
+                                <span className="text-sm text-accent"> {HOST_DOMAIN} </span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <button
@@ -166,8 +177,8 @@ export function CliWindow() {
                             onClick={() => document.getElementById("terminal-input")?.focus()}
                         >
                             <div className="space-y-1 text-zinc-300 font-mono text-[10px] md:text-sm">
-                                {history.map((line, i) => (
-                                    <div key={i} className="whitespace-pre leading-none">
+                                {displayTray.map((line, i) => (
+                                    <div key={i} className="whitespace-pre leading-tight">
                                         {displayLine(line)}
                                     </div>
                                 ))}
@@ -187,6 +198,7 @@ export function CliWindow() {
                                 className="flex-1 bg-transparent border-none outline-none text-white font-mono"
                                 autoFocus
                                 autoComplete="off"
+                                onKeyDown={handleKeyDown}
                             />
                         </form>
                     </motion.div>
@@ -194,6 +206,63 @@ export function CliWindow() {
             </AnimatePresence>
         </>
     );
+
+    function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+        let travelled = false;
+
+        if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            // can go all the way till the -[length] index which gives the full size
+            if (timeTraverser.current > -commandHistory.length) {
+                timeTraverser.current -= 1;
+                travelled = true;
+            }
+
+        } else if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            // can come all the way from the -[leghth] index to 0
+            if (timeTraverser.current < 0) {
+                timeTraverser.current += 1;
+                travelled = true;
+            }
+        }
+
+        travelled && handleCommandTraversal();
+    }
+
+    function handleCommandTraversal() {
+        const index = timeTraverser.current;
+        const pastCommand = commandHistory.slice(index)[0];
+        if (index >= 0) {
+            setInput('')
+            return;
+        }
+
+        if (pastCommand) {
+            setInput(commandHistory.slice(index)[0])
+        }
+    }
+
+    function resetTraverser() {
+        timeTraverser.current = 0;
+    }
+
+    function triggerCriticalError() {
+        setTimeout(() => {
+            setDisplayTray(prev => [...prev, "CRITICAL ERROR: KERNEL PANIC."]);
+        }, 500);
+
+        setTimeout(() => {
+            document.body.style.opacity = "0";
+        }, 1000);
+
+        setTimeout(() => {
+            document.body.style.opacity = "1";
+            setDisplayTray(prev => [...prev, "Just kidding. Opening contact form..."]);
+            window.location.href = "mailto:duwagbale07@gmail.com";
+        }, 1500);
+
+    }
 }
 
 
