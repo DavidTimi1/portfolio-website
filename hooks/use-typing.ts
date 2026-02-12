@@ -20,7 +20,7 @@ const steps = [
 
 export function useTypingName(
   speed: number = 200,
-  pauseMultiplier: number = 50
+  pauseMultiplier: number = 40
 ) {
   const [index, setIndex] = useState(0);
   const [delay, setDelay] = useState(speed);
