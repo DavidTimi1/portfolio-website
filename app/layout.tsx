@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono, Philosopher } from "next/font/google";
+import { JetBrains_Mono, Ubuntu_Sans } from "next/font/google";
 import "./globals.css";
 import { GlassNav } from "@/components/ui/glass-nav";
 import { MobileNav } from "@/components/ui/mobile-nav";
@@ -7,21 +7,15 @@ import { CustomCursor } from "@/components/ui/custom-cursor";
 import { CliWindow } from "@/components/terminal/cli-window";
 import { ActiveSectionProvider } from "@/components/providers/active-section-context";
 
-const inter = Inter({
-  variable: "--font-sans",
-  subsets: ["latin"],
-});
-
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
 });
 
-const philosopher = Philosopher({
-  weight: ["400", "700"],
-  variable: "--font-glyph",
+const ubuntu = Ubuntu_Sans({
+  variable: "--font-sans",
   subsets: ["latin"],
-});
+})
 
 export const metadata: Metadata = {
   title: "David Uwagbale | Full Stack Engineer | Dev_id",
@@ -36,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} ${philosopher.variable} antialiased font-sans`}
+        className={`${jetbrainsMono.variable} ${ubuntu.variable} antialiased font-sans`}
       >
         <div className="fixed inset-0 z-[-1] bg-zinc-900" />
         <ActiveSectionProvider>

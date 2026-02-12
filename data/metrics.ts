@@ -3,7 +3,7 @@ import { BriefcaseBusiness, FolderKanban, Globe } from "lucide-react";
 export const STATS = [
     {
         title: "Years Experience",
-        value: "2+",
+        value: "3+",
         description: "Building scalable web & mobile apps",
         icon: BriefcaseBusiness
     },

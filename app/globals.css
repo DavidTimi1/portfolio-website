@@ -49,7 +49,7 @@
 :root {
   --radius: 0.625rem;
   --background: #18181b;
-  --foreground: oklch(0.141 0.005 285.823);
+  --foreground: #e4e4e7;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.141 0.005 285.823);
   --popover: oklch(1 0 0);
@@ -174,4 +174,12 @@ body .container {
   display: block;
   position: absolute;
   z-index: 1;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
 }
