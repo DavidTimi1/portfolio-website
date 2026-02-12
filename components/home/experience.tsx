@@ -86,7 +86,7 @@ function WorkExperienceSection() {
             {/* Hover Border Effect for Main Container */}
             <div className="flex flex-col space-y-5 relative w-full h-full overflow-hidden">
                 <div className="flex items-center justify-between">
-                    <h2 className="text-3xl font-bold text-white tracking-tighter">
+                    <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tighter">
                         WORK <span className="text-accent italic">HISTORY</span>
                     </h2>
                     <Button>

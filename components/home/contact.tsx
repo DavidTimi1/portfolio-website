@@ -2,9 +2,10 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Github, Twitter, Mail, ArrowUpRight, Send, GithubIcon, TwitterIcon, MailIcon } from "lucide-react";
-import { FaLinkedinIn, FaTelegram } from "react-icons/fa";
+import { Github, Twitter, Mail, ArrowUpRight, Send, GithubIcon, MailIcon } from "lucide-react";
+import { FaLinkedinIn, FaMedium, FaTelegram } from "react-icons/fa";
 import { Button } from "../ui/button";
+import { BsTwitterX } from "react-icons/bs";
 
 
 export default function Contact() {
@@ -12,9 +13,9 @@ export default function Contact() {
         <section id="contact" className="min-h-screen w-full sticky bottom-0 bg-black text-white border-t border-zinc-800 flex flex-col items-center justify-center">
             <div className="absolute inset-0 bg-grid-white/[0.05] bg-size-[50px_50px] mask-[linear-gradient(to_bottom,transparent,black)]" />
 
-            <div className="container py-10 flex flex-col md:flex-row items-center md:items-start md:justify-center gap-4 md:gap-12 ">
+            <div className="container py-10 flex flex-col md:flex-row items-center md:justify-center gap-4 md:gap-12 ">
                 {/* Header */}
-                <div className="space-y-4 md:w-1/3">
+                <div className="space-y-4 md:w-1/3 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">
                         GET IN <span className="text-accent italic">TOUCH</span>
                     </h2>
@@ -60,11 +61,11 @@ export default function Contact() {
                             id="message"
                             placeholder="Tell me about your project..."
                             rows={4}
-                            className="w-full bg-zinc-950/50 border border-zinc-800 rounded-lg px-4 py-3 text-sm focus:border-accent focus:outline-none transition-colors resize-none"
+                            className="w-full bg-zinc-950/50 border border-zinc-800 rounded-lg px-4 py-3 text-sm focus:border-accent focus:outline-none resize-none"
                         />
                     </div>
 
-                    <button className="mt-2 w-full bg-accent text-black font-bold py-3 rounded-lg hover:bg-cyan-300 transition-colors flex items-center justify-center gap-2 group">
+                    <button className="mt-2 w-full bg-accent text-black font-bold py-3 rounded-lg hover:bg-cyan-300 flex items-center justify-center gap-2 group">
                         <span>SEND MESSAGE</span>
                     </button>
                 </motion.form>
@@ -87,45 +88,46 @@ export default function Contact() {
 
 
 const Socials = () => (
-    <div className="flex flex-col gap-6 mt-6 items-center w-full">
+    <div className="relative flex flex-col gap-6 mt-6 items-center w-full z-10">
         <div className="h-px w-full bg-linear-to-r from-transparent via-zinc-800 to-transparent" />
 
-        <div className="w-full flex justify-center gap-6 flex-wrap">
+        <div className="grid grid-cols-3 items-center justify-center gap-5">
 
-            <Button asChild size="icon" className="hover:scale-110 transition-transform">
-                <Link href="https://github.com/DavidTimi1" target="_blank" className="flex items-center gap-2 text-zinc-500 hover:text-white transition-colors group">
+            <Button asChild size="icon" className="hover:scale-110 transition-all">
+                <Link href="https://github.com/DavidTimi1" target="_blank">
                     <GithubIcon size={20} />
                     <span className="sr-only">GITHUB</span>
                 </Link>
             </Button>
-            <Button asChild size="icon" className="hover:scale-110 transition-transform">
-                <Link href="https://x.com/DavidTimi_1" target="_blank" className="flex items-center gap-2 text-zinc-500 hover:text-white transition-colors group">
-                    <TwitterIcon size={20} />
+            <Button asChild size="icon" className="hover:scale-110 transition-all">
+                <Link href="https://x.com/DavidTimi_1" target="_blank">
+                    <BsTwitterX size={20} />
                     <span className="sr-only">TWITTER</span>
                 </Link>
             </Button>
-            <Button asChild size="icon" className="hover:scale-110 transition-transform">
-                <Link href="mailto:duwagbale07@gmail.com" className="flex items-center gap-2 text-zinc-500 hover:text-white transition-colors group">
-                    <MailIcon size={20} />
-                    <span className="sr-only">EMAIL</span>
-                </Link>
-            </Button>
-            <Button asChild size="icon" className="hover:scale-110 transition-transform">
-                <Link href="mailto:duwagbale07@gmail.com" className="flex items-center gap-2 text-zinc-500 hover:text-white transition-colors group">
-                    <MailIcon size={20} />
-                    <span className="sr-only">EMAIL</span>
-                </Link>
-            </Button>
-            <Button asChild size="icon" className="hover:scale-110 transition-transform">
-                <Link href="mailto:duwagbale07@gmail.com" className="flex items-center gap-2 text-zinc-500 hover:text-white transition-colors group">
-                    <FaTelegram size={20} />
-                    <span className="sr-only">TELEGRAM</span>
-                </Link>
-            </Button>
-            <Button asChild size="icon" className="hover:scale-110 transition-transform">
-                <Link href="mailto:duwagbale07@gmail.com" className="flex items-center gap-2 text-zinc-500 hover:text-white transition-colors group">
+            <Button asChild size="icon" className="hover:scale-110 transition-all">
+                <Link href="https://www.linkedin.com/in/daviduwagbale" target="_blank">
                     <FaLinkedinIn size={20} />
                     <span className="sr-only">LINKEDIN</span>
+                </Link>
+            </Button>
+            <Button asChild size="icon" className="hover:scale-110 transition-all">
+                <Link href="mailto:duwagbale07@gmail.com" target="_blank">
+                    <MailIcon size={20} />
+                    <span className="sr-only">EMAIL</span>
+                </Link>
+            </Button>
+
+            <Button asChild size="icon" className="hover:scale-110 transition-all">
+                <Link href="https://medium.com/@duwagbale07" target="_blank">
+                    <FaMedium size={20} />
+                    <span className="sr-only">MEDIUM</span>
+                </Link>
+            </Button>
+            <Button asChild size="icon" className="hover:scale-110 transition-all">
+                <Link href="https://t.me/DavidTimi1" target="_blank">
+                    <FaTelegram size={24} />
+                    <span className="sr-only">TELEGRAM</span>
                 </Link>
             </Button>
         </div>

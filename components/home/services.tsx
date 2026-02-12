@@ -35,8 +35,8 @@ export default function Services() {
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-3xl md:text-4xl font-black tracking-tighter text-white">
-                        MY <span className="text-accent">SERVICES</span>
+                    <h2 className="text-2xl md:text-3xl font-black tracking-tighter text-white">
+                        MY <span className="text-accent italic">SERVICES</span>
                     </h2>
                     <p className="text-zinc-400 max-w-xl">
                         I deliver high-quality digital solutions tailored to your needs.

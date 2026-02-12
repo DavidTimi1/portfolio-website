@@ -35,7 +35,7 @@ export default function Projects() {
 
 
     return (
-        <section id="featured-projects" className="min-h-screen snap-start w-full flex flex-col justify-center overflow-hidden relative">
+        <section id="featured-projects" className="min-h-screen py-10 snap-start w-full flex flex-col justify-center overflow-hidden relative">
             <SectionDetector sectionId="featured-projects" />
 
             <div className="w-full container flex flex-col space-y-5 pb-10">
@@ -47,7 +47,7 @@ export default function Projects() {
                         <motion.h2
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            className="text-3xl md:text-4xl font-bold tracking-tighter"
+                            className="text-2xl md:text-3xl font-bold tracking-tighter"
                         >
                             FEATURED <span className="text-accent italic">PROJECTS</span>
                         </motion.h2>
@@ -113,7 +113,7 @@ export default function Projects() {
                                 </div>
                                 <div className="p-8">
                                     <h3 className="text-2xl font-bold mb-2 text-zinc-100">
-                                        Whoa, that's a lot!
+                                        Whoa, there's a lot!
                                     </h3>
                                     <p className="text-zinc-400 max-w-xs mb-8">
                                         I have way more cool stuff than I can fit in this carousel without breaking your scroll wheel.
