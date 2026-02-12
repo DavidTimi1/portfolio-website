@@ -13,6 +13,7 @@ import {
 import { Code2, MessageSquare, BrainCircuit, RefreshCw, Crown } from "lucide-react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { SectionDetector } from "../ui/section-detector";
 
 export default function Skills() {
     const radius = 175; // Increased radius for more items
@@ -71,6 +72,7 @@ export default function Skills() {
 
     return (
         <section id="skills" className="min-h-screen snap-start w-full flex flex-col items-center justify-center bg-zinc-900 relative overflow-hidden z-10">
+            <SectionDetector sectionId="skills" />
             <div className="absolute inset-0 bg-grid-white/[0.05] bg-size-[30px_30px] mask-[radial-gradient(ellipse_at_center,black,transparent_70%)]" />
 
             <div className=" w-full container flex flex-col">

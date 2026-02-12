@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { CodeIcon, ServerIcon, LayersIcon } from "lucide-react"
 import { Button } from "../ui/button"
+import { SectionDetector } from "../ui/section-detector"
 
 const services = [
     {
@@ -25,6 +26,7 @@ const services = [
 export default function Services() {
     return (
         <section id="services" className="min-h-screen snap-start w-full relative flex items-center justify-center">
+            <SectionDetector sectionId="services" />
 
             <div className="relative container h-full mx-auto flex flex-col gap-12">
                 <motion.div

@@ -8,6 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { GlassShard } from "./glass-shard";
 import { useTypingName } from "@/hooks/use-typing";
+import { SectionDetector } from "../ui/section-detector";
 
 const resumeLink = "#"; // Update with actual link
 const GHLink = "https://github.com/DavidTimi1";
@@ -35,6 +36,7 @@ export default function Hero() {
             id="hero"
             className="h-screen w-full snap-start flex flex-col items-center justify-center relative overflow-hidden"
         >
+            <SectionDetector sectionId="hero" />
             {/* Background Video/Blurred Effect */}
             {/* todo */}
 
@@ -56,7 +58,7 @@ export default function Hero() {
                 />
             </div>
 
-            <div className="w-full flex flex-col-reverse md:flex-row gap-6 items-center justify-evenly text-center">
+            <div className="w-full container flex flex-col-reverse md:flex-row gap-6 items-center justify-evenly text-center">
                 <motion.div
                     style={{ opacity, scale }}
                     className="z-30 flex items-center justify-center px-4 md:w-1/2 max-w-xl shrink-0"
@@ -84,7 +86,7 @@ export default function Hero() {
                         <div className="flex flex-col gap-4 items-center justify-center md:flex-row">
                             <Button className="bg-white text-black hover:bg-zinc-200 border-none rounded-full px-8 py-6 text-lg font-bold">
                                 Open Resume
-                                <ArrowUpRightFromSquareIcon/>
+                                <ArrowUpRightFromSquareIcon />
                             </Button>
 
                             <Button className="bg-transparent border border-white/20 text-white hover:bg-white/10 rounded-full px-8 py-6 text-lg">
@@ -135,6 +137,6 @@ const SocialDock = () => (
             </Link>
         </Button>
 
-        <div className="absolute left-[calc(100%_+_1.25rem)] w-[45vw] h-px md:top-[calc(100%_+_1.25rem)] md:left-auto md:w-px md:h-[25vh] bg-zinc-600" />
+        <div className="absolute left-[calc(100%+1.25rem)] w-[45vw] h-px md:top-[calc(100%+1.25rem)] md:left-auto md:w-px md:h-[25vh] bg-zinc-600" />
     </div>
 )

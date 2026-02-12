@@ -1,3 +1,5 @@
+"use client";
+
 import { CERTIFICATIONS } from "@/data/certifications";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRightIcon } from "lucide-react";

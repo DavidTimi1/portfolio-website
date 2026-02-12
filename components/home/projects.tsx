@@ -9,6 +9,7 @@ import { toast } from "sonner";
 import { ProjectItem } from "./project-item";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import { SectionDetector } from "../ui/section-detector";
 
 export default function Projects() {
     const [currentProgress, setCurrentProgress] = useState(0);
@@ -35,6 +36,7 @@ export default function Projects() {
 
     return (
         <section id="featured-projects" className="min-h-screen snap-start w-full flex flex-col justify-center overflow-hidden relative">
+            <SectionDetector sectionId="featured-projects" />
 
             <div className="w-full container flex flex-col space-y-5 pb-10">
 

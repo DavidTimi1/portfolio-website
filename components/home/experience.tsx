@@ -9,7 +9,7 @@ import { CertificatesCarousel } from "./certifications";
 import { TestimonialsCarousel } from "./testimonials";
 import { Button } from "../ui/button";
 import { MetricCards } from "./metrics";
-import { cn } from "@/lib/utils";
+import { SectionDetector } from "../ui/section-detector";
 
 export default function Experience() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -32,6 +32,7 @@ export default function Experience() {
             onMouseMove={handleMouseMove}
             className="md:snap-start w-full flex flex-col md:flex-row mt-0 place-items-center"
         >
+            <SectionDetector sectionId="experience" />
             <div className="relative min-h-screen w-full overflow-auto py-10">
                 {/* Mouse Follower Gradient (The "Border" Glow) */}
                 <div
