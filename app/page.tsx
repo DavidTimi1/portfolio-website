@@ -30,7 +30,7 @@ export default function Home() {
   }, [params, isInitialLoad]);
 
   return (
-    <main className="h-screen w-full snap-y overflow-y-scroll scrollbar-hide bg-zinc-900 text-zinc-100">
+    <main className="h-screen dom-loaded w-full snap-y overflow-y-scroll scrollbar-hide bg-zinc-900 text-zinc-100">
       <Toaster />
       <div className="relative space-y-20 bg-zinc-900 text-zinc-100 z-10">
         <Hero />

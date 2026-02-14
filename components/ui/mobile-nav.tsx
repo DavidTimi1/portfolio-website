@@ -26,10 +26,11 @@ export function MobileNav() {
             <Button
                 size="icon"
                 variant="ghost"
-                className="fixed top-6 right-6 size-12 z-50 rounded-full bg-black/50 backdrop-blur-md border border-white/10 text-white hover:bg-white/20"
+                className="fixed top-5 right-5 size-12 z-50 rounded-full bg-black/50 backdrop-blur-md border border-white/10 text-white hover:bg-white/20"
                 onClick={toggleMenu}
             >
-                {isOpen ? <XIcon className="size-6" /> : <MenuIcon className="size-6" />}
+                {/* a longer middle stripe in the menu icon */}
+                {isOpen ? <XIcon className="size-6" /> : <MenuIcon className="size-6 rotate-135 [&>path:nth-child(2)]:scale-x-125" />}
             </Button>
 
             {/* Full Screen Menu Overlay */}

@@ -4,10 +4,12 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { useAppNav } from "@/hooks/use-app-nav";
+import { useActiveSection } from "../providers/active-section-context";
 
 
 export function GlassNav() {
     const { navItems, handleNavClick, isActiveSection } = useAppNav();
+    const { activeSection } = useActiveSection();
 
     return (
         <motion.nav
@@ -17,10 +19,12 @@ export function GlassNav() {
             className="fixed right-5 top-1/2 -translate-y-1/2 z-50 hidden md:block"
         >
             {/* Nav Container */}
-            <div className="relative flex flex-col gap-6 p-2 rounded-full border border-white/10 shadow-xl bg-zinc-950/30 backdrop-blur-sm">
+            <div className="group/nav relative flex flex-col gap-6 p-2 rounded-full border border-white/10 shadow-xl bg-zinc-950/30 backdrop-blur-sm">
 
                 {/* Glassy Overlay for specific look */}
-                <div className="absolute inset-0 bg-white/5 rounded-full pointer-events-none z-[-1]" />
+                <div className={cn("absolute inset-0 bg-white/5 transition-colors duration-300 rounded-full pointer-events-none z-[-1]",
+                    activeSection === "contact" ? "" : "group-hover/nav:bg-zinc-950"
+                )} />
 
                 {navItems.map((item) => {
                     const isActive = isActiveSection(item.href);
