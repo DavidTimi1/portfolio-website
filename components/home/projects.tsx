@@ -104,7 +104,7 @@ export default function Projects() {
                             >
                                 <div className="relative w-full max-h-64 bg-zinc-800">
                                     <Image
-                                        alt="shy meme image"
+                                        alt="Humorous meme indicating there are more projects available"
                                         width={200}
                                         height={200}
                                         src="/assets/shy-laugh-meme.jfif"
