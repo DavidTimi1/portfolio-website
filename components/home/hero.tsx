@@ -11,7 +11,7 @@ import { useTypingName } from "@/hooks/use-typing";
 import { SectionDetector } from "../ui/section-detector";
 import { HeroImage } from "./hero-image";
 
-const resumeLink = "#"; // Update with actual link
+const resumeLink = "/resume.pdf"; // Path to actual resume file in /public
 const GHLink = "https://github.com/DavidTimi1";
 const XLink = "https://x.com/DavidTimi_1";
 const MailLink = "mailto:duwagbale07@gmail.com";
