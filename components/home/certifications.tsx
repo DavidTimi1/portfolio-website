@@ -61,7 +61,7 @@ export function CertificatesCarousel() {
                                         onClick={() => {
                                             if (isCenter) {
                                                 if (item.imageURL && !item.imageURL.includes("....")) {
-                                                    window.open(item.imageURL, "_blank");
+                                                    window.open(item.imageURL, "_blank", "noopener, noreferrer");
                                                 } else {
                                                     console.log("No image url for", item.name)
                                                 }

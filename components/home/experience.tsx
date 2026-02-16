@@ -10,6 +10,7 @@ import { TestimonialsCarousel } from "./testimonials";
 import { Button } from "../ui/button";
 import { MetricCards } from "./metrics";
 import { SectionDetector } from "../ui/section-detector";
+import Link from "next/link";
 
 export default function Experience() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -90,9 +91,11 @@ function WorkExperienceSection() {
                         WORK <span className="text-accent italic">HISTORY</span>
                     </h2>
                     <Button>
-                        <span className="hidden md:block">Resume</span>
-                        <span className="sr-only">Resume</span>
-                        <ArrowUpRightFromSquareIcon />
+                        <Link href="/resume" target="_blank" rel="noopener noreferrer">
+                            <span className="hidden md:block">Resume</span>
+                            <span className="sr-only">Resume</span>
+                            <ArrowUpRightFromSquareIcon />
+                        </Link>
                     </Button>
                 </div>
 
@@ -136,7 +139,7 @@ function ExperienceItem({ data }: { data: typeof experiences[0] }) {
                 </div>
                 <div className="flex flex-col grow items-end justify-between">
                     {
-                        data.period.map((month, idx) => (
+                        data.period.reverse().map((month, idx) => (
                             <span key={idx} className="text-xs text-nowrap font-mono text-zinc-600">{month}</span>
                         ))
                     }

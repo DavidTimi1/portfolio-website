@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import {
     FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPython,
     FaGitAlt, FaGithub, FaFigma
@@ -18,36 +17,6 @@ import { SectionDetector } from "../ui/section-detector";
 export default function Skills() {
     const radius = 175; // Increased radius for more items
     const navigateTo = useRouter().push;
-
-    const [stats, setStats] = useState({
-        repos: 0,
-        followers: 0,
-        contributions: 0,
-        years: 4
-    });
-
-    useEffect(() => {
-        // Fetch basic user stats
-        fetch("https://api.github.com/users/DavidTimi1")
-            .then(res => res.json())
-            .then(data => {
-                setStats(prev => ({
-                    ...prev,
-                    repos: data.public_repos || 45,
-                    followers: data.followers || 15
-                }));
-            })
-            .catch(err => console.error("GitHub API Error:", err));
-
-        // Fetch contributions (Using a public proxy for contributions graph)
-        fetch("https://github-contributions-api.jogruber.de/v4/DavidTimi1?y=last")
-            .then(res => res.json())
-            .then(data => {
-                const total = data.total?.lastYear || 2400;
-                setStats(prev => ({ ...prev, contributions: total }));
-            })
-            .catch(err => console.error("Contributions API Error:", err));
-    }, []);
 
     const skills = [
         { name: "HTML", icon: FaHtml5, color: "#E34F26" },
@@ -85,7 +54,7 @@ export default function Skills() {
                         SKILLS <span className="text-accent italic">ARSENAL</span>
                     </h2>
 
-                    <div className="flex flex-col items-center gap-4 max-w-full md:max-w-3xl min-w-[80%] self-center">
+                    <div className="flex flex-col items-center gap-4 max-w-3xl min-w-[80%] self-center">
 
                         {/* Soft Skills positioned at "edges" */}
                         {/* Top Left */}
@@ -106,7 +75,7 @@ export default function Skills() {
                             </div>
                         </div>
 
-                        <div className="relative flex items-center justify-center h-[400px] w-[400px]  perspective-[1000px] gradient-masks-x">
+                        <div className="relative flex items-center justify-center h-[400px] w-[400px]  perspective-[1000px]">
                             <div className="absolute w-24 h-24 bg-accent/10 rounded-full blur-xl animate-pulse" />
                             <div className="absolute w-16 h-16 bg-zinc-900 border border-accent rounded-full flex items-center justify-center shadow-[0_0_30px_#00f0ff50]">
                                 <Code2 className="text-accent w-8 h-8" />

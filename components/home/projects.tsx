@@ -28,9 +28,13 @@ export default function Projects() {
     }, [] as typeof projects[]);
 
     const handleDotClick = (idx: number) => {
-        if (idx > 1) {
-            console.log(scrollXProgress)
-        }
+        const container = containerRef.current;
+        if (!container) return;
+        
+        container.scroll({
+            left: idx * container.scrollWidth,
+            behavior: "smooth",
+        });
     }
 
 
@@ -156,7 +160,7 @@ export default function Projects() {
                             key={idx}
                             onClick={() => handleDotClick(idx)}
                             className={`transition-all duration-300 rounded-full 
-                            ${idx === currentIndex ? "w-8 h-1 bg-white" : "w-1 h-1 bg-zinc-700 hover:bg-zinc-500"}`}
+                            ${idx === currentIndex ? "w-8 h-2 bg-white" : "size-2 hover:scale-110 bg-zinc-700 hover:bg-zinc-500"}`}
                         />
                     ))}
                 </div>
