@@ -132,8 +132,14 @@
   }
 
   body {
-    @apply bg-background text-foreground cursor-none;
-    /* Hide default cursor */
+    @apply bg-background text-foreground;
+  }
+
+  @media (min-width: 1280px) and (hover: hover) and (pointer: fine) {
+    body {
+      @apply cursor-none;
+      /* Hide default cursor when custom cursor is active (desktop, fine pointer) */
+    }
   }
 }
 
