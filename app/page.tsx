@@ -7,27 +7,34 @@ import Contact from "@/components/home/contact";
 import Experience from "@/components/home/experience";
 import Services from "@/components/home/services";
 import { Toaster } from "@/components/ui/sonner";
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useParams } from "next/navigation";
 import { SectionDetector } from "@/components/ui/section-detector";
 
 export default function Home() {
-  const [isInitialLoad, setIsLoaded] = useState(false)
+  const hasScrolledRef = useRef(false);
   const params = useParams();
 
   useEffect(() => {
-    if (params?.section) {
-      const sectionId = params.section === "contact" ? "contact-end" : params.section as string;
-      const element = document.getElementById(sectionId);
-
-      if (element && !isInitialLoad) {
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: "smooth" });
-          setIsLoaded(true)
-        }, 100);
-      }
+    if (!params?.section || hasScrolledRef.current) {
+      return;
     }
-  }, [params, isInitialLoad]);
+
+    const sectionId =
+      params.section === "contact" ? "contact-end" : (params.section as string);
+    const element = document.getElementById(sectionId);
+
+    if (element) {
+      const timeoutId = window.setTimeout(() => {
+        element.scrollIntoView({ behavior: "smooth" });
+        hasScrolledRef.current = true;
+      }, 100);
+
+      return () => {
+        window.clearTimeout(timeoutId);
+      };
+    }
+  }, [params?.section]);
 
   return (
     <main className="h-screen dom-loaded w-full snap-y overflow-y-scroll scrollbar-hide bg-zinc-900 text-zinc-100">
