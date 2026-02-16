@@ -60,6 +60,7 @@ export default function ProjectsPage() {
                             <input
                                 type="text"
                                 placeholder="Search projects..."
+                                aria-label="Search projects"
                                 value={inputValue}
                                 onChange={handleSearchChange}
                                 className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-4 py-2 focus:border-accent focus:outline-none transition-colors"
