@@ -130,8 +130,16 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
-    @apply bg-background text-foreground cursor-none; /* Hide default cursor */
+    @apply bg-background text-foreground;
+  }
+
+  @media (min-width: 1280px) and (hover: hover) and (pointer: fine) {
+    body {
+      @apply cursor-none;
+      /* Hide default cursor when custom cursor is active (desktop, fine pointer) */
+    }
   }
 }
 
@@ -163,17 +171,30 @@ body .container {
   scroll-margin-top: 100px;
 }
 
-.arc-div, 
-.pseudo-arc::before, 
+.arc-div,
+.pseudo-arc::before,
 .pseudo-arc::after {
   clip-path: path("M0 60 A150 60 0 0 1 300 60 L300 200 L0 200 Z");
   aspect-ratio: 1/1;
 }
 
-.pseudo-absolute::before, .pseudo-absolute::after {
+.pseudo-absolute::before,
+.pseudo-absolute::after {
   display: block;
   position: absolute;
   z-index: 1;
+}
+
+
+.dom-loaded {
+  opacity: 1;
+  transition: opacity 1s .2s ease-in-out;
+}
+
+@starting-style {
+  .dom-loaded {
+    opacity: 0;
+  }
 }
 
 .perspective-1000 {
@@ -182,4 +203,18 @@ body .container {
 
 .backface-hidden {
   backface-visibility: hidden;
+}
+
+@keyframes preloader-blink {
+  0% {
+    opacity: 0.2;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
 }

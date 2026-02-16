@@ -51,7 +51,7 @@ const MetricCard = ({ stat, index }: { stat: typeof STATS[0]; index: number }) =
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="bg-black h-full relative overflow-hidden hover:shadow-[0_0_1px_1px] shadow-accent/70 rounded-xl border border-zinc-600 hover:border-accent/70 hover:scale-[0.99] transition"
+            className="bg-black h-full min-h-[100px] relative overflow-hidden hover:shadow-[0_0_1px_1px] shadow-accent/70 rounded-xl border border-zinc-600 hover:border-accent/70 hover:scale-[0.99] transition"
         >
             <div className="flex flex-col items-center justify-evenly h-full gap-1">
                 <span className="text-4xl md:text-5xl font-bold tabular-nums">
@@ -62,7 +62,8 @@ const MetricCard = ({ stat, index }: { stat: typeof STATS[0]; index: number }) =
                 <div className="flex items-center gap-2 px-2 py-1 rounded-full bg-zinc-900/50 border border-zinc-800">
                     <stat.icon className="size-4 text-zinc-400" />
                     <span className="text-xs font-medium text-zinc-500">
-                        {stat.title}
+                        <span> {stat.title.split(" ")[0]} </span>
+                        <span className="hidden sm:inline"> {stat.title.split(" ")[1]} </span>
                     </span>
                 </div>
             </div>

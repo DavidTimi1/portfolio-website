@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import {
     FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPython,
     FaGitAlt, FaGithub, FaFigma
@@ -18,36 +17,6 @@ import { SectionDetector } from "../ui/section-detector";
 export default function Skills() {
     const radius = 175; // Increased radius for more items
     const navigateTo = useRouter().push;
-
-    const [stats, setStats] = useState({
-        repos: 0,
-        followers: 0,
-        contributions: 0,
-        years: 4
-    });
-
-    useEffect(() => {
-        // Fetch basic user stats
-        fetch("https://api.github.com/users/DavidTimi1")
-            .then(res => res.json())
-            .then(data => {
-                setStats(prev => ({
-                    ...prev,
-                    repos: data.public_repos || 45,
-                    followers: data.followers || 15
-                }));
-            })
-            .catch(err => console.error("GitHub API Error:", err));
-
-        // Fetch contributions (Using a public proxy for contributions graph)
-        fetch("https://github-contributions-api.jogruber.de/v4/DavidTimi1?y=last")
-            .then(res => res.json())
-            .then(data => {
-                const total = data.total?.lastYear || 2400;
-                setStats(prev => ({ ...prev, contributions: total }));
-            })
-            .catch(err => console.error("Contributions API Error:", err));
-    }, []);
 
     const skills = [
         { name: "HTML", icon: FaHtml5, color: "#E34F26" },

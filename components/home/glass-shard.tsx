@@ -51,7 +51,7 @@ export function GlassShard({
                 delay: delay,
             }}
             className={cn(
-                "absolute bg-linear-to-br from-white/10 to-transparent backdrop-blur-sm pointer-events-none z-10",
+                "absolute hidden md:block bg-linear-to-br from-white/10 to-transparent backdrop-blur-sm pointer-events-none z-10",
                 "border-t border-l border-white/20 shadow-2xl",
                 className
             )}

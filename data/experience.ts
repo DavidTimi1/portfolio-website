@@ -28,7 +28,7 @@ export const experiences = [
         role: "Frontend Engineer Intern",
         logo: "/assets/brands/hng-tech.png",
         company: "HNG Internship",
-        period: ["12/2025", "10/2025"],
+        period: ["10/2025", "12/2025"],
         description: [
             "Developed pixel perfect web applications using various tech stacks under extreme deadlines",
             "Collaborated with other developers, PMs, Graphic designers, and tech professionals to develop enerprise-level apps",
@@ -40,7 +40,7 @@ export const experiences = [
         role: "Backend Engineer Intern",
         logo: "/assets/brands/placeholder-company.jpeg", // Placeholder
         company: "Darq Envoy",
-        period: ["09/2025", "06/2025"],
+        period: ["06/2025", "09/2025"],
         description: [
             "Developed backend features and APIs to support scalable web applications, focusing on performance and reliability.",
             "Collaborated with frontend and product teams to deliver seamless end-to-end solutions."
@@ -51,7 +51,7 @@ export const experiences = [
         role: "Frontend Developer / Team Lead",
         logo: "/assets/brands/placeholder-company.jpeg", // Placeholder
         company: "NexusmindAI",
-        period: ["01/2025", "08/2024"],
+        period: ["08/2024", "01/2025"],
         description: [
             "Collaborated with other developers in engineering the User Experience on product websites.",
             "Served as Dev Team Lead, reviewing pull requests, maintaining code quality, and reducing technical debt.",

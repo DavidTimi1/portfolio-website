@@ -27,7 +27,7 @@ export const useAppNav = () => {
     const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
         e.preventDefault();
         const pathname = window.location.pathname;
-        const isHomePage = navItems.some(item => item.href.includes(pathname));
+        const isHomePage = navItems.some(item => item.href === pathname);
 
         // If on home page, prevent default navigation and scroll smoothly
         if (isHomePage) {

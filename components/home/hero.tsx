@@ -11,7 +11,7 @@ import { useTypingName } from "@/hooks/use-typing";
 import { SectionDetector } from "../ui/section-detector";
 import { HeroImage } from "./hero-image";
 
-const resumeLink = "#"; // Update with actual link
+const resumeLink = "/resume.pdf"; // Path to actual resume file in /public
 const GHLink = "https://github.com/DavidTimi1";
 const XLink = "https://x.com/DavidTimi_1";
 const MailLink = "mailto:duwagbale07@gmail.com";
@@ -41,7 +41,7 @@ export default function Hero() {
         <section
             ref={targetRef}
             id="hero"
-            className="h-screen w-full snap-start flex flex-col items-center justify-center relative overflow-hidden"
+            className="h-dvh w-full snap-start flex flex-col items-center justify-center relative overflow-hidden"
         >
             <SectionDetector sectionId="hero" />
 
@@ -59,7 +59,7 @@ export default function Hero() {
                     alt=""
                     width={1920}
                     height={1080}
-                    className="h-full md:w-full object-cover opacity-30 mix-blend-overlay"
+                    className="h-full md:w-full object-cover opacity-10 mix-blend-overlay"
                 />
             </div>
 
@@ -72,7 +72,7 @@ export default function Hero() {
                         initial={{ opacity: 0, x: -150 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: false, amount: 0.5 }}
-                        transition={{ type: 'spring', stiffness: 400, damping: 25, delay: 0.4 }}
+                        transition={{ type: 'spring', stiffness: 400, damping: 25, delay: 0.1 }}
                         className="flex flex-col items-center justify-center gap-6 w-full relative"
                     >
 
@@ -84,13 +84,13 @@ export default function Hero() {
                                 animate={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }}
                                 transition={{ duration: 0.8, ease: "circOut", delay: 0.5 }} // Added delay to sync with container
                             >
-                                <h1 className="text-4xl md:text-6xl font-black text-white mix-blend-overlay">
+                                <h1 className="text-3xl md:text-6xl font-black text-white mix-blend-overlay">
                                     {name}
                                 </h1>
                             </motion.div>
                         </div>
 
-                        <p className="text-xl md:text-2xl text-zinc-300 font-light tracking-wide">
+                        <p className="text-md md:text-xl text-zinc-300 font-light tracking-wide">
                             <span className="font-mono text-accent">{`<>`}</span> <br />
                             {ELEVATOR} <br />
                             <span className="font-mono text-accent">{`</>`}</span>

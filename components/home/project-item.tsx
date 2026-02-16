@@ -16,9 +16,9 @@ export const ProjectItem = ({
 
     const handleCardClick = () => {
         if (project.links.live) {
-            window.open(project.links.live, "_blank");
+            window.open(project.links.live, "_blank", "noopener, noreferrer");
         } else if (project.links.github) {
-            window.open(project.links.github, "_blank");
+            window.open(project.links.github, "_blank", "noopener, noreferrer");
         } else {
             toast.error("No usage link available for this project yet!");
         }
@@ -30,7 +30,7 @@ export const ProjectItem = ({
         const btnValue = e.currentTarget.value as 'live' | 'github';
 
         if (btnValue) {
-            window.open(project.links[btnValue], "_blank");
+            window.open(project.links[btnValue], "_blank", "noopener, noreferrer");
         }
     };
 
@@ -72,22 +72,22 @@ export const ProjectItem = ({
 
                         {/* Top Row: Type & Links */}
                         <div className="flex flex-col justify-between">
-                                {project.links.github && (
-                                    <Button variant="outline" size="icon" value='github'
-                                        onClick={handleIconClick}
-                                    >
-                                        <GithubIcon className='w-4 h-4' />
-                                        <span className="sr-only">Show in Github</span>
-                                    </Button>
-                                )}
-                                {project.links.live && (
-                                    <Button variant="outline" size="icon" value='live' onClick={handleIconClick}>
-                                        <ExternalLinkIcon className='w-4 h-4' />
-                                        <span className="sr-only">
-                                            View live
-                                        </span>
-                                    </Button>
-                                )}
+                            {project.links.github && (
+                                <Button variant="outline" size="icon" value='github'
+                                    onClick={handleIconClick}
+                                >
+                                    <GithubIcon className='w-4 h-4' />
+                                    <span className="sr-only">Show in Github</span>
+                                </Button>
+                            )}
+                            {project.links.live && (
+                                <Button variant="outline" size="icon" value='live' onClick={handleIconClick}>
+                                    <ExternalLinkIcon className='w-4 h-4' />
+                                    <span className="sr-only">
+                                        View live
+                                    </span>
+                                </Button>
+                            )}
                         </div>
                     </div>
 

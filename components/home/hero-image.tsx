@@ -8,7 +8,7 @@ export const HeroImage = () => {
 
 
     return (
-        <div className="relative size-64 md:size-96 z-30 shrink-0 perspective-1000">
+        <div className="relative size-54 md:size-96 z-30 shrink-0 perspective-1000">
 
             <motion.div
                 initial={{ opacity: 0, x: 150 }}
@@ -18,7 +18,7 @@ export const HeroImage = () => {
                     rotateY: hasBeenFlipped
                         ? { type: "spring", stiffness: 200, damping: 18 }
                         : { duration: 1.2, delay: 1 },
-                    x: { type: 'spring', stiffness: 400, damping: 25, delay: 0.4 }
+                    x: { type: 'spring', stiffness: 400, damping: 25, delay: 0.1 }
                 }}
                 onClick={() => {
                     setHasBeenFlipped(true);
