@@ -14,6 +14,7 @@ export const ProjectsSearch = () => {
         <div className="relative w-full md:w-64">
             <input
                 type="text"
+                aria-label="Search projects"
                 placeholder="Search projects..."
                 value={inputValue}
                 onChange={handleSearchChange}
