@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { projects } from "@/data/projects";
 import { useEffect } from "react";
 import { useActiveSection } from "../providers/active-section-context";
