@@ -1,0 +1,1239 @@
+[
+  {
+    "title": "portfolio-website",
+    "links": {
+      "github": "https://github.com/DavidTimi1/portfolio-website",
+      "live": "https://davidtimi1-github-io.vercel.app"
+    },
+    "description": "",
+    "rank": 4,
+    "is_collab": false,
+    "is_featured": true,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2026
+  },
+  {
+    "title": "DavidTimi1",
+    "links": {
+      "github": "https://github.com/DavidTimi1/DavidTimi1"
+    },
+    "description": "My github profile",
+    "rank": 2,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [],
+    "year": 2024
+  },
+  {
+    "title": "Framez-HNG-13-Stage-4",
+    "links": {
+      "github": "https://github.com/DavidTimi1/Framez-HNG-13-Stage-4"
+    },
+    "description": "HNG Internship Frontend Track Stage 4 Task",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "VisualVoiceStatic",
+    "links": {
+      "github": "https://github.com/DavidTimi1/VisualVoiceStatic"
+    },
+    "description": "Web inclusitivity for individuals with disabilities ",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "HTML"
+    ],
+    "year": 2024
+  },
+  {
+    "title": "crisisscope-ai",
+    "links": {
+      "github": "https://github.com/DavidTimi1/crisisscope-ai",
+      "live": "https://crisisscope-ai-demo.vercel.app"
+    },
+    "description": "",
+    "rank": 4,
+    "is_collab": false,
+    "is_featured": true,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "Aisylum",
+    "links": {
+      "github": "https://github.com/DavidTimi1/Aisylum",
+      "live": "https://aisylum.vercel.app"
+    },
+    "description": "Think refugees and asylum seekers using AI without fear of their info being compromised.",
+    "rank": 4,
+    "is_collab": false,
+    "is_featured": true,
+    "tech": [
+      "TypeScript",
+      "builtin-ai",
+      "offline-ai",
+      "pwa"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "test-repo",
+    "links": {
+      "github": "https://github.com/DavidTimi1/test-repo"
+    },
+    "description": "",
+    "rank": 2,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [],
+    "year": 2026
+  },
+  {
+    "title": "Members-Assessment",
+    "links": {
+      "github": "https://github.com/DavidTimi1/Members-Assessment"
+    },
+    "description": "Assessment repository for new members of the club",
+    "rank": 2,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "Python"
+    ],
+    "year": 2026
+  },
+  {
+    "title": "mellow-pay-flow2",
+    "links": {
+      "github": "https://github.com/DavidTimi1/mellow-pay-flow2",
+      "live": "https://20x-hackaholics.vercel.app"
+    },
+    "description": "Wema hackaholics 6.0 classroom fork for previews",
+    "rank": 2,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "ASO-CONCEPT",
+    "links": {
+      "github": "https://github.com/DavidTimi1/ASO-CONCEPT",
+      "live": "https://aso-concept.vercel.app"
+    },
+    "description": "",
+    "rank": 2,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "JavaScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "Merry-christmas",
+    "links": {
+      "github": "https://github.com/DavidTimi1/Merry-christmas"
+    },
+    "description": "A simple Christmas greetings webpage",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "JavaScript"
+    ],
+    "year": 2024
+  },
+  {
+    "title": "globex-website",
+    "links": {
+      "github": "https://github.com/DavidTimi1/globex-website",
+      "live": "https://globex-website-eosin.vercel.app"
+    },
+    "description": "Just a deployment preview fork, will be deleted after handover",
+    "rank": 2,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "hng-va",
+    "links": {
+      "github": "https://github.com/DavidTimi1/hng-va",
+      "live": "https://hng-va.vercel.app"
+    },
+    "description": "",
+    "rank": 4,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "scholarly",
+    "links": {
+      "github": "https://github.com/DavidTimi1/scholarly"
+    },
+    "description": "Scholarly hackathon",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "v0-grad-zee-admin-portal-architectu",
+    "links": {
+      "github": "https://github.com/DavidTimi1/v0-grad-zee-admin-portal-architectu",
+      "live": "https://grad-zee.vercel.app"
+    },
+    "description": "",
+    "rank": 4,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "Audiophile-HNG-13",
+    "links": {
+      "github": "https://github.com/DavidTimi1/Audiophile-HNG-13",
+      "live": "https://audiophile-hng-13.vercel.app"
+    },
+    "description": "HNG 13 Frontend Stage 3A Task",
+    "rank": 4,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "embeddable-tour-web-app",
+    "links": {
+      "github": "https://github.com/DavidTimi1/embeddable-tour-web-app",
+      "live": "https://embeddable-tour-web-app-ten.vercel.app"
+    },
+    "description": "",
+    "rank": 2,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "Reverse-proxies",
+    "links": {
+      "github": "https://github.com/DavidTimi1/Reverse-proxies",
+      "live": "https://hng-13-stage-3.vercel.app"
+    },
+    "description": "",
+    "rank": 4,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "HTML"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "Framez-HNG-13-Stage-7",
+    "links": {
+      "github": "https://github.com/DavidTimi1/Framez-HNG-13-Stage-7"
+    },
+    "description": "HNG 13 Frontend Track Stage 4 Task:",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [],
+    "year": 2025
+  },
+  {
+    "title": "React-Native-Todo-App-HNG-13",
+    "links": {
+      "github": "https://github.com/DavidTimi1/React-Native-Todo-App-HNG-13"
+    },
+    "description": "HNG 13 Stage 3B Frontend Task",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "tick-it-hng13",
+    "links": {
+      "github": "https://github.com/DavidTimi1/tick-it-hng13",
+      "live": "https://tick-it-hng13.vercel.app"
+    },
+    "description": "",
+    "rank": 4,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "JavaScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "HNG-13-Stage-0",
+    "links": {
+      "github": "https://github.com/DavidTimi1/HNG-13-Stage-0",
+      "live": "https://hng-13-stage-0-kappa.vercel.app"
+    },
+    "description": "Profile Card",
+    "rank": 4,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "HTML"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "crisis-scope-ai-frontend",
+    "links": {
+      "github": "https://github.com/DavidTimi1/crisis-scope-ai-frontend"
+    },
+    "description": "",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "Message_50",
+    "links": {
+      "github": "https://github.com/DavidTimi1/Message_50"
+    },
+    "description": "E2EE chat app",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "JavaScript"
+    ],
+    "year": 2024
+  },
+  {
+    "title": "C-Files-CS50-2021-",
+    "links": {
+      "github": "https://github.com/DavidTimi1/C-Files-CS50-2021-"
+    },
+    "description": "",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "C"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "Pic2Plate",
+    "links": {
+      "github": "https://github.com/DavidTimi1/Pic2Plate",
+      "live": "https://pic2plate-tau.vercel.app"
+    },
+    "description": "",
+    "rank": 4,
+    "is_collab": false,
+    "is_featured": true,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2024
+  },
+  {
+    "title": "starel_waitlist",
+    "links": {
+      "github": "https://github.com/DavidTimi1/starel_waitlist",
+      "live": "https://starel-waitlist.vercel.app"
+    },
+    "description": "The WaitList of Starel Start up",
+    "rank": 2,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "The-Teams",
+    "links": {
+      "github": "https://github.com/DavidTimi1/The-Teams"
+    },
+    "description": "",
+    "rank": 2,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "Msg50-BE",
+    "links": {
+      "github": "https://github.com/DavidTimi1/Msg50-BE"
+    },
+    "description": "Python Django backend for e2ee messaging app",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "JavaScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "Codez",
+    "links": {
+      "github": "https://github.com/DavidTimi1/Codez"
+    },
+    "description": "Nice quotes to convert to MD",
+    "rank": 2,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [],
+    "year": 2025
+  },
+  {
+    "title": "mellow-pay-flow",
+    "links": {
+      "github": "https://github.com/DavidTimi1/mellow-pay-flow",
+      "live": "https://20x-hackaholics.vercel.app"
+    },
+    "description": "",
+    "rank": 4,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "learn-web3",
+    "links": {
+      "github": "https://github.com/DavidTimi1/learn-web3"
+    },
+    "description": "Learning foundations of Solidity and Smart Contract Development",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "Solidity"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "custom-pizza-portal",
+    "links": {
+      "github": "https://github.com/DavidTimi1/custom-pizza-portal"
+    },
+    "description": "",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "single-image-showcase-easy",
+    "links": {
+      "github": "https://github.com/DavidTimi1/single-image-showcase-easy"
+    },
+    "description": "",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "LiquidRampDashboardDev",
+    "links": {
+      "github": "https://github.com/DavidTimi1/LiquidRampDashboardDev",
+      "live": "https://liquidramp-dashboard-dev.vercel.app"
+    },
+    "description": "A modern, responsive admin dashboard for **LiquidRamp**, built using **React + Vite** and styled based on a Figma design. The project emphasizes modularity, performance, and ease of extension.",
+    "rank": 4,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "client-side-dreamscape-ui",
+    "links": {
+      "github": "https://github.com/DavidTimi1/client-side-dreamscape-ui",
+      "live": "https://client-side-dreamscape-ui.vercel.app"
+    },
+    "description": "Simple Web3 dashboard",
+    "rank": 2,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "slidetrail-preview",
+    "links": {
+      "github": "https://github.com/DavidTimi1/slidetrail-preview"
+    },
+    "description": "Development preview for slidetrail apis",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "refuge-ai-compass-47",
+    "links": {
+      "github": "https://github.com/DavidTimi1/refuge-ai-compass-47",
+      "live": "https://refuge-ai-compass-47.vercel.app"
+    },
+    "description": "",
+    "rank": 4,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "Jupyter Notebook"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "Accessibility-Web-Extension",
+    "links": {
+      "github": "https://github.com/DavidTimi1/Accessibility-Web-Extension"
+    },
+    "description": "Web accessibility and inclusitivity extension",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "JavaScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "davidtimi1.github.io",
+    "links": {
+      "github": "https://github.com/DavidTimi1/davidtimi1.github.io",
+      "live": "https://davidtimi1-github-io.vercel.app"
+    },
+    "description": "Pages Repo",
+    "rank": 4,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "JavaScript"
+    ],
+    "year": 2023
+  },
+  {
+    "title": "VisibleVoice",
+    "links": {
+      "github": "https://github.com/DavidTimi1/VisibleVoice",
+      "live": "https://visual-voice.vercel.app"
+    },
+    "description": "Web accessibility inclusitivity",
+    "rank": 4,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "JavaScript"
+    ],
+    "year": 2024
+  },
+  {
+    "title": "nova-frontend",
+    "links": {
+      "github": "https://github.com/DavidTimi1/nova-frontend",
+      "live": "https://ikuzo.vercel.app"
+    },
+    "description": "Nova frontend repo",
+    "rank": 4,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "CSS"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "Test-Slide",
+    "links": {
+      "github": "https://github.com/DavidTimi1/Test-Slide"
+    },
+    "description": "",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "HTML"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "Chess",
+    "links": {
+      "github": "https://github.com/DavidTimi1/Chess"
+    },
+    "description": "",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "JavaScript"
+    ],
+    "year": 2023
+  },
+  {
+    "title": "DeCirco",
+    "links": {
+      "github": "https://github.com/DavidTimi1/DeCirco"
+    },
+    "description": "Revolutionizing recycling by leveraging decentralisation and blockchain technology ",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "flask_telegram_bot",
+    "links": {
+      "github": "https://github.com/DavidTimi1/flask_telegram_bot"
+    },
+    "description": "Simple telegram bot that gives ai responses built using flask",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "Python"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "mit_ocw_downloader",
+    "links": {
+      "github": "https://github.com/DavidTimi1/mit_ocw_downloader"
+    },
+    "description": "Bulk download MIT OpenCourseWare Videos",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "Python"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "Pythonanywhere-Free-Tier-CICD",
+    "links": {
+      "github": "https://github.com/DavidTimi1/Pythonanywhere-Free-Tier-CICD"
+    },
+    "description": "Emulate a CICD pipeline using Pythonanywhere api for seamless deployments for FREE TIER",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "Python"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "Ludo-Game",
+    "links": {
+      "github": "https://github.com/DavidTimi1/Ludo-Game"
+    },
+    "description": "Web-based implementation of the classic board game Ludo, developed using HTML, CSS, and JavaScript.",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "JavaScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "ASL-BE",
+    "links": {
+      "github": "https://github.com/DavidTimi1/ASL-BE"
+    },
+    "description": "",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [],
+    "year": 2025
+  },
+  {
+    "title": "Django-Sockets",
+    "links": {
+      "github": "https://github.com/DavidTimi1/Django-Sockets"
+    },
+    "description": "Test django websockets repo",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "Python"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "HNG-12-BE-Stage-2",
+    "links": {
+      "github": "https://github.com/DavidTimi1/HNG-12-BE-Stage-2"
+    },
+    "description": "HNG12 (STAGE 2) - DEVOPS x BACKEND Task",
+    "rank": 2,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "Python"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "HNG-12-FE-Stage-2",
+    "links": {
+      "github": "https://github.com/DavidTimi1/HNG-12-FE-Stage-2"
+    },
+    "description": "HNG Intership 12 Stage 2 Task",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "JavaScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "EcoNauts",
+    "links": {
+      "github": "https://github.com/DavidTimi1/EcoNauts",
+      "live": "https://eco-nauts.vercel.app"
+    },
+    "description": "NACOSS hackerthon project",
+    "rank": 4,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "JavaScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "ProfileCard",
+    "links": {
+      "github": "https://github.com/DavidTimi1/ProfileCard"
+    },
+    "description": "Simple Profile Business Card",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "HTML"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "HNG-12-FE-Stage-0-",
+    "links": {
+      "github": "https://github.com/DavidTimi1/HNG-12-FE-Stage-0-"
+    },
+    "description": "HNG Internship Frontend Track Stage 0",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "HTML"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "HNG-FE-Stage-1",
+    "links": {
+      "github": "https://github.com/DavidTimi1/HNG-FE-Stage-1",
+      "live": "https://hng-fe-stage-1-two.vercel.app"
+    },
+    "description": "HNG Internship Frontend Track Satge 1 Task",
+    "rank": 4,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "JavaScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "HNG-BE-Stage-1",
+    "links": {
+      "github": "https://github.com/DavidTimi1/HNG-BE-Stage-1"
+    },
+    "description": "HNG Internship Backend Track Stage 1 Task",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "Python"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "HNG-12-BE-Stage-0",
+    "links": {
+      "github": "https://github.com/DavidTimi1/HNG-12-BE-Stage-0"
+    },
+    "description": "HNG Internship Backend Track Stage 0 Task",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "Python"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "HNG-12-FE",
+    "links": {
+      "github": "https://github.com/DavidTimi1/HNG-12-FE"
+    },
+    "description": "HNG Internship Frontend Track",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "HTML"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "NexusMind-AI",
+    "links": {
+      "github": "https://github.com/DavidTimi1/NexusMind-AI"
+    },
+    "description": "My work from nexusmind",
+    "rank": 2,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [],
+    "year": 2025
+  },
+  {
+    "title": "Next-js-dashboard-",
+    "links": {
+      "github": "https://github.com/DavidTimi1/Next-js-dashboard-",
+      "live": "https://next-js-dashboard-iota-self.vercel.app"
+    },
+    "description": "Getting started with nextjs",
+    "rank": 4,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "TypeScript"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "AI-Tic-Tac-Toe",
+    "links": {
+      "github": "https://github.com/DavidTimi1/AI-Tic-Tac-Toe"
+    },
+    "description": "Tic toc toe AI using Minimax Algorithm",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "Python"
+    ],
+    "year": 2023
+  },
+  {
+    "title": "Tic-Tac-Toe-",
+    "links": {
+      "github": "https://github.com/DavidTimi1/Tic-Tac-Toe-"
+    },
+    "description": "",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "JavaScript"
+    ],
+    "year": 2023
+  },
+  {
+    "title": "Whatsapp-Chatgpt-AI",
+    "links": {
+      "github": "https://github.com/DavidTimi1/Whatsapp-Chatgpt-AI"
+    },
+    "description": "AI Chatbot for Whatsapp with Image Gen and Speech Recognition capabilities using Python Flask",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "Python"
+    ],
+    "year": 2023
+  },
+  {
+    "title": "saasuke",
+    "links": {
+      "github": "https://github.com/DavidTimi1/saasuke"
+    },
+    "description": "Koyeb-deployed Django Saas",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "Python"
+    ],
+    "year": 2024
+  },
+  {
+    "title": "LearnXcess_Frontend",
+    "links": {
+      "github": "https://github.com/DavidTimi1/LearnXcess_Frontend",
+      "live": "https://learnxcess.vercel.app"
+    },
+    "description": "Frontend separated for easy deployment ",
+    "rank": 4,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "JavaScript"
+    ],
+    "year": 2024
+  },
+  {
+    "title": "NexusMind",
+    "links": {
+      "github": "https://github.com/DavidTimi1/NexusMind",
+      "live": "https://nexusmind-alpha.vercel.app"
+    },
+    "description": "",
+    "rank": 4,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "JavaScript"
+    ],
+    "year": 2024
+  },
+  {
+    "title": "Koyeb-Flask",
+    "links": {
+      "github": "https://github.com/DavidTimi1/Koyeb-Flask"
+    },
+    "description": "Example to deploy a Flask application on Koyeb",
+    "rank": 2,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "Python"
+    ],
+    "year": 2024
+  },
+  {
+    "title": "ChatAI",
+    "links": {
+      "github": "https://github.com/DavidTimi1/ChatAI"
+    },
+    "description": "React web app ",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "Python"
+    ],
+    "year": 2024
+  },
+  {
+    "title": "project-bits",
+    "links": {
+      "github": "https://github.com/DavidTimi1/project-bits"
+    },
+    "description": "Python (Flask), JavaScript, HTML, CSS, SQL pieces",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "JavaScript"
+    ],
+    "year": 2023
+  },
+  {
+    "title": "nextpy",
+    "links": {
+      "github": "https://github.com/DavidTimi1/nextpy",
+      "live": "https://dotagent.ai"
+    },
+    "description": "🤖Self-Modifying Framework from the Future 🔮 World's First AMS",
+    "rank": 2,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "Python"
+    ],
+    "year": 2025
+  },
+  {
+    "title": "message50",
+    "links": {
+      "github": "https://github.com/DavidTimi1/message50"
+    },
+    "description": "CS50 Python (Flask), JavaScript, HTML, CSS, SQL Final Project ",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "HTML"
+    ],
+    "year": 2023
+  },
+  {
+    "title": "Calc",
+    "links": {
+      "github": "https://github.com/DavidTimi1/Calc"
+    },
+    "description": "",
+    "rank": 3,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "JavaScript"
+    ],
+    "year": 2023
+  },
+
+  
+  {
+    "title": "liquidramp/web-app",
+    "links": {
+      "github": "https://github.com/liquidramp/web-app"
+    },
+    "description": "Collaborated via pull requests: https://github.com/liquidramp/web-app/pull/68",
+    "rank": 3,
+    "is_collab": true,
+    "is_featured": false,
+    "tech": [],
+    "year": 2026
+  },
+  {
+    "title": "liquidramp/dexfiat",
+    "links": {
+      "github": "https://github.com/liquidramp/dexfiat"
+    },
+    "description": "Collaborated via pull requests: https://github.com/liquidramp/dexfiat/pull/22",
+    "rank": 3,
+    "is_collab": true,
+    "is_featured": false,
+    "tech": [],
+    "year": 2026
+  },
+  {
+    "title": "The-Programming-club-FUTA/Members-Assessment",
+    "links": {
+      "github": "https://github.com/The-Programming-club-FUTA/Members-Assessment"
+    },
+    "description": "Collaborated via pull requests: https://github.com/The-Programming-club-FUTA/Members-Assessment/pull/7",
+    "rank": 3,
+    "is_collab": true,
+    "is_featured": false,
+    "tech": [],
+    "year": 2026
+  },
+  {
+    "title": "Fasanya-Oluwatobiloba/ASO-CONCEPT",
+    "links": {
+      "github": "https://github.com/Fasanya-Oluwatobiloba/ASO-CONCEPT"
+    },
+    "description": "Collaborated via pull requests: https://github.com/Fasanya-Oluwatobiloba/ASO-CONCEPT/pull/8",
+    "rank": 3,
+    "is_collab": true,
+    "is_featured": false,
+    "tech": [],
+    "year": 2025
+  },
+  {
+    "title": "osueke-christian/globex-website",
+    "links": {
+      "github": "https://github.com/osueke-christian/globex-website"
+    },
+    "description": "Collaborated via pull requests: https://github.com/osueke-christian/globex-website/pull/6",
+    "rank": 3,
+    "is_collab": true,
+    "is_featured": false,
+    "tech": [],
+    "year": 2025
+  },
+  {
+    "title": "leothatguy/embeddable-tour-web-app",
+    "links": {
+      "github": "https://github.com/leothatguy/embeddable-tour-web-app"
+    },
+    "description": "Collaborated via pull requests: https://github.com/leothatguy/embeddable-tour-web-app/pull/20",
+    "rank": 3,
+    "is_collab": true,
+    "is_featured": false,
+    "tech": [],
+    "year": 2025
+  },
+  {
+    "title": "hngprojects/open-school-portal-FE",
+    "links": {
+      "github": "https://github.com/hngprojects/open-school-portal-FE"
+    },
+    "description": "Collaborated via pull requests: https://github.com/hngprojects/open-school-portal-FE/pull/232",
+    "rank": 3,
+    "is_collab": true,
+    "is_featured": false,
+    "tech": [],
+    "year": 2025
+  },
+  {
+    "title": "Deep-Initiatives/dl-ai-crisisScope",
+    "links": {
+      "github": "https://github.com/Deep-Initiatives/dl-ai-crisisScope"
+    },
+    "description": "Collaborated via pull requests: https://github.com/Deep-Initiatives/dl-ai-crisisScope/pull/5",
+    "rank": 3,
+    "is_collab": true,
+    "is_featured": false,
+    "tech": [],
+    "year": 2025
+  },
+  {
+    "title": "Andrew-oduola/circle-backend",
+    "links": {
+      "github": "https://github.com/Andrew-oduola/circle-backend"
+    },
+    "description": "Collaborated via pull requests: https://github.com/Andrew-oduola/circle-backend/pull/7",
+    "rank": 3,
+    "is_collab": true,
+    "is_featured": false,
+    "tech": [],
+    "year": 2025
+  },
+  {
+    "title": "winsznx/revamp",
+    "links": {
+      "github": "https://github.com/winsznx/revamp"
+    },
+    "description": "Collaborated via pull requests: https://github.com/winsznx/revamp/pull/2",
+    "rank": 3,
+    "is_collab": true,
+    "is_featured": false,
+    "tech": [],
+    "year": 2025
+  },
+  {
+    "title": "andrewanuga/starel_waitlist",
+    "links": {
+      "github": "https://github.com/andrewanuga/starel_waitlist"
+    },
+    "description": "Collaborated via pull requests: https://github.com/andrewanuga/starel_waitlist/pull/2",
+    "rank": 3,
+    "is_collab": true,
+    "is_featured": false,
+    "tech": [],
+    "year": 2025
+  },
+  {
+    "title": "Fasanya-Oluwatobiloba/The-Teams",
+    "links": {
+      "github": "https://github.com/Fasanya-Oluwatobiloba/The-Teams"
+    },
+    "description": "Collaborated via pull requests: https://github.com/Fasanya-Oluwatobiloba/The-Teams/pull/11",
+    "rank": 3,
+    "is_collab": true,
+    "is_featured": false,
+    "tech": [],
+    "year": 2025
+  },
+  {
+    "title": "Fasanya-Oluwatobiloba/Starel",
+    "links": {
+      "github": "https://github.com/Fasanya-Oluwatobiloba/Starel"
+    },
+    "description": "Collaborated via pull requests: https://github.com/Fasanya-Oluwatobiloba/Starel/pull/1",
+    "rank": 3,
+    "is_collab": true,
+    "is_featured": false,
+    "tech": [],
+    "year": 2025
+  },
+  {
+    "title": "ProfBee-dot/refuge-ai-compass",
+    "links": {
+      "github": "https://github.com/ProfBee-dot/refuge-ai-compass"
+    },
+    "description": "Collaborated via pull requests: https://github.com/ProfBee-dot/refuge-ai-compass/pull/3",
+    "rank": 3,
+    "is_collab": true,
+    "is_featured": false,
+    "tech": [],
+    "year": 2025
+  },
+  {
+    "title": "Maxifacture/Slidetrail",
+    "links": {
+      "github": "https://github.com/Maxifacture/Slidetrail"
+    },
+    "description": "Collaborated via pull requests: https://github.com/Maxifacture/Slidetrail/pull/3",
+    "rank": 3,
+    "is_collab": true,
+    "is_featured": false,
+    "tech": [],
+    "year": 2025
+  }
+]
