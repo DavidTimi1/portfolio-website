@@ -1,42 +1,32 @@
 [
   {
-    "title": "portfolio-website",
+    "title": "Portfolio Website",
     "links": {
       "github": "https://github.com/DavidTimi1/portfolio-website",
       "live": "https://davidtimi1-github-io.vercel.app"
     },
-    "description": "",
+    "description": "My personal developer portfolio — the site you're on right now! Built with Next.js and Framer Motion to showcase my projects, skills, and experience through smooth animations and a responsive, modern design.",
     "rank": 4,
     "is_collab": false,
     "is_featured": true,
     "tech": [
-      "TypeScript"
+      "framer",
+      "nextjs"
     ],
     "year": 2026
   },
   {
-    "title": "DavidTimi1",
-    "links": {
-      "github": "https://github.com/DavidTimi1/DavidTimi1"
-    },
-    "description": "My github profile",
-    "rank": 2,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [],
-    "year": 2024
-  },
-  {
-    "title": "Framez-HNG-13-Stage-4",
+    "title": "Framez (Socialmedia Mobile app)",
     "links": {
       "github": "https://github.com/DavidTimi1/Framez-HNG-13-Stage-4"
     },
-    "description": "HNG Internship Frontend Track Stage 4 Task",
+    "description": "An Instagram-inspired social media mobile app built with React Native, TypeScript, and Expo. Features real-time post feeds, image uploads via Cloudinary, reposts, user profile browsing, Convex Auth authentication, and frosted-glass UI with smooth animations. Built as part of HNG 13 Internship Frontend Track Stage 4.",
     "rank": 3,
     "is_collab": false,
-    "is_featured": false,
+    "is_featured": true,
     "tech": [
-      "TypeScript"
+      "react native",
+      "convex"
     ],
     "year": 2025
   },
@@ -45,29 +35,14 @@
     "links": {
       "github": "https://github.com/DavidTimi1/VisualVoiceStatic"
     },
-    "description": "Web inclusitivity for individuals with disabilities ",
+    "description": "A static web app that promotes digital inclusivity for users with disabilities, providing accessibility tools including text-to-speech, simplified content views, and sign language support for the deaf community. Hosted via a lightweight Flask/Koyeb server.",
     "rank": 3,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "HTML"
+      "html"
     ],
     "year": 2024
-  },
-  {
-    "title": "crisisscope-ai",
-    "links": {
-      "github": "https://github.com/DavidTimi1/crisisscope-ai",
-      "live": "https://crisisscope-ai-demo.vercel.app"
-    },
-    "description": "",
-    "rank": 4,
-    "is_collab": false,
-    "is_featured": true,
-    "tech": [
-      "TypeScript"
-    ],
-    "year": 2025
   },
   {
     "title": "Aisylum",
@@ -80,80 +55,45 @@
     "is_collab": false,
     "is_featured": true,
     "tech": [
-      "TypeScript",
+      "typescript",
       "builtin-ai",
       "offline-ai",
-      "pwa"
+      "pwa",
+      "express",
+      "react"
     ],
     "year": 2025
   },
   {
-    "title": "test-repo",
-    "links": {
-      "github": "https://github.com/DavidTimi1/test-repo"
-    },
-    "description": "",
-    "rank": 2,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [],
-    "year": 2026
-  },
-  {
-    "title": "Members-Assessment",
-    "links": {
-      "github": "https://github.com/DavidTimi1/Members-Assessment"
-    },
-    "description": "Assessment repository for new members of the club",
-    "rank": 2,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "Python"
-    ],
-    "year": 2026
-  },
-  {
-    "title": "mellow-pay-flow2",
+    "title": "Payflow",
     "links": {
       "github": "https://github.com/DavidTimi1/mellow-pay-flow2",
       "live": "https://20x-hackaholics.vercel.app"
     },
-    "description": "Wema hackaholics 6.0 classroom fork for previews",
+    "description": "A smart fintech app built for the Wema Hackaholics 6.0 hackathon that transforms digital payments into intelligent, social experiences. Features include AI-powered spending insights via Gemini, transaction tagging, group payment splitting, and cashback via float tracking. Built with React, TailwindCSS, and a FastAPI + Supabase backend.",
     "rank": 2,
-    "is_collab": false,
+    "is_collab": true,
     "is_featured": false,
     "tech": [
-      "TypeScript"
+      "typescript",
+      "react",
+      "flask"
     ],
     "year": 2025
   },
   {
-    "title": "ASO-CONCEPT",
-    "links": {
-      "github": "https://github.com/DavidTimi1/ASO-CONCEPT",
-      "live": "https://aso-concept.vercel.app"
-    },
-    "description": "",
-    "rank": 2,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "JavaScript"
-    ],
-    "year": 2025
-  },
-  {
-    "title": "Merry-christmas",
+    "title": "Merry christmas",
     "links": {
       "github": "https://github.com/DavidTimi1/Merry-christmas"
     },
-    "description": "A simple Christmas greetings webpage",
+    "description": "An interactive Christmas greetings webpage with festive animations and holiday-themed visuals, built with vanilla JavaScript, HTML, and CSS.",
     "rank": 3,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "JavaScript"
+      "javascript",
+      "html",
+      "css"
     ],
     "year": 2024
   },
@@ -163,56 +103,46 @@
       "github": "https://github.com/DavidTimi1/globex-website",
       "live": "https://globex-website-eosin.vercel.app"
     },
-    "description": "Just a deployment preview fork, will be deleted after handover",
+    "description": "A modern corporate website built with Next.js and Framer Motion animations. Developed as a freelance client project for Globex, featuring sleek section transitions and a professional business landing page layout.",
     "rank": 2,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "TypeScript"
+      "framer",
+      "nextjs"
     ],
     "year": 2025
   },
   {
-    "title": "hng-va",
+    "title": "HNG Tech Virtual Assistants",
     "links": {
       "github": "https://github.com/DavidTimi1/hng-va",
       "live": "https://hng-va.vercel.app"
     },
-    "description": "",
+    "description": "A TypeScript + React web application serving as a virtual assistants directory or dashboard tool for HNG Tech. Provides an interactive interface for managing and surfacing assistant-related workflows, built with Vite for a fast development experience.",
     "rank": 4,
     "is_collab": false,
-    "is_featured": false,
+    "is_featured": true,
     "tech": [
-      "TypeScript"
+      "typescript",
+      "react"
     ],
     "year": 2025
   },
   {
-    "title": "scholarly",
-    "links": {
-      "github": "https://github.com/DavidTimi1/scholarly"
-    },
-    "description": "Scholarly hackathon",
-    "rank": 3,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "TypeScript"
-    ],
-    "year": 2025
-  },
-  {
-    "title": "v0-grad-zee-admin-portal-architectu",
+    "title": "Gradzee 🎓",
     "links": {
       "github": "https://github.com/DavidTimi1/v0-grad-zee-admin-portal-architectu",
       "live": "https://grad-zee.vercel.app"
     },
-    "description": "",
+    "description": "An AI-powered graduation planning and admin portal built with Next.js, Supabase, and Gemini API. Designed to help students track their graduation requirements and university administrators manage graduation workflows, with intelligent recommendations and real-time data sync.",
     "rank": 4,
     "is_collab": false,
-    "is_featured": false,
+    "is_featured": true,
     "tech": [
-      "TypeScript"
+      "nextjs",
+      "gemini api",
+      "supabase"
     ],
     "year": 2025
   },
@@ -222,27 +152,29 @@
       "github": "https://github.com/DavidTimi1/Audiophile-HNG-13",
       "live": "https://audiophile-hng-13.vercel.app"
     },
-    "description": "HNG 13 Frontend Stage 3A Task",
+    "description": "A full-featured e-commerce platform for premium audio products, built with Next.js and Convex for real-time backend. Includes dynamic category pages, a live cart system, SSR-optimised product listing, and responsive design — developed as the HNG 13 Frontend Stage 3A task.",
     "rank": 4,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "TypeScript"
+      "nextjs",
+      "convex"
     ],
     "year": 2025
   },
   {
-    "title": "embeddable-tour-web-app",
+    "title": "Embeddable Tour Webapp",
     "links": {
       "github": "https://github.com/DavidTimi1/embeddable-tour-web-app",
       "live": "https://embeddable-tour-web-app-ten.vercel.app"
     },
-    "description": "",
+    "description": "A collaborative web app for creating and embedding interactive product tours into any website. Built with Next.js and Supabase, it allows teams to design guided user onboarding flows that can be dropped into external sites as embeddable widgets.",
     "rank": 2,
-    "is_collab": false,
+    "is_collab": true,
     "is_featured": false,
     "tech": [
-      "TypeScript"
+      "nextjs",
+      "supabase"
     ],
     "year": 2025
   },
@@ -252,110 +184,78 @@
       "github": "https://github.com/DavidTimi1/Reverse-proxies",
       "live": "https://hng-13-stage-3.vercel.app"
     },
-    "description": "",
+    "description": "A hands-on project exploring reverse proxy configuration and networking concepts. Demonstrates how to set up and manage reverse proxies to route HTTP traffic between multiple services — built as part of the HNG 13 Stage 3 DevOps track.",
     "rank": 4,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "HTML"
+      "html",
+      "Networking"
     ],
     "year": 2025
   },
   {
-    "title": "Framez-HNG-13-Stage-7",
-    "links": {
-      "github": "https://github.com/DavidTimi1/Framez-HNG-13-Stage-7"
-    },
-    "description": "HNG 13 Frontend Track Stage 4 Task:",
-    "rank": 3,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [],
-    "year": 2025
-  },
-  {
-    "title": "React-Native-Todo-App-HNG-13",
+    "title": "React Native Todo App",
     "links": {
       "github": "https://github.com/DavidTimi1/React-Native-Todo-App-HNG-13"
     },
-    "description": "HNG 13 Stage 3B Frontend Task",
+    "description": "A mobile todo list application built with React Native and Convex for real-time data sync across devices. Features task creation, completion tracking, and persistent storage — developed as the HNG 13 Frontend Stage 3B mobile task.",
     "rank": 3,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "TypeScript"
+      "react native",
+      "convex"
     ],
     "year": 2025
   },
   {
-    "title": "tick-it-hng13",
+    "title": "Tick it",
     "links": {
       "github": "https://github.com/DavidTimi1/tick-it-hng13",
       "live": "https://tick-it-hng13.vercel.app"
     },
-    "description": "",
-    "rank": 4,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "JavaScript"
-    ],
-    "year": 2025
-  },
-  {
-    "title": "HNG-13-Stage-0",
-    "links": {
-      "github": "https://github.com/DavidTimi1/HNG-13-Stage-0",
-      "live": "https://hng-13-stage-0-kappa.vercel.app"
-    },
-    "description": "Profile Card",
-    "rank": 4,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "HTML"
-    ],
-    "year": 2025
-  },
-  {
-    "title": "crisis-scope-ai-frontend",
-    "links": {
-      "github": "https://github.com/DavidTimi1/crisis-scope-ai-frontend"
-    },
-    "description": "",
+    "description": "A task management app implemented in three different frontend frameworks simultaneously — Vue.js, React, and Twig (PHP) — within the same monorepo. Demonstrates framework-agnostic UI design and feature parity, built as an HNG 13 internship challenge.",
     "rank": 3,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "TypeScript"
+      "typescript",
+      "php",
+      "twig",
+      "vuejs",
+      "react"
     ],
     "year": 2025
   },
   {
-    "title": "Message_50",
+    "title": "Message50",
     "links": {
       "github": "https://github.com/DavidTimi1/Message_50"
     },
-    "description": "E2EE chat app",
+    "description": "An end-to-end encrypted (E2EE) chat app built with React, where messages are encrypted client-side before being transmitted — ensuring not even the server can read them. Paired with a Django REST backend (Msg50-BE) for user management and message relay.",
     "rank": 3,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "JavaScript"
+      "javascript",
+      "react",
+      "django",
+      "socketio"
     ],
     "year": 2024
   },
   {
-    "title": "C-Files-CS50-2021-",
+    "title": "C Files",
     "links": {
       "github": "https://github.com/DavidTimi1/C-Files-CS50-2021-"
     },
-    "description": "",
+    "description": "A collection of C programs and utility scripts written during CS50 (2021). Covers algorithms, data structures, file I/O, and low-level systems concepts — serving as a foundation in computer science fundamentals.",
     "rank": 3,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "C"
+      "c"
     ],
     "year": 2025
   },
@@ -365,82 +265,28 @@
       "github": "https://github.com/DavidTimi1/Pic2Plate",
       "live": "https://pic2plate-tau.vercel.app"
     },
-    "description": "",
+    "description": "An AI-powered Next.js app that turns food photos into full recipes. Upload or describe a dish and the Gemini API identifies ingredients and generates step-by-step cooking instructions. Backed by Cloudinary for image handling and Neon (serverless Postgres) for data storage.",
     "rank": 4,
     "is_collab": false,
     "is_featured": true,
     "tech": [
-      "TypeScript"
+      "nextjs",
+      "gemini api"
     ],
     "year": 2024
-  },
-  {
-    "title": "starel_waitlist",
-    "links": {
-      "github": "https://github.com/DavidTimi1/starel_waitlist",
-      "live": "https://starel-waitlist.vercel.app"
-    },
-    "description": "The WaitList of Starel Start up",
-    "rank": 2,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "TypeScript"
-    ],
-    "year": 2025
-  },
-  {
-    "title": "The-Teams",
-    "links": {
-      "github": "https://github.com/DavidTimi1/The-Teams"
-    },
-    "description": "",
-    "rank": 2,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "TypeScript"
-    ],
-    "year": 2025
   },
   {
     "title": "Msg50-BE",
     "links": {
       "github": "https://github.com/DavidTimi1/Msg50-BE"
     },
-    "description": "Python Django backend for e2ee messaging app",
+    "description": "Django REST Framework backend powering the Message50 E2EE chat app. Handles user authentication, account management, and acts as a relay server for encrypted messages — never storing plaintext content thanks to client-side encryption.",
     "rank": 3,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "JavaScript"
-    ],
-    "year": 2025
-  },
-  {
-    "title": "Codez",
-    "links": {
-      "github": "https://github.com/DavidTimi1/Codez"
-    },
-    "description": "Nice quotes to convert to MD",
-    "rank": 2,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [],
-    "year": 2025
-  },
-  {
-    "title": "mellow-pay-flow",
-    "links": {
-      "github": "https://github.com/DavidTimi1/mellow-pay-flow",
-      "live": "https://20x-hackaholics.vercel.app"
-    },
-    "description": "",
-    "rank": 4,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "TypeScript"
+      "python",
+      "django"
     ],
     "year": 2025
   },
@@ -449,7 +295,7 @@
     "links": {
       "github": "https://github.com/DavidTimi1/learn-web3"
     },
-    "description": "Learning foundations of Solidity and Smart Contract Development",
+    "description": "A personal learning repository for Web3 development — covering the foundations of Solidity, smart contract design patterns, and on-chain application development on the Ethereum and Cardano ecosystems.",
     "rank": 3,
     "is_collab": false,
     "is_featured": false,
@@ -459,89 +305,32 @@
     "year": 2025
   },
   {
-    "title": "custom-pizza-portal",
+    "title": "Custom Pizza Portal",
     "links": {
       "github": "https://github.com/DavidTimi1/custom-pizza-portal"
     },
-    "description": "",
+    "description": "A TypeScript web app for building and ordering custom pizzas online. Users select their crust, sauce, toppings, and size through an intuitive step-by-step configurator, with order summary and pricing calculated dynamically.",
     "rank": 3,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "TypeScript"
+      "typescript"
     ],
     "year": 2025
   },
   {
-    "title": "single-image-showcase-easy",
-    "links": {
-      "github": "https://github.com/DavidTimi1/single-image-showcase-easy"
-    },
-    "description": "",
-    "rank": 3,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "TypeScript"
-    ],
-    "year": 2025
-  },
-  {
-    "title": "LiquidRampDashboardDev",
+    "title": "Liquidramp Dashboard Demo",
     "links": {
       "github": "https://github.com/DavidTimi1/LiquidRampDashboardDev",
       "live": "https://liquidramp-dashboard-dev.vercel.app"
     },
-    "description": "A modern, responsive admin dashboard for **LiquidRamp**, built using **React + Vite** and styled based on a Figma design. The project emphasizes modularity, performance, and ease of extension.",
+    "description": "A modern, responsive admin dashboard for Liquidramp, built using React + Vite and styled based on a Figma design. The project emphasizes modularity, performance, and ease of extension.",
     "rank": 4,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "TypeScript"
-    ],
-    "year": 2025
-  },
-  {
-    "title": "client-side-dreamscape-ui",
-    "links": {
-      "github": "https://github.com/DavidTimi1/client-side-dreamscape-ui",
-      "live": "https://client-side-dreamscape-ui.vercel.app"
-    },
-    "description": "Simple Web3 dashboard",
-    "rank": 2,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "TypeScript"
-    ],
-    "year": 2025
-  },
-  {
-    "title": "slidetrail-preview",
-    "links": {
-      "github": "https://github.com/DavidTimi1/slidetrail-preview"
-    },
-    "description": "Development preview for slidetrail apis",
-    "rank": 3,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "TypeScript"
-    ],
-    "year": 2025
-  },
-  {
-    "title": "refuge-ai-compass-47",
-    "links": {
-      "github": "https://github.com/DavidTimi1/refuge-ai-compass-47",
-      "live": "https://refuge-ai-compass-47.vercel.app"
-    },
-    "description": "",
-    "rank": 4,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "Jupyter Notebook"
+      "typescript",
+      "react"
     ],
     "year": 2025
   },
@@ -550,27 +339,28 @@
     "links": {
       "github": "https://github.com/DavidTimi1/Accessibility-Web-Extension"
     },
-    "description": "Web accessibility and inclusitivity extension",
-    "rank": 3,
+    "description": "A browser extension that makes the web more inclusive for people with disabilities. Provides screen reader support, content simplification for dyslexia, text-to-ASL sign language conversion via animated avatars, and voice command navigation — all WCAG 2.1 compliant.",
+    "rank": 5,
     "is_collab": false,
-    "is_featured": false,
+    "is_featured": true,
     "tech": [
-      "JavaScript"
+      "javascript"
     ],
     "year": 2025
   },
   {
-    "title": "davidtimi1.github.io",
+    "title": "Portfolio Website V1",
     "links": {
       "github": "https://github.com/DavidTimi1/davidtimi1.github.io",
       "live": "https://davidtimi1-github-io.vercel.app"
     },
-    "description": "Pages Repo",
+    "description": "The first version of my personal developer portfolio, hosted as a GitHub Pages site. Built with React and Bootstrap CSS, showcasing early projects and skills with a clean, responsive layout.",
     "rank": 4,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "JavaScript"
+      "react",
+      "bootstrapcss"
     ],
     "year": 2023
   },
@@ -580,41 +370,28 @@
       "github": "https://github.com/DavidTimi1/VisibleVoice",
       "live": "https://visual-voice.vercel.app"
     },
-    "description": "Web accessibility inclusitivity",
+    "description": "A browser extension that makes online education accessible for users with disabilities. Features include a screen reader for visually impaired users, content simplification and font adjustments for dyslexia, text-to-ASL sign language conversion with animated avatars, and hands-free voice command navigation.",
     "rank": 4,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "JavaScript"
+      "javascript"
     ],
     "year": 2024
   },
   {
-    "title": "nova-frontend",
+    "title": "Nova frontend",
     "links": {
       "github": "https://github.com/DavidTimi1/nova-frontend",
       "live": "https://ikuzo.vercel.app"
     },
-    "description": "Nova frontend repo",
+    "description": "Frontend for Nova — an edtech platform built with React. Provides a responsive learning interface for students with course navigation, progress tracking, and an intuitive dashboard designed for an engaging educational experience.",
     "rank": 4,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "CSS"
-    ],
-    "year": 2025
-  },
-  {
-    "title": "Test-Slide",
-    "links": {
-      "github": "https://github.com/DavidTimi1/Test-Slide"
-    },
-    "description": "",
-    "rank": 3,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "HTML"
+      "react",
+      "edtech"
     ],
     "year": 2025
   },
@@ -623,12 +400,14 @@
     "links": {
       "github": "https://github.com/DavidTimi1/Chess"
     },
-    "description": "",
-    "rank": 3,
+    "description": "A browser-based multiplayer chess game inspired by Chess Titans, allowing two players to compete in real time. Built entirely with vanilla JavaScript, HTML, and CSS — featuring full chess rules, piece highlighting, and responsive board layout.",
+    "rank": 5,
     "is_collab": false,
-    "is_featured": false,
+    "is_featured": true,
     "tech": [
-      "JavaScript"
+      "javascript",
+      "html",
+      "css"
     ],
     "year": 2023
   },
@@ -637,54 +416,59 @@
     "links": {
       "github": "https://github.com/DavidTimi1/DeCirco"
     },
-    "description": "Revolutionizing recycling by leveraging decentralisation and blockchain technology ",
+    "description": "Revolutionizing recycling by leveraging decentralisation and blockchain technology.",
     "rank": 3,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "TypeScript"
+      "nextjs",
+      "Aiken",
+      "web3"
     ],
     "year": 2025
   },
   {
-    "title": "flask_telegram_bot",
+    "title": "Flask Telegram Bot",
     "links": {
       "github": "https://github.com/DavidTimi1/flask_telegram_bot"
     },
-    "description": "Simple telegram bot that gives ai responses built using flask",
+    "description": "A Telegram chatbot built with Python Flask that responds to messages using GPT-4. Lightweight and webhook-based, it can be deployed on any public server and extended with custom commands or conversation context.",
     "rank": 3,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "Python"
+      "flask",
+      "GPT-4"
     ],
     "year": 2025
   },
   {
-    "title": "mit_ocw_downloader",
+    "title": "MIT Opencourseware Downloader",
     "links": {
       "github": "https://github.com/DavidTimi1/mit_ocw_downloader"
     },
-    "description": "Bulk download MIT OpenCourseWare Videos",
+    "description": "A Python script for bulk downloading video lectures from MIT OpenCourseWare. Automates the process of fetching and saving course materials locally for offline study.",
     "rank": 3,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "Python"
+      "python",
+      "Scripts"
     ],
     "year": 2025
   },
   {
-    "title": "Pythonanywhere-Free-Tier-CICD",
+    "title": "Pythonanywhere Free-Tier CICD",
     "links": {
       "github": "https://github.com/DavidTimi1/Pythonanywhere-Free-Tier-CICD"
     },
-    "description": "Emulate a CICD pipeline using Pythonanywhere api for seamless deployments for FREE TIER",
+    "description": "A CI/CD automation script that uses the PythonAnywhere API to trigger zero-downtime deployments on the free tier — pulling the latest code from GitHub and reloading the web app automatically, without needing paid webhooks or paid hosting features.",
     "rank": 3,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "Python"
+      "python",
+      "Scripts"
     ],
     "year": 2025
   },
@@ -693,12 +477,14 @@
     "links": {
       "github": "https://github.com/DavidTimi1/Ludo-Game"
     },
-    "description": "Web-based implementation of the classic board game Ludo, developed using HTML, CSS, and JavaScript.",
-    "rank": 3,
+    "description": "A complete web-based implementation of the classic Ludo board game with multiplayer support. Features dice rolling, pawn movement logic, turn management, and win detection — all built with vanilla JavaScript, HTML, and CSS.",
+    "rank": 4,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "JavaScript"
+      "javascript",
+      "html",
+      "css"
     ],
     "year": 2025
   },
@@ -707,52 +493,13 @@
     "links": {
       "github": "https://github.com/DavidTimi1/ASL-BE"
     },
-    "description": "",
-    "rank": 3,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [],
-    "year": 2025
-  },
-  {
-    "title": "Django-Sockets",
-    "links": {
-      "github": "https://github.com/DavidTimi1/Django-Sockets"
-    },
-    "description": "Test django websockets repo",
+    "description": "Python Flask backend for an American Sign Language (ASL) recognition application. Built as part of a hackathon, it processes image or video input and returns ASL gesture classifications to power accessibility tools for the deaf community.",
     "rank": 3,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "Python"
-    ],
-    "year": 2025
-  },
-  {
-    "title": "HNG-12-BE-Stage-2",
-    "links": {
-      "github": "https://github.com/DavidTimi1/HNG-12-BE-Stage-2"
-    },
-    "description": "HNG12 (STAGE 2) - DEVOPS x BACKEND Task",
-    "rank": 2,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "Python"
-    ],
-    "year": 2025
-  },
-  {
-    "title": "HNG-12-FE-Stage-2",
-    "links": {
-      "github": "https://github.com/DavidTimi1/HNG-12-FE-Stage-2"
-    },
-    "description": "HNG Intership 12 Stage 2 Task",
-    "rank": 3,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "JavaScript"
+      "hackathon",
+      "flask"
     ],
     "year": 2025
   },
@@ -762,12 +509,14 @@
       "github": "https://github.com/DavidTimi1/EcoNauts",
       "live": "https://eco-nauts.vercel.app"
     },
-    "description": "NACOSS hackerthon project",
+    "description": "An environmental awareness web app built for the NACOSS Tech Confluence hackathon. Built with React and TypeScript, EcoNauts encourages eco-friendly habits by gamifying sustainability challenges and tracking users' environmental impact.",
     "rank": 4,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "JavaScript"
+      "hackathon",
+      "react",
+      "typescript"
     ],
     "year": 2025
   },
@@ -776,83 +525,14 @@
     "links": {
       "github": "https://github.com/DavidTimi1/ProfileCard"
     },
-    "description": "Simple Profile Business Card",
+    "description": "A sleek, shareable digital business card built with HTML, CSS, and JavaScript. Displays name, role, contact links, and social profiles in a compact card layout — easy to customize and host as a standalone page.",
     "rank": 3,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "HTML"
-    ],
-    "year": 2025
-  },
-  {
-    "title": "HNG-12-FE-Stage-0-",
-    "links": {
-      "github": "https://github.com/DavidTimi1/HNG-12-FE-Stage-0-"
-    },
-    "description": "HNG Internship Frontend Track Stage 0",
-    "rank": 3,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "HTML"
-    ],
-    "year": 2025
-  },
-  {
-    "title": "HNG-FE-Stage-1",
-    "links": {
-      "github": "https://github.com/DavidTimi1/HNG-FE-Stage-1",
-      "live": "https://hng-fe-stage-1-two.vercel.app"
-    },
-    "description": "HNG Internship Frontend Track Satge 1 Task",
-    "rank": 4,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "JavaScript"
-    ],
-    "year": 2025
-  },
-  {
-    "title": "HNG-BE-Stage-1",
-    "links": {
-      "github": "https://github.com/DavidTimi1/HNG-BE-Stage-1"
-    },
-    "description": "HNG Internship Backend Track Stage 1 Task",
-    "rank": 3,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "Python"
-    ],
-    "year": 2025
-  },
-  {
-    "title": "HNG-12-BE-Stage-0",
-    "links": {
-      "github": "https://github.com/DavidTimi1/HNG-12-BE-Stage-0"
-    },
-    "description": "HNG Internship Backend Track Stage 0 Task",
-    "rank": 3,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "Python"
-    ],
-    "year": 2025
-  },
-  {
-    "title": "HNG-12-FE",
-    "links": {
-      "github": "https://github.com/DavidTimi1/HNG-12-FE"
-    },
-    "description": "HNG Internship Frontend Track",
-    "rank": 3,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "HTML"
+      "html",
+      "css",
+      "javascript"
     ],
     "year": 2025
   },
@@ -861,25 +541,14 @@
     "links": {
       "github": "https://github.com/DavidTimi1/NexusMind-AI"
     },
-    "description": "My work from nexusmind",
+    "description": "A React + Vite web application providing an AI-powered virtual customer care assistant interface. Allows businesses to embed an intelligent chatbot that handles customer queries, service lookups, and support escalation.",
     "rank": 2,
     "is_collab": false,
     "is_featured": false,
-    "tech": [],
-    "year": 2025
-  },
-  {
-    "title": "Next-js-dashboard-",
-    "links": {
-      "github": "https://github.com/DavidTimi1/Next-js-dashboard-",
-      "live": "https://next-js-dashboard-iota-self.vercel.app"
-    },
-    "description": "Getting started with nextjs",
-    "rank": 4,
-    "is_collab": false,
-    "is_featured": false,
     "tech": [
-      "TypeScript"
+      "react",
+      "css",
+      "vite"
     ],
     "year": 2025
   },
@@ -888,26 +557,30 @@
     "links": {
       "github": "https://github.com/DavidTimi1/AI-Tic-Tac-Toe"
     },
-    "description": "Tic toc toe AI using Minimax Algorithm",
+    "description": "A Python implementation of Tic-Tac-Toe with an unbeatable AI opponent powered by the Minimax algorithm. The AI evaluates all possible game states to always play optimally — making it impossible to beat without a draw.",
     "rank": 3,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "Python"
+      "python",
+      "scripts",
+      "AI"
     ],
     "year": 2023
   },
   {
-    "title": "Tic-Tac-Toe-",
+    "title": "Tic-Tac-Toe",
     "links": {
       "github": "https://github.com/DavidTimi1/Tic-Tac-Toe-"
     },
-    "description": "",
+    "description": "A classic browser-based 2-player Tic-Tac-Toe game built with vanilla JavaScript, HTML, and CSS. Features an interactive 3x3 grid, turn-based gameplay, win/draw detection, and a clean UI — playable directly in the browser with no setup needed.",
     "rank": 3,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "JavaScript"
+      "javascript",
+      "html",
+      "css"
     ],
     "year": 2023
   },
@@ -916,41 +589,30 @@
     "links": {
       "github": "https://github.com/DavidTimi1/Whatsapp-Chatgpt-AI"
     },
-    "description": "AI Chatbot for Whatsapp with Image Gen and Speech Recognition capabilities using Python Flask",
+    "description": "A Flask-based WhatsApp bot that integrates GPT-4 and Gemini API to respond to messages with AI-generated text, generate images on demand, and recognize speech from voice notes — bringing multimodal AI capabilities directly into WhatsApp chats.",
     "rank": 3,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "Python"
+      "flask",
+      "gemini api",
+      "GPT-4"
     ],
     "year": 2023
   },
   {
-    "title": "saasuke",
-    "links": {
-      "github": "https://github.com/DavidTimi1/saasuke"
-    },
-    "description": "Koyeb-deployed Django Saas",
-    "rank": 3,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "Python"
-    ],
-    "year": 2024
-  },
-  {
-    "title": "LearnXcess_Frontend",
+    "title": "LearnXcess Frontend",
     "links": {
       "github": "https://github.com/DavidTimi1/LearnXcess_Frontend",
       "live": "https://learnxcess.vercel.app"
     },
-    "description": "Frontend separated for easy deployment ",
+    "description": "The frontend for LearnXcess — an edtech platform connecting students with learning resources and tutors. Built with JavaScript and deployed separately on Vercel for flexible CI/CD, it provides a clean course browsing and enrollment experience.",
     "rank": 4,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "JavaScript"
+      "javascript",
+      "edtech"
     ],
     "year": 2024
   },
@@ -960,196 +622,46 @@
       "github": "https://github.com/DavidTimi1/NexusMind",
       "live": "https://nexusmind-alpha.vercel.app"
     },
-    "description": "",
+    "description": "A polished marketing landing page for NexusMind — an AI-powered customer intelligence product. Features animated sections, clear value proposition copy, and a modern layout designed to convert visitors to users.",
     "rank": 4,
     "is_collab": false,
     "is_featured": false,
     "tech": [
-      "JavaScript"
+      "javascript",
+      "landing-page"
     ],
     "year": 2024
-  },
-  {
-    "title": "Koyeb-Flask",
-    "links": {
-      "github": "https://github.com/DavidTimi1/Koyeb-Flask"
-    },
-    "description": "Example to deploy a Flask application on Koyeb",
-    "rank": 2,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "Python"
-    ],
-    "year": 2024
-  },
-  {
-    "title": "ChatAI",
-    "links": {
-      "github": "https://github.com/DavidTimi1/ChatAI"
-    },
-    "description": "React web app ",
-    "rank": 3,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "Python"
-    ],
-    "year": 2024
-  },
-  {
-    "title": "project-bits",
-    "links": {
-      "github": "https://github.com/DavidTimi1/project-bits"
-    },
-    "description": "Python (Flask), JavaScript, HTML, CSS, SQL pieces",
-    "rank": 3,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "JavaScript"
-    ],
-    "year": 2023
-  },
-  {
-    "title": "nextpy",
-    "links": {
-      "github": "https://github.com/DavidTimi1/nextpy",
-      "live": "https://dotagent.ai"
-    },
-    "description": "🤖Self-Modifying Framework from the Future 🔮 World's First AMS",
-    "rank": 2,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "Python"
-    ],
-    "year": 2025
-  },
-  {
-    "title": "message50",
-    "links": {
-      "github": "https://github.com/DavidTimi1/message50"
-    },
-    "description": "CS50 Python (Flask), JavaScript, HTML, CSS, SQL Final Project ",
-    "rank": 3,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "HTML"
-    ],
-    "year": 2023
-  },
-  {
-    "title": "Calc",
-    "links": {
-      "github": "https://github.com/DavidTimi1/Calc"
-    },
-    "description": "",
-    "rank": 3,
-    "is_collab": false,
-    "is_featured": false,
-    "tech": [
-      "JavaScript"
-    ],
-    "year": 2023
-  },
-
-  
-  {
-    "title": "liquidramp/web-app",
-    "links": {
-      "github": "https://github.com/liquidramp/web-app"
-    },
-    "description": "Collaborated via pull requests: https://github.com/liquidramp/web-app/pull/68",
-    "rank": 3,
-    "is_collab": true,
-    "is_featured": false,
-    "tech": [],
-    "year": 2026
-  },
-  {
-    "title": "liquidramp/dexfiat",
-    "links": {
-      "github": "https://github.com/liquidramp/dexfiat"
-    },
-    "description": "Collaborated via pull requests: https://github.com/liquidramp/dexfiat/pull/22",
-    "rank": 3,
-    "is_collab": true,
-    "is_featured": false,
-    "tech": [],
-    "year": 2026
-  },
-  {
-    "title": "The-Programming-club-FUTA/Members-Assessment",
-    "links": {
-      "github": "https://github.com/The-Programming-club-FUTA/Members-Assessment"
-    },
-    "description": "Collaborated via pull requests: https://github.com/The-Programming-club-FUTA/Members-Assessment/pull/7",
-    "rank": 3,
-    "is_collab": true,
-    "is_featured": false,
-    "tech": [],
-    "year": 2026
   },
   {
     "title": "Fasanya-Oluwatobiloba/ASO-CONCEPT",
     "links": {
       "github": "https://github.com/Fasanya-Oluwatobiloba/ASO-CONCEPT"
     },
-    "description": "Collaborated via pull requests: https://github.com/Fasanya-Oluwatobiloba/ASO-CONCEPT/pull/8",
+    "description": "Contributed backend features to ASO-CONCEPT — a private blogging platform. Built RESTful API endpoints using Node.js and Express, enabling secure blog post management, user authentication, and content delivery for the platform's authors.",
     "rank": 3,
     "is_collab": true,
     "is_featured": false,
-    "tech": [],
+    "tech": [
+      "backend",
+      "nodejs",
+      "express"
+    ],
     "year": 2025
   },
   {
-    "title": "osueke-christian/globex-website",
-    "links": {
-      "github": "https://github.com/osueke-christian/globex-website"
-    },
-    "description": "Collaborated via pull requests: https://github.com/osueke-christian/globex-website/pull/6",
-    "rank": 3,
-    "is_collab": true,
-    "is_featured": false,
-    "tech": [],
-    "year": 2025
-  },
-  {
-    "title": "leothatguy/embeddable-tour-web-app",
-    "links": {
-      "github": "https://github.com/leothatguy/embeddable-tour-web-app"
-    },
-    "description": "Collaborated via pull requests: https://github.com/leothatguy/embeddable-tour-web-app/pull/20",
-    "rank": 3,
-    "is_collab": true,
-    "is_featured": false,
-    "tech": [],
-    "year": 2025
-  },
-  {
-    "title": "hngprojects/open-school-portal-FE",
+    "title": "Openschool Portal",
     "links": {
       "github": "https://github.com/hngprojects/open-school-portal-FE"
     },
-    "description": "Collaborated via pull requests: https://github.com/hngprojects/open-school-portal-FE/pull/232",
+    "description": "Contributed to the Open School Portal — a Next.js school management platform that replaces paper-based workflows with digital attendance, grading, timetables, and fee management. Submitted feature improvements via pull request during the HNG internship collaboration.",
     "rank": 3,
     "is_collab": true,
     "is_featured": false,
-    "tech": [],
-    "year": 2025
-  },
-  {
-    "title": "Deep-Initiatives/dl-ai-crisisScope",
-    "links": {
-      "github": "https://github.com/Deep-Initiatives/dl-ai-crisisScope"
-    },
-    "description": "Collaborated via pull requests: https://github.com/Deep-Initiatives/dl-ai-crisisScope/pull/5",
-    "rank": 3,
-    "is_collab": true,
-    "is_featured": false,
-    "tech": [],
+    "tech": [
+      "typescript",
+      "nextjs",
+      "tailwindcss"
+    ],
     "year": 2025
   },
   {
@@ -1157,83 +669,50 @@
     "links": {
       "github": "https://github.com/Andrew-oduola/circle-backend"
     },
-    "description": "Collaborated via pull requests: https://github.com/Andrew-oduola/circle-backend/pull/7",
+    "description": "Contributed to Circle — a Django REST Framework backend with JWT authentication via Djoser, custom user models, and Swagger API documentation. Submitted improvements to the user accounts and authentication flow during a hackathon sprint.",
     "rank": 3,
     "is_collab": true,
     "is_featured": false,
-    "tech": [],
-    "year": 2025
+    "tech": [
+      "hackathon",
+      "django",
+      "python"
+    ]
   },
   {
-    "title": "winsznx/revamp",
+    "title": "Chainloop",
     "links": {
       "github": "https://github.com/winsznx/revamp"
     },
-    "description": "Collaborated via pull requests: https://github.com/winsznx/revamp/pull/2",
+    "description": "Contributed frontend improvements to Chainloop — a TypeScript + React web application built during a hackathon. Submitted UI enhancements and component fixes via pull request to improve the overall user experience.",
     "rank": 3,
     "is_collab": true,
     "is_featured": false,
-    "tech": [],
+    "tech": [
+      "typescript",
+      "hackathon",
+      "tailwindcss",
+      "react"
+    ],
     "year": 2025
   },
   {
-    "title": "andrewanuga/starel_waitlist",
+    "title": "RefugeeAI",
     "links": {
-      "github": "https://github.com/andrewanuga/starel_waitlist"
+      "github": "https://github.com/ProfBee-dot/refuge-ai-compass",
+      "live": "https://refuge-ai-compass-47.vercel.app"
     },
-    "description": "Collaborated via pull requests: https://github.com/andrewanuga/starel_waitlist/pull/2",
+    "description": "Contributed to RefugeeAid — an AI-powered multilingual platform that assists displaced people by coordinating fundraising, distributing supplies, and providing emotional, legal, and integration support. Features offline PWA support, AI-driven need-to-donor matching, predictive resource analytics, and multilingual chat via Google Translate API.",
     "rank": 3,
     "is_collab": true,
     "is_featured": false,
-    "tech": [],
-    "year": 2025
-  },
-  {
-    "title": "Fasanya-Oluwatobiloba/The-Teams",
-    "links": {
-      "github": "https://github.com/Fasanya-Oluwatobiloba/The-Teams"
-    },
-    "description": "Collaborated via pull requests: https://github.com/Fasanya-Oluwatobiloba/The-Teams/pull/11",
-    "rank": 3,
-    "is_collab": true,
-    "is_featured": false,
-    "tech": [],
-    "year": 2025
-  },
-  {
-    "title": "Fasanya-Oluwatobiloba/Starel",
-    "links": {
-      "github": "https://github.com/Fasanya-Oluwatobiloba/Starel"
-    },
-    "description": "Collaborated via pull requests: https://github.com/Fasanya-Oluwatobiloba/Starel/pull/1",
-    "rank": 3,
-    "is_collab": true,
-    "is_featured": false,
-    "tech": [],
-    "year": 2025
-  },
-  {
-    "title": "ProfBee-dot/refuge-ai-compass",
-    "links": {
-      "github": "https://github.com/ProfBee-dot/refuge-ai-compass"
-    },
-    "description": "Collaborated via pull requests: https://github.com/ProfBee-dot/refuge-ai-compass/pull/3",
-    "rank": 3,
-    "is_collab": true,
-    "is_featured": false,
-    "tech": [],
-    "year": 2025
-  },
-  {
-    "title": "Maxifacture/Slidetrail",
-    "links": {
-      "github": "https://github.com/Maxifacture/Slidetrail"
-    },
-    "description": "Collaborated via pull requests: https://github.com/Maxifacture/Slidetrail/pull/3",
-    "rank": 3,
-    "is_collab": true,
-    "is_featured": false,
-    "tech": [],
+    "tech": [
+      "react",
+      "typescript",
+      "shadcn",
+      "fastapi",
+      "supabase"
+    ],
     "year": 2025
   }
 ]
