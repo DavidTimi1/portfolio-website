@@ -5,7 +5,9 @@ import { GlassNav } from "@/components/ui/glass-nav";
 import { MobileNav } from "@/components/ui/mobile-nav";
 import { CustomCursor } from "@/components/ui/custom-cursor";
 import { CliWindow } from "@/components/terminal/cli-window";
+import { Toaster } from "@/components/ui/sonner";
 import { ActiveSectionProvider } from "@/components/providers/active-section-context";
+import { QCProvider } from "@/components/providers/query-client-context";
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-mono",
@@ -32,14 +34,17 @@ export default function RootLayout({
       <body
         className={`${jetbrainsMono.variable} ${ubuntu.variable} antialiased font-sans`}
       >
+        <Toaster />
         <div className="fixed inset-0 z-[-1] bg-zinc-900" />
-        <ActiveSectionProvider>
-          <GlassNav />
-          <MobileNav />
-          <CustomCursor />
-          <CliWindow />
-          {children}
-        </ActiveSectionProvider>
+        <QCProvider>
+          <ActiveSectionProvider>
+            <GlassNav />
+            <MobileNav />
+            <CustomCursor />
+            <CliWindow />
+            {children}
+          </ActiveSectionProvider>
+        </QCProvider>
       </body>
     </html>
   );

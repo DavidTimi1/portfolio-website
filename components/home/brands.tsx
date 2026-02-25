@@ -1,5 +1,6 @@
 import { BRANDS } from "@/data/brands";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 
 export function BrandsCarousel() {
@@ -23,7 +24,7 @@ export function BrandsCarousel() {
                     {[...BRANDS, ...BRANDS].map((brand, i) => (
                         <div key={i} className="flex flex-col items-center gap-4 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
                             {brand.logo && !brand.logo.includes("....") ? (
-                                <img src={brand.logo} alt={brand.name} className="h-8 w-auto object-contain max-w-[300px] brightness-150" />
+                                <Image width={50} height={50} src={brand.logo} alt={brand.name} className="h-8 w-auto object-contain max-w-[300px] brightness-150" />
                             ) : (
                                 <span className="text-xl font-bold text-zinc-400 hover:text-white whitespace-nowrap">{brand.name}</span>
                             )}

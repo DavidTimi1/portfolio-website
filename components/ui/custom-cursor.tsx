@@ -34,7 +34,7 @@ export function CustomCursor() {
 
         if (!hasFinePointer || !supportsHover) return;
 
-        setEnabled(true);
+        setTimeout(() => setEnabled(true))
 
         const moveCursor = (e: MouseEvent) => {
             cursorX.set(e.clientX - 16);
@@ -67,6 +67,13 @@ export function CustomCursor() {
             window.removeEventListener("mouseover", updateCursorType);
         };
     }, [cursorX, cursorY]);
+
+    useEffect(() => {
+        if (!enabled){
+            document.body.style.cursor = "unset";
+        }
+
+    }, [enabled])
 
     // ❌ Do not render on touch devices
     if (!enabled) return null;

@@ -40,7 +40,7 @@ function Gem({ count = technologies.length }) {
 
     // Create an Icosahedron geometry to distribute points evenly
     const radius = 1;
-    const geometry = useMemo(() => new THREE.IcosahedronGeometry(radius, 0), []);
+    // const geometry = useMemo(() => new THREE.IcosahedronGeometry(radius, 0), []);
 
     // Get vertices from the geometry to position our icons
     const verticesGeometry = useMemo(() => new THREE.IcosahedronGeometry(radius, 1), []);

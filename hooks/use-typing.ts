@@ -43,11 +43,13 @@ export function useTypingName(
     const value = steps[index];
 
     // pause at completed words
-    if (value === "ev_id" || value === "avid U.") {
-      setDelay(speed * pauseMultiplier);
-    } else {
-      setDelay(speed);
-    }
+    setTimeout(() => {
+      if (value === "ev_id" || value === "avid U.") {
+        setDelay(speed * pauseMultiplier);
+      } else {
+        setDelay(speed);
+      }
+    })
   }, [index, speed, pauseMultiplier]);
 
   return `D${steps[index]}`;

@@ -11,12 +11,12 @@ import { useTypingName } from "@/hooks/use-typing";
 import { SectionDetector } from "../ui/section-detector";
 import { HeroImage } from "./hero-image";
 
-const resumeLink = "/resume.pdf"; // Path to actual resume file in /public
+
 const GHLink = "https://github.com/DavidTimi1";
 const XLink = "https://x.com/DavidTimi_1";
 const MailLink = "mailto:duwagbale07@gmail.com";
 
-const ELEVATOR = <> Hi I'm David Uwagbale — a 20x Full-stack Software Engineer. <br />
+const ELEVATOR = <> Hi I&apos;m David Uwagbale — a 20x Full-stack Software Engineer. <br />
     <SeparatorVertical className="mx-auto" />
     I have a talent for developing awesome user experiences and building scalable solutions. </>
 
@@ -31,7 +31,7 @@ export default function Hero() {
 
     const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
     const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.9]);
-    const shardY = useTransform(scrollYProgress, [0, 1], [0, -100]);
+    // const shardY = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
     const viewFeaturedProjects = () => {
         document.getElementById('featured-projects')?.scrollIntoView({ behavior: "smooth" });
@@ -98,7 +98,7 @@ export default function Hero() {
 
                         <div className="flex flex-col gap-4 items-center justify-center md:flex-row">
                             <Button asChild className="bg-white text-black hover:bg-zinc-200 border-none rounded-full px-8 py-6 text-lg font-bold">
-                                <Link autoFocus href="/assets/resume.pdf" target="_blank">
+                                <Link autoFocus href="/resume.pdf" target="_blank">
                                     View Resume
                                     <ArrowUpRightFromSquareIcon />
                                 </Link>

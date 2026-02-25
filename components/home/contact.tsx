@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Github, Twitter, Mail, ArrowUpRight, Send, GithubIcon, MailIcon } from "lucide-react";
+import { GithubIcon, MailIcon } from "lucide-react";
 import { FaLinkedinIn, FaMedium, FaTelegram } from "react-icons/fa";
 import { Button } from "../ui/button";
 import { BsTwitterX } from "react-icons/bs";
