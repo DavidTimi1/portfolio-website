@@ -68,6 +68,13 @@ export function CustomCursor() {
         };
     }, [cursorX, cursorY]);
 
+    useEffect(() => {
+        if (!enabled){
+            document.body.style = "cursor: unset";
+        }
+
+    }, [enabled])
+
     // ❌ Do not render on touch devices
     if (!enabled) return null;
 
