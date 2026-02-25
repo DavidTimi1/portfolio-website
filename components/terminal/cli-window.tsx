@@ -2,14 +2,14 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Terminal, Maximize2, Minimize2, X, ChevronRight } from "lucide-react";
+import { Terminal, Maximize2, Minimize2, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useIsMobile } from "@/hooks/use-media-query";
 import { toast } from "sonner";
 
-const DIRECTORY_TREE = [
-    // todo
-]
+// const DIRECTORY_TREE = [
+//     // todo
+// ]
 
 const HOST_DOMAIN = "dev_id@portfolio:~"
 
@@ -227,7 +227,8 @@ export function CliWindow() {
             }
         }
 
-        travelled && handleCommandTraversal();
+        if (travelled) 
+            handleCommandTraversal();
     }
 
     function handleCommandTraversal() {

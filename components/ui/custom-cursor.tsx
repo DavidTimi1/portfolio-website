@@ -34,7 +34,7 @@ export function CustomCursor() {
 
         if (!hasFinePointer || !supportsHover) return;
 
-        setEnabled(true);
+        setTimeout(() => setEnabled(true))
 
         const moveCursor = (e: MouseEvent) => {
             cursorX.set(e.clientX - 16);

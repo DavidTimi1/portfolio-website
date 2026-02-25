@@ -1,6 +1,3 @@
-import Link from "next/link";
-import { ArrowLeftIcon } from "lucide-react";
-import { GlassNav } from "@/components/ui/glass-nav";
 import { ProjectsSearch } from "@/components/projects/projects-search";
 import { ProjectsList } from "@/components/projects/project-list";
 import { ProjectsFilter } from "@/components/projects/projects-filter";

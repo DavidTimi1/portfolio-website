@@ -1,9 +1,9 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import { useRef, useState } from "react";
 import Link from "next/link";
-import { ArrowUpRight, Github, ExternalLink, Terminal, ListIcon } from "lucide-react";
+import { ArrowUpRight, ListIcon } from "lucide-react";
 import ALL_PROJECTS from "@/data/projects.json";
 import { ProjectItem } from "./project-item";
 import Image from "next/image";
@@ -16,11 +16,10 @@ import { Project } from "@/data/projects";
 const featuredProjects = ALL_PROJECTS.filter((project) => project.is_featured);
 
 export default function Projects() {
-    const [currentProgress, setCurrentProgress] = useState(0);
+    const [currentProgress] = useState(0);
     const containerRef = useRef<HTMLDivElement>(null);
-    const { scrollXProgress } = useScroll({ container: containerRef });
+    // const { scrollXProgress } = useScroll({ container: containerRef });
 
-    scrollXProgress.updateAndNotify = setCurrentProgress;
     const currentIndex = Math.round(currentProgress * 2);
 
     // show projects in groups of 4s
@@ -121,7 +120,7 @@ export default function Projects() {
                                 </div>
                                 <div className="p-8">
                                     <h3 className="text-2xl font-bold mb-2 text-zinc-100">
-                                        Whoa, there's a lot!
+                                        Whoa, there&apos;s a lot!
                                     </h3>
                                     <p className="text-zinc-400 max-w-xs mb-8">
                                         I have way more cool stuff than I can fit in this carousel without breaking your scroll wheel.

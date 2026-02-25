@@ -32,7 +32,7 @@ export const ProjectsList = ({ }) => {
         }
     }, [isError, errorMessage]);
 
-    const updateLimit = useCallback(() => {
+    const updateLimit = () => {
         const limit = projectsData?.meta?.limit;
         if (!limit || !moreToLoad) return;
 
@@ -40,7 +40,7 @@ export const ProjectsList = ({ }) => {
         params.set("limit", String(limit + 20));
 
         router.replace(`/projects?${params.toString()}`);
-    }, [projectsData?.meta, searchParams, router]);
+    }
 
     const handleObserver = useCallback(
         (entries: IntersectionObserverEntry[]) => {

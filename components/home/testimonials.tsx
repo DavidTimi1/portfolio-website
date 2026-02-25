@@ -33,7 +33,7 @@ export function TestimonialsCarousel() {
                             className="absolute inset-0 flex flex-col justify-between"
                         >
                             <p className="text-sm text-zinc-300 italic leading-relaxed">
-                                "{TESTIMONIALS[currentIndex].text}"
+                                &quot;{TESTIMONIALS[currentIndex].text}&quot;
                             </p>
 
                             <div className="flex items-center gap-3 mt-4">

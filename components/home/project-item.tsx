@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { toast } from 'sonner';
 import { GithubIcon, ExternalLinkIcon } from "lucide-react";
 import { Button } from '../ui/button';
-import { MouseEventHandler } from 'react';
 import Image from 'next/image';
 
 

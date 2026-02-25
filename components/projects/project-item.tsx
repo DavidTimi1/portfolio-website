@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { Github, ExternalLink, GithubIcon, ExternalLinkIcon, StarIcon } from "lucide-react";
+import { GithubIcon, ExternalLinkIcon, StarIcon } from "lucide-react";
 import { Project } from "@/data/projects";
 import Image from "next/image";
 import { getProjectImage } from "@/lib/get-project-image";

@@ -9,18 +9,15 @@ import {
     Layers,
     Terminal,
     Layout,
-    Server,
-    Github,
-    GitCommit,
-    Users
+    Server
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function Skills() {
-    const iconSize = 40;
+    // const iconSize = 40;
     const radius = 160;
 
-    const [stats, setStats] = useState({
+    const [, setStats] = useState({
         repos: 0,
         followers: 0,
         contributions: 0,

@@ -25,7 +25,7 @@ export const ProjectHeader = () => {
                     <span className="text-sm tracking-normal">{" "} ... well, most of em 😂 </span>
                 </h2>
                 <p className="text-zinc-400 max-w-2xl">
-                    A comprehensive list of things I've built, broken, and fixed again.
+                    A comprehensive list of things I&apos;ve built, broken, and fixed again.
                 </p>
             </div>
         </motion.div>

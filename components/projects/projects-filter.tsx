@@ -2,7 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useActiveSection } from "../providers/active-section-context";
 import { toast } from "sonner";
 import { useTechOptions } from "@/hooks/use-projects";

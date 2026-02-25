@@ -6,9 +6,9 @@ import ALL_PROJECTS from "@/data/projects.json";
 
 const getTechMappings = (techList: string[]) => {
     const initialTechList = [...techList]
-    let supportList: string[] = [];
+    const supportList: string[] = [];
 
-    for (let tech of initialTechList) {
+    for (const tech of initialTechList) {
         switch (tech) {
             case "nextjs":
                 supportList.push(

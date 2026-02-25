@@ -3,11 +3,10 @@
 import { useState } from "react"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
-import { MenuIcon, XIcon, HomeIcon, LayersIcon, CodeIcon, FolderIcon, MailIcon } from "lucide-react"
+import { MenuIcon, XIcon } from "lucide-react"
 import { Button } from "./button"
 import { cn } from "@/lib/utils"
 import { useAppNav } from "@/hooks/use-app-nav";
-import { useActiveSection } from "../providers/active-section-context"
 
 export function MobileNav() {
     const [isOpen, setIsOpen] = useState(false)
