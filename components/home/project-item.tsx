@@ -4,6 +4,7 @@ import { toast } from 'sonner';
 import { GithubIcon, ExternalLinkIcon } from "lucide-react";
 import { Button } from '../ui/button';
 import { MouseEventHandler } from 'react';
+import Image from 'next/image';
 
 
 export const ProjectItem = ({
@@ -13,6 +14,9 @@ export const ProjectItem = ({
     project: Project;
     index: number
 }) => {
+    const ghLink = project.links.github;
+    const projectSlug = ghLink?.replace("https://github.com/", "")?.replace("/", "_")?.toLowerCase();
+    const imageSrc = project.image || ghLink ? `/assets/projects/${projectSlug}.jpg` : "/assets/projects/placeholder.jpg";
 
     const handleCardClick = () => {
         if (project.links.live) {
@@ -49,13 +53,17 @@ export const ProjectItem = ({
                 className="group relative h-full w-full bg-zinc-900/50 border border-zinc-800 rounded-2xl flex flex-col justify-between overflow-hidden cursor-pointer hover:border-zinc-600 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10"
             >
                 {/* Gradient Background */}
-                <div className={`absolute inset-0 bg-linear-to-br ${project.color || "from-zinc-800 to-zinc-950"} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                <div className={`absolute inset-0 bg-linear-to-br from-zinc-800 to-zinc-950 opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
                 {/* Content */}
                 <div className="relative h-full flex gap-3 pr-3">
                     <div className="flex items-center justify-center h-full aspect-square group-hover:scale-110 transition-transform duration-300">
-                        <img
-                            src={project.image}
+                        <Image
+                            src={imageSrc}
+                            alt={project.title}
+                            height={200}
+                            width={200}
+                            onError={ e => e.currentTarget.src = "/assets/projects/placeholder.jpg" }
                             className='size-full object-cover'
                         />
                     </div>

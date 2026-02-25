@@ -4,12 +4,16 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowUpRight, Github, ExternalLink, Terminal, ListIcon } from "lucide-react";
-import { projects } from "@/data/projects";
-import { toast } from "sonner";
+import ALL_PROJECTS from "@/data/projects.json";
 import { ProjectItem } from "./project-item";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { SectionDetector } from "../ui/section-detector";
+import { Project } from "@/data/projects";
+
+
+
+const featuredProjects = ALL_PROJECTS.filter((project) => project.is_featured);
 
 export default function Projects() {
     const [currentProgress, setCurrentProgress] = useState(0);
@@ -20,17 +24,17 @@ export default function Projects() {
     const currentIndex = Math.round(currentProgress * 2);
 
     // show projects in groups of 4s
-    const allProjectsSections = projects.reduce((acc, project, index) => {
+    const allProjectsSections = featuredProjects.reduce((acc, project, index) => {
         if (index % 4 === 0) {
-            acc.push(projects.slice(index, index + 4));
+            acc.push(featuredProjects.slice(index, index + 4));
         }
         return acc;
-    }, [] as typeof projects[]);
+    }, [] as Project[][]);
 
     const handleDotClick = (idx: number) => {
         const container = containerRef.current;
         if (!container) return;
-        
+
         container.scroll({
             left: idx * container.scrollWidth,
             behavior: "smooth",
@@ -155,7 +159,7 @@ export default function Projects() {
 
                 {/* Navigation Dots */}
                 <div className="h-12 flex items-center justify-center gap-2 pb-4">
-                    {projects.map((_, idx) => (
+                    {featuredProjects.map((_, idx) => (
                         <button
                             key={idx}
                             onClick={() => handleDotClick(idx)}
