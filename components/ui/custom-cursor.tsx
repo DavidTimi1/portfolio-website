@@ -70,7 +70,7 @@ export function CustomCursor() {
 
     useEffect(() => {
         if (!enabled){
-            document.body.style = "cursor: unset";
+            document.body.style.cursor = "unset";
         }
 
     }, [enabled])
