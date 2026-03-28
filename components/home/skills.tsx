@@ -40,7 +40,7 @@ export default function Skills() {
     ];
 
     return (
-        <section id="skills" className="min-h-screen py-10 snap-start w-full flex flex-col items-center justify-center bg-zinc-900 relative overflow-hidden z-10">
+        <section id="skills" className="min-h-screen py-10 md:snap-start w-full flex flex-col items-center justify-center bg-zinc-900 relative overflow-hidden z-10">
             <SectionDetector sectionId="skills" />
             <div className="absolute inset-0 bg-grid-white/[0.05] bg-size-[30px_30px] mask-[radial-gradient(ellipse_at_center,black,transparent_70%)]" />
 

@@ -37,7 +37,7 @@ export default function Experience() {
             <div className="relative min-h-screen w-full overflow-auto py-10">
                 {/* Mouse Follower Gradient (The "Border" Glow) */}
                 <div
-                    className="absolute inset-0 z-0 pointer-events-none blur-3xl"
+                    className="absolute hidden md:block inset-0 z-0 pointer-events-none blur-3xl"
                     style={{
                         background: `radial-gradient(400px circle at ${mousePosition.x}px ${mousePosition.y}px, var(--accent), transparent 60%)`
                     }}
@@ -161,7 +161,11 @@ function ExperienceItem({ data }: { data: typeof experiences[0] }) {
                     >
                         <div className="px-3 py-2">
                             <p className="text-zinc-400 text-sm leading-relaxed mb-4">
-                                {data.description[0]} {/* Showing first point as summary, or loop all */}
+                                <ul className="space-y-2 list-disc">
+                                    {
+                                        data.description.map( (item, i) => (<li key={i}> {item} </li>) )
+                                    }
+                                </ul>
                             </p>
                             <div className="flex flex-wrap gap-2">
                                 {data.skills.map((skill) => (

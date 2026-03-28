@@ -41,7 +41,7 @@ export default function Hero() {
         <section
             ref={targetRef}
             id="hero"
-            className="h-dvh w-full snap-start flex flex-col items-center justify-center relative overflow-hidden"
+            className="h-dvh w-full md:snap-start flex flex-col items-center justify-center relative overflow-hidden"
         >
             <SectionDetector sectionId="hero" />
 
@@ -57,6 +57,7 @@ export default function Hero() {
                 <Image
                     src="/assets/transparent-cracked.png"
                     alt=""
+                    aria-hidden
                     width={1920}
                     height={1080}
                     className="h-full md:w-full object-cover opacity-10 mix-blend-overlay"

@@ -59,7 +59,7 @@ export default function Skills() {
     ];
 
     return (
-        <section id="skills" className="min-h-screen w-full flex flex-col items-center justify-center snap-start bg-black relative overflow-hidden py-20 z-20">
+        <section id="skills" className="min-h-screen w-full flex flex-col items-center justify-center md:snap-start bg-black relative overflow-hidden py-20 z-20">
             <div className="absolute inset-0 bg-grid-white/[0.05] bg-size-[30px_30px] mask-[radial-gradient(ellipse_at_center,black,transparent_70%)]" />
 
             <div className="z-10 w-full container px-4 flex flex-col gap-24">

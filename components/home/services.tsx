@@ -25,7 +25,7 @@ const services = [
 
 export default function Services() {
     return (
-        <section id="services" className="min-h-screen snap-start w-full relative flex items-center justify-center">
+        <section id="services" className="min-h-screen md:snap-start w-full relative flex items-center justify-center">
             <SectionDetector sectionId="services" />
 
             <div className="relative container h-full py-10 mx-auto flex flex-col gap-12">

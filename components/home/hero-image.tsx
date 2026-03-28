@@ -39,7 +39,7 @@ export const HeroImage = () => {
                 >
                     <Image
                         src="/assets/my-avatar.jpg"
-                        alt="front avatar"
+                        alt="david's avatar"
                         width={512}
                         height={512}
                         className="w-full h-full object-cover rounded-full grayscale"
@@ -53,7 +53,7 @@ export const HeroImage = () => {
                 >
                     <Image
                         src="/assets/my-pic.jpg" // ← your second image
-                        alt="back avatar"
+                        alt="david's picture"
                         width={512}
                         height={512}
                         className="w-full h-full object-cover rounded-full"

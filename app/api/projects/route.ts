@@ -64,13 +64,15 @@ const getTechMappings = (techList: string[]) => {
 export const GET = (req: NextRequest) => {
     const searchParams = req.nextUrl.searchParams;
 
-    const search = searchParams.get("search");
-    const tech = searchParams.get("skill");
-    const is_collab = searchParams.get("is_collab");
-    const is_featured = searchParams.get("is_featured");
+    let search = searchParams.get("search");
+    let tech = searchParams.get("skill");
+    let is_collab = searchParams.get("is_collab");
+    let is_featured = searchParams.get("is_featured");
     const year = searchParams.get("year");
     const page = searchParams.get("page") || 1;
     const limit = searchParams.get("limit") || 20;
+
+    [search, tech, is_featured, is_collab] = [search, tech].map(m => m && m.toLowerCase().replace('.', ''))
 
 
     let filteredProjects = [...ALL_PROJECTS];

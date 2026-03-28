@@ -42,7 +42,7 @@ export default function Projects() {
 
 
     return (
-        <section id="featured-projects" className="min-h-screen py-10 snap-start w-full flex flex-col justify-center overflow-hidden relative">
+        <section id="featured-projects" className="min-h-screen py-10 md:snap-start w-full flex flex-col justify-center overflow-hidden relative">
             <SectionDetector sectionId="featured-projects" />
 
             <div className="w-full container flex flex-col space-y-5 pb-10">
