@@ -1,12 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { GithubIcon, MailIcon } from "lucide-react";
 import { FaLinkedinIn, FaMedium, FaTelegram } from "react-icons/fa";
 import { Button } from "../ui/button";
 import { BsTwitterX } from "react-icons/bs";
-
+import ContactForm from "./contact-form"; // Adjust path as needed
 
 export default function Contact() {
     return (
@@ -27,53 +26,12 @@ export default function Contact() {
                     </div>
                 </div>
 
-                {/* Form */}
-                <motion.form
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="w-full flex flex-col gap-4 bg-zinc-900/50 p-8 rounded-2xl border border-zinc-800 backdrop-blur-sm max-w-xl"
-                >
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="space-y-2">
-                            <label htmlFor="name" className="text-xs font-mono text-zinc-500 uppercase">Name</label>
-                            <input
-                                id="name"
-                                type="text"
-                                placeholder="John Doe"
-                                className="w-full bg-zinc-950/50 border border-zinc-800 rounded-lg px-4 py-3 text-sm focus:border-accent focus:outline-none transition-colors"
-                            />
-                        </div>
-                        <div className="space-y-2">
-                            <label htmlFor="email" className="text-xs font-mono text-zinc-500 uppercase">Email</label>
-                            <input
-                                id="email"
-                                type="email"
-                                placeholder="john@example.com"
-                                className="w-full bg-zinc-950/50 border border-zinc-800 rounded-lg px-4 py-3 text-sm focus:border-accent focus:outline-none transition-colors"
-                            />
-                        </div>
-                    </div>
-
-                    <div className="space-y-2">
-                        <label htmlFor="message" className="text-xs font-mono text-zinc-500 uppercase">Message</label>
-                        <textarea
-                            id="message"
-                            placeholder="Tell me about your project..."
-                            rows={4}
-                            className="w-full bg-zinc-950/50 border border-zinc-800 rounded-lg px-4 py-3 text-sm focus:border-accent focus:outline-none resize-none"
-                        />
-                    </div>
-
-                    <button className="mt-2 w-full bg-accent text-black font-bold py-3 rounded-lg hover:bg-cyan-300 flex items-center justify-center gap-2 group">
-                        <span>SEND MESSAGE</span>
-                    </button>
-                </motion.form>
+                {/* Form Component */}
+                <ContactForm />
 
                 <div className="md:hidden w-full">
                     <Socials />
                 </div>
-
 
                 {/* Footer */}
                 <div className="absolute bottom-4 text-center">
@@ -85,6 +43,7 @@ export default function Contact() {
         </section>
     );
 }
+
 
 
 const Socials = () => (
