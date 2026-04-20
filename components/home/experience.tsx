@@ -91,7 +91,7 @@ function WorkExperienceSection() {
                         WORK <span className="text-accent italic">HISTORY</span>
                     </h2>
                     <Button>
-                        <Link href="/resume" target="_blank" rel="noopener noreferrer">
+                        <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                             <span className="hidden md:block">Resume</span>
                             <span className="sr-only">Resume</span>
                             <ArrowUpRightFromSquareIcon />
