@@ -57,18 +57,18 @@ export default function Experience() {
                         </div>
 
                         <div className="flex flex-col w-full md:w-1/2 gap-3">
-                            <div className="md:h-1/6 w-full ">
+                            <div className="md:h-2/6 w-full ">
                                 <MetricCards />
                             </div>
 
-                            <div className="md:h-2/6 W-full bg-black relative overflow-hidden hover:shadow-[0_0_1px_1px] shadow-accent/70 rounded-xl border border-zinc-600 hover:border-accent/70 hover:scale-[0.99] transition">
+                            <div className="hidden md:h-2/6 W-full bg-black relative overflow-hidden hover:shadow-[0_0_1px_1px] shadow-accent/70 rounded-xl border border-zinc-600 hover:border-accent/70 hover:scale-[0.99] transition">
                                 <TestimonialsCarousel />
                                 {/* Hover Border Effect */}
                                 <div className="absolute inset-0 border border-transparent group-hover:border-accent/70 group-hover:shadow-md rounded-xl transition-colors duration-300 pointer-events-none" />
                             </div>
 
 
-                            <div className="flex-1 md:h-3/6 w-full bg-black relative overflow-hidden hover:shadow-[0_0_1px_1px] shadow-accent/70 rounded-xl border border-zinc-600 hover:border-accent/70 hover:scale-[0.99] transition">
+                            <div className="flex-1 md:h-4/6 w-full bg-black relative overflow-hidden hover:shadow-[0_0_1px_1px] shadow-accent/70 rounded-xl border border-zinc-600 hover:border-accent/70 hover:scale-[0.99] transition">
                                 <CertificatesCarousel />
                                 <div className="absolute inset-0 border border-transparent group-hover:border-accent/70 group-hover:shadow-md rounded-xl transition-colors duration-300 pointer-events-none" />
                             </div>
