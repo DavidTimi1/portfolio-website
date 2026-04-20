@@ -123,7 +123,7 @@ export function CliWindow() {
                 <motion.button
                     initial={{ y: 100 }}
                     animate={{ y: 0 }}
-                    className="fixed bottom-5 right-5 cursor-pointer md:right-8 z-50 p-3 bg-zinc-900 border border-zinc-800 text-accent rounded-full shadow-lg hover:shadow-[0_0_20px_rgba(0,240,255,0.3)] transition-shadow"
+                    className="fixed hidden bottom-5 right-5 cursor-pointer md:right-8 z-50 p-3 bg-zinc-900 border border-zinc-800 text-accent rounded-full shadow-lg hover:shadow-[0_0_20px_rgba(0,240,255,0.3)] transition-shadow"
                     onClick={() => setIsOpen(true)}
                 >
                     <Terminal size={24} />
@@ -145,7 +145,7 @@ export function CliWindow() {
                         exit={{ y: "100%", opacity: 0 }}
                         transition={{ type: "spring", damping: 25, stiffness: 200 }}
                         className={cn(
-                            "fixed z-100 bg-black/90 font-mono backdrop-blur-xl border border-zinc-800 shadow-2xl overflow-hidden flex flex-col",
+                            "fixed hidden z-100 bg-black/90 font-mono backdrop-blur-xl border border-zinc-800 shadow-2xl overflow-hidden flex flex-col",
                             isFullScreen ? "inset-0" : "bottom-4 right-4 md:right-8"
                         )}
                     >
