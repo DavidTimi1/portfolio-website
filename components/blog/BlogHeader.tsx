@@ -3,7 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowLeftIcon, CalendarIcon, ChevronRightIcon, ClockIcon } from "lucide-react";
+import { CalendarIcon, ChevronRightIcon, ClockIcon } from "lucide-react";
+
 import { BlogMetadata } from "@/lib/blog";
 import { getReadingTime } from "@/hooks/use-blogs";
 import { cn } from "@/lib/utils";

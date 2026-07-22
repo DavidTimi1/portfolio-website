@@ -1,6 +1,7 @@
 import { useActiveSection } from "@/components/providers/active-section-context";
 import { useRouter } from "next/navigation";
-import { Code2Icon, BriefcaseIcon, MailIcon, LayersIcon, FolderGitIcon, HomeIcon, BookOpenIcon } from "lucide-react";
+import { Code2Icon, BriefcaseIcon, MailIcon, LayersIcon, FolderGitIcon, HomeIcon } from "lucide-react";
+
 
 export const navItems = [
     { name: "Home", icon: HomeIcon, href: "/" },

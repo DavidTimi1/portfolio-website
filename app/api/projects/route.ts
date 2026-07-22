@@ -64,13 +64,14 @@ const getTechMappings = (techList: string[]) => {
 export const GET = (req: NextRequest) => {
     const searchParams = req.nextUrl.searchParams;
 
-    let rawSearch = searchParams.get("search");
-    let rawTech = searchParams.get("skill");
-    let is_collab = searchParams.get("is_collab");
-    let is_featured = searchParams.get("is_featured");
+    const rawSearch = searchParams.get("search");
+    const rawTech = searchParams.get("skill");
+    const is_collab = searchParams.get("is_collab");
+    const is_featured = searchParams.get("is_featured");
     const year = searchParams.get("year");
     const rawPage = searchParams.get("page");
     const rawLimit = searchParams.get("limit");
+
 
     const search = rawSearch ? rawSearch.toLowerCase().trim().slice(0, 100).replace('.', '') : null;
     const tech = rawTech ? rawTech.toLowerCase().trim().slice(0, 50).replace('.', '') : null;
