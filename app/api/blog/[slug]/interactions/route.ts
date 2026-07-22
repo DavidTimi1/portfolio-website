@@ -1,21 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 import { db } from '@/lib/db';
-
-function getOrSetUserId(cookieStore: Awaited<ReturnType<typeof cookies>>): string {
-  let userId = cookieStore.get('devid_blog_user_id')?.value;
-  if (!userId) {
-    userId = crypto.randomUUID();
-    cookieStore.set('devid_blog_user_id', userId, {
-      maxAge: 60 * 60 * 24 * 365 * 10, // 10 years
-      path: '/',
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'lax',
-    });
-  }
-  return userId;
-}
+import { getOrSetUserId, isValidSlug } from '@/lib/security';
+import { checkRateLimit, getClientIp } from '@/lib/rate-limit';
 
 export async function GET(
   request: NextRequest,
@@ -23,8 +10,13 @@ export async function GET(
 ) {
   try {
     const { slug } = await params;
+
+    if (!isValidSlug(slug)) {
+      return NextResponse.json({ error: 'Invalid article slug' }, { status: 400 });
+    }
+
     const cookieStore = await cookies();
-    const userId = getOrSetUserId(cookieStore);
+    const userId = await getOrSetUserId(cookieStore);
 
     if (!db) {
       // Mock / fallback response
@@ -65,18 +57,42 @@ export async function POST(
 ) {
   try {
     const { slug } = await params;
+
+    if (!isValidSlug(slug)) {
+      return NextResponse.json({ error: 'Invalid article slug' }, { status: 400 });
+    }
+
+    // Rate Limiting (30 interaction updates per minute per IP)
+    const clientIp = getClientIp(request);
+    const rateLimit = checkRateLimit(`post_interaction:${clientIp}`, 30, 60 * 1000);
+    if (!rateLimit.success) {
+      return NextResponse.json(
+        { error: 'Too many interaction requests. Please slow down.' },
+        { status: 429 }
+      );
+    }
+
     const body = await request.json();
     const { action, count, value } = body;
 
+    const allowedActions = ['clap', 'bookmark', 'view'];
+    if (!action || typeof action !== 'string' || !allowedActions.includes(action)) {
+      return NextResponse.json({ error: 'Invalid interaction action' }, { status: 400 });
+    }
+
+    // Bounded clap count (1 to 50)
+    const safeCount = typeof count === 'number' ? Math.max(1, Math.min(50, Math.floor(count))) : 1;
+    const safeValue = Boolean(value);
+
     const cookieStore = await cookies();
-    const userId = getOrSetUserId(cookieStore);
+    const userId = await getOrSetUserId(cookieStore);
 
     if (!db) {
       return NextResponse.json({
         success: true,
         is_mock: true,
         action,
-        value: action === 'clap' ? count : value,
+        value: action === 'clap' ? safeCount : safeValue,
       });
     }
 
@@ -85,8 +101,8 @@ export async function POST(
     let initialBookmarked = false;
     let initialViews = 0;
 
-    if (action === 'clap') initialClaps = count ?? 1;
-    if (action === 'bookmark') initialBookmarked = value ?? false;
+    if (action === 'clap') initialClaps = safeCount;
+    if (action === 'bookmark') initialBookmarked = safeValue;
     if (action === 'view') initialViews = 1;
 
     // Upsert query
@@ -95,8 +111,8 @@ export async function POST(
       VALUES (${slug}, ${userId}, ${initialClaps}, ${initialBookmarked}, ${initialViews})
       ON CONFLICT (slug, user_id)
       DO UPDATE SET
-        claps = CASE WHEN ${action} = 'clap' THEN LEAST(50, blog_interactions.claps + ${count ?? 1}) ELSE blog_interactions.claps END,
-        bookmarked = CASE WHEN ${action} = 'bookmark' THEN ${value ?? false} ELSE blog_interactions.bookmarked END,
+        claps = CASE WHEN ${action} = 'clap' THEN LEAST(50, blog_interactions.claps + ${safeCount}) ELSE blog_interactions.claps END,
+        bookmarked = CASE WHEN ${action} = 'bookmark' THEN ${safeValue} ELSE blog_interactions.bookmarked END,
         views = CASE WHEN ${action} = 'view' THEN blog_interactions.views + 1 ELSE blog_interactions.views END,
         updated_at = CURRENT_TIMESTAMP
       RETURNING claps, bookmarked, views
@@ -117,3 +133,4 @@ export async function POST(
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }
+
