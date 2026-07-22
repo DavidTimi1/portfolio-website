@@ -2,7 +2,7 @@ import { ProjectsSearch } from "@/components/projects/projects-search";
 import { ProjectsList } from "@/components/projects/project-list";
 import { ProjectsFilter } from "@/components/projects/projects-filter";
 import { Suspense } from "react";
-import Preloader from "../loading";
+import Preloader from "../../loading";
 import { ProjectHeader } from "@/components/projects/project-header";
 
 
