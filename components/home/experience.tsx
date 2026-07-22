@@ -11,6 +11,7 @@ import { Button } from "../ui/button";
 import { MetricCards } from "./metrics";
 import { SectionDetector } from "../ui/section-detector";
 import Link from "next/link";
+import { LatestBlogCarousel } from "./latest-blog";
 
 export default function Experience() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -49,27 +50,33 @@ export default function Experience() {
                             {/* Left Half: Work Experience */}
                             <WorkExperienceSection />
 
-                            <div className="md:h-1/4 min-h-[100px] w-full bg-black relative overflow-hidden hover:shadow-[0_0_1px_1px] shadow-accent/70 rounded-xl border border-zinc-600 hover:border-accent/70 hover:scale-[0.99] transition">
-                                <BrandsCarousel />
-                                {/* Hover Border Effect */}
-                                <div className="absolute inset-0 border border-transparent group-hover:border-accent/70 group-hover:shadow-md rounded-xl transition-colors duration-300 pointer-events-none" />
+                            <div className="flex flex-col md:flex-row gap-3 md:h-1/4 min-h-[100px] w-full">
+                                <div className="w-full bg-black relative overflow-hidden hover:shadow-[0_0_1px_1px] shadow-accent/70 rounded-xl border border-zinc-600 hover:border-accent/70 hover:scale-[0.99] transition">
+                                    <BrandsCarousel />
+                                    {/* Hover Border Effect */}
+                                    <div className="absolute inset-0 border border-transparent group-hover:border-accent/70 group-hover:shadow-md rounded-xl transition-colors duration-300 pointer-events-none" />
+                                </div>
                             </div>
                         </div>
 
                         <div className="flex flex-col w-full md:w-1/2 gap-3">
-                            <div className="md:h-2/6 w-full ">
+                            <div className="md:h-1/5 w-full ">
                                 <MetricCards />
                             </div>
 
-                            <div className="hidden md:h-2/6 W-full bg-black relative overflow-hidden hover:shadow-[0_0_1px_1px] shadow-accent/70 rounded-xl border border-zinc-600 hover:border-accent/70 hover:scale-[0.99] transition">
+                            <div className="hidden md:h-2/5 W-full bg-black relative overflow-hidden hover:shadow-[0_0_1px_1px] shadow-accent/70 rounded-xl border border-zinc-600 hover:border-accent/70 hover:scale-[0.99] transition">
                                 <TestimonialsCarousel />
                                 {/* Hover Border Effect */}
                                 <div className="absolute inset-0 border border-transparent group-hover:border-accent/70 group-hover:shadow-md rounded-xl transition-colors duration-300 pointer-events-none" />
                             </div>
 
-
-                            <div className="flex-1 md:h-4/6 w-full bg-black relative overflow-hidden hover:shadow-[0_0_1px_1px] shadow-accent/70 rounded-xl border border-zinc-600 hover:border-accent/70 hover:scale-[0.99] transition">
+                            <div className="flex-1 w-full bg-black relative overflow-hidden hover:shadow-[0_0_1px_1px] shadow-accent/70 rounded-xl border border-zinc-600 hover:border-accent/70 hover:scale-[0.99] transition">
                                 <CertificatesCarousel />
+                                <div className="absolute inset-0 border border-transparent group-hover:border-accent/70 group-hover:shadow-md rounded-xl transition-colors duration-300 pointer-events-none" />
+                            </div>
+
+                            <div className="flex-1 w-full bg-black relative overflow-hidden hover:shadow-[0_0_1px_1px] shadow-accent/70 rounded-xl border border-zinc-600 hover:border-accent/70 hover:scale-[0.99] transition">
+                                <LatestBlogCarousel />
                                 <div className="absolute inset-0 border border-transparent group-hover:border-accent/70 group-hover:shadow-md rounded-xl transition-colors duration-300 pointer-events-none" />
                             </div>
                         </div>
@@ -90,7 +97,7 @@ function WorkExperienceSection() {
                     <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tighter">
                         WORK <span className="text-accent italic">HISTORY</span>
                     </h2>
-                    <Button>
+                    <Button asChild>
                         <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                             <span className="hidden md:block">Resume</span>
                             <span className="sr-only">Resume</span>
