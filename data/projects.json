@@ -6,9 +6,9 @@
       "live": "https://davidtimi1-github-io.vercel.app"
     },
     "description": "My personal developer portfolio — the site you're on right now! Built with Next.js and Framer Motion to showcase my projects, skills, and experience through smooth animations and a responsive, modern design.",
-    "rank": 4,
+    "rank": 3,
     "is_collab": false,
-    "is_featured": true,
+    "is_featured": false,
     "tech": [
       "framer",
       "nextjs"
@@ -119,7 +119,7 @@
       "github": "https://github.com/DavidTimi1/hng-va",
       "live": "https://hng-va.vercel.app"
     },
-    "description": "A TypeScript + React web application serving as a virtual assistants directory or dashboard tool for HNG Tech. Provides an interactive interface for managing and surfacing assistant-related workflows, built with Vite for a fast development experience.",
+    "description": "Virtual assistants talent discovery webpage for HNG Tech. Shows accelerator affiliations, brand reputation and seamlessly works well with other units of the official HNG Tech platform.",
     "rank": 4,
     "is_collab": false,
     "is_featured": true,
@@ -138,7 +138,7 @@
     "description": "An AI-powered graduation planning and admin portal built with Next.js, Supabase, and Gemini API. Designed to help students track their graduation requirements and university administrators manage graduation workflows, with intelligent recommendations and real-time data sync.",
     "rank": 4,
     "is_collab": false,
-    "is_featured": true,
+    "is_featured": false,
     "tech": [
       "nextjs",
       "gemini api",
@@ -234,14 +234,15 @@
       "github": "https://github.com/DavidTimi1/Message_50"
     },
     "description": "An end-to-end encrypted (E2EE) chat app built with React, where messages are encrypted client-side before being transmitted — ensuring not even the server can read them. Paired with a Django REST backend (Msg50-BE) for user management and message relay.",
-    "rank": 3,
+    "rank": 5,
     "is_collab": false,
-    "is_featured": false,
+    "is_featured": true,
     "tech": [
       "javascript",
       "react",
       "django",
-      "socketio"
+      "socketio",
+      "aes/rsa"
     ],
     "year": 2024
   },
@@ -352,7 +353,7 @@
     "title": "Portfolio Website V1",
     "links": {
       "github": "https://github.com/DavidTimi1/davidtimi1.github.io",
-      "live": "https://davidtimi1-github-io.vercel.app"
+      "live": "https://davidtimi1.github.io"
     },
     "description": "The first version of my personal developer portfolio, hosted as a GitHub Pages site. Built with React and Bootstrap CSS, showcasing early projects and skills with a clean, responsive layout.",
     "rank": 4,
@@ -651,7 +652,8 @@
   {
     "title": "Openschool Portal",
     "links": {
-      "github": "https://github.com/hngprojects/open-school-portal-FE"
+      "github": "https://github.com/hngprojects/open-school-portal-FE",
+      "live": "https://schoolbase.africa/"
     },
     "description": "Contributed to the Open School Portal — a Next.js school management platform that replaces paper-based workflows with digital attendance, grading, timetables, and fee management. Submitted feature improvements via pull request during the HNG internship collaboration.",
     "rank": 3,
@@ -682,7 +684,8 @@
   {
     "title": "Chainloop",
     "links": {
-      "github": "https://github.com/winsznx/revamp"
+      "github": "https://github.com/winsznx/revamp",
+      "live": "https://www.chaincircle.org/"
     },
     "description": "Contributed frontend improvements to Chainloop — a TypeScript + React web application built during a hackathon. Submitted UI enhancements and component fixes via pull request to improve the overall user experience.",
     "rank": 3,
@@ -714,5 +717,40 @@
       "supabase"
     ],
     "year": 2025
+  }, {
+    "title": "Mosaic",
+    "links": {
+      "github": "https://github.com/sirxalfred/mosaic-cardano",
+      "live": "https://https://mosaic-cardano-production-e6ae.up.railway.app/"
+    },
+    "description": "Mosaic is a collaborative infrastructure for communities, allowing groups of people to document ideas, collaborate openly and preserve every contribution on the blockchain.",
+    "rank": 5,
+    "is_collab": false,
+    "is_featured": true,
+    "tech": [
+      "nextjs",
+      "cardano",
+      "redis",
+      "neo4j (Graph DB)"
+    ],
+    "year": 2026
+  }, {
+    "title": "Catchup",
+    "description": "Skipped lectures? I got you. Turn those notes and PDFs into interactive tutoring sessions. #studysmart",
+    "links": {
+      "github": "https://github.com/DavidTimi1/catch-up",
+      "live": "https://catchup-ten.vercel.app/"
+    },
+    "rank": 4,
+    "is_collab": false,
+    "is_featured": false,
+    "tech": [
+      "nextjs",
+      "pwa",
+      "offline",
+      "gemini",
+      "postgresql"
+    ],
+    "year": 2026
   }
 ]
