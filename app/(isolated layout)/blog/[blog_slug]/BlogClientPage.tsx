@@ -7,6 +7,7 @@ import { BlogMetadata } from "@/lib/blog";
 import { BlogHeader } from "@/components/blog/BlogHeader";
 import { BlogBody } from "@/components/blog/BlogBody";
 import { Interactions } from "@/components/blog/Interactions";
+import { RecommendedPosts } from "@/components/blog/RecommendedPosts";
 import { useBlogComments, useBlogInteractions } from "@/hooks/use-blogs";
 import { Button } from "@/components/ui/button";
 
@@ -83,6 +84,10 @@ export function BlogClientPage({ metadata, content }: BlogClientPageProps) {
         >
           <BlogBody content={content} />
         </motion.div>
+
+        {/* Recommended Posts Section */}
+        <RecommendedPosts slug={metadata.slug} />
+
 
         {/* Comments Section */}
         <motion.div

@@ -208,3 +208,39 @@ export function useBlogComments(slug: string) {
     isPostingComment: addCommentMutation.isPending,
   };
 }
+
+export interface RecommendedPostItem {
+  metadata: {
+    slug: string;
+    title: string;
+    description: string;
+    cover_image: string;
+    created_at: string;
+    category: string;
+    author?: string;
+    redirect_to?: string;
+  };
+  reason: 'top_interacted' | 'related' | 'unexplored';
+  readTime: string;
+}
+
+export function useBlogRecommendations(slug: string) {
+  const queryKey = ['blog-recommendations', slug];
+
+  const { data, isLoading, error } = useQuery<{ recommendations: RecommendedPostItem[] }>({
+    queryKey,
+    queryFn: async () => {
+      const res = await fetch(`/api/blog/${slug}/recommendations`);
+      if (!res.ok) throw new Error('Failed to fetch recommendations');
+      return res.json();
+    },
+    staleTime: 1000 * 60 * 5, // 5 minutes cache
+  });
+
+  return {
+    recommendations: data?.recommendations ?? [],
+    isLoading,
+    error,
+  };
+}
+
