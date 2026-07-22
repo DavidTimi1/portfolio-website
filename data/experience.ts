@@ -1,19 +1,6 @@
 
 export const experiences = [
     {
-        role: "Full-stack Developer",
-        logo: "/assets/brands/deeplab.svg", // Using existing brand logo if available or generic
-        company: "DeepLab",
-        period: ["09/2025"],
-        description: [
-            `AI-to-Web Integration: Architected production-ready MVPs in high-velocity pods, bridging complex AI
-            models with React applications and reducing latency through robust asynchronous API layers.`,
-            `Global Collaboration: Contributed to a distributed, community-led team to build accessible AI tools, ensuring
-            high code standards and seamless integration within the SingularityNET ecosystem.`
-        ],
-        skills: ["React", "Next.js", "Node.js", "TypeScript"]
-    },
-    {
         role: "Frontend Engineer",
         logo: "/assets/brands/placeholder-company.jpeg", // Placeholder or reuse deeplab if same
         company: "Dlab Technologies",
@@ -24,7 +11,20 @@ export const experiences = [
             `Data & Observability: Built a modular data layer using TanStack Query, Zustand, and Redux; integrated
             Sentry/Mixpanel to reduce bugs by 20% and optimize user retention.`
         ],
-        skills: ["React", "Frontend Architecture", "Team Leadership"]
+        skills: ["Nexjs", "Frontend Architecture", "Team Leadership"]
+    },
+    {
+        role: "Full-stack Developer",
+        logo: "/assets/brands/deeplab.svg", // Using existing brand logo if available or generic
+        company: "DeepLab",
+        period: ["09/2025", "04/2026"],
+        description: [
+            `AI-to-Web Integration: Architected production-ready MVPs in high-velocity pods, bridging complex AI
+            models with React applications and reducing latency through robust asynchronous API layers.`,
+            `Global Collaboration: Contributed to a distributed, community-led team to build accessible AI tools, ensuring
+            high code standards and seamless integration within the SingularityNET ecosystem.`
+        ],
+        skills: ["React", "Next.js", "Node.js", "TypeScript"]
     },
     {
         role: "Frontend Engineer Intern",

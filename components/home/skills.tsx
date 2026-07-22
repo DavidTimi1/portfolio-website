@@ -27,7 +27,7 @@ export default function Skills() {
         { name: "React", icon: FaReact, color: "#61DAFB" },
         { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
         { name: "Node.js", icon: FaNodeJs, color: "#339933" },
-        { name: "Next.js", icon: SiNextdotjs, color: "#ffffff" },
+        { name: "Nextjs", icon: SiNextdotjs, color: "#ffffff" },
         { name: "Python", icon: FaPython, color: "#3776AB" },
         { name: "Django", icon: SiDjango, color: "#092E20" },
         { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3" },

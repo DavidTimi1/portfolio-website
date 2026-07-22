@@ -64,15 +64,20 @@ const getTechMappings = (techList: string[]) => {
 export const GET = (req: NextRequest) => {
     const searchParams = req.nextUrl.searchParams;
 
-    let search = searchParams.get("search");
-    let tech = searchParams.get("skill");
-    let is_collab = searchParams.get("is_collab");
-    let is_featured = searchParams.get("is_featured");
+    const rawSearch = searchParams.get("search");
+    const rawTech = searchParams.get("skill");
+    const is_collab = searchParams.get("is_collab");
+    const is_featured = searchParams.get("is_featured");
     const year = searchParams.get("year");
-    const page = searchParams.get("page") || 1;
-    const limit = searchParams.get("limit") || 20;
+    const rawPage = searchParams.get("page");
+    const rawLimit = searchParams.get("limit");
 
-    [search, tech, is_featured, is_collab] = [search, tech].map(m => m && m.toLowerCase().replace('.', ''))
+
+    const search = rawSearch ? rawSearch.toLowerCase().trim().slice(0, 100).replace('.', '') : null;
+    const tech = rawTech ? rawTech.toLowerCase().trim().slice(0, 50).replace('.', '') : null;
+
+    const page = Math.max(1, parseInt(rawPage || "1", 10) || 1);
+    const limit = Math.min(50, Math.max(1, parseInt(rawLimit || "20", 10) || 20));
 
 
     let filteredProjects = [...ALL_PROJECTS];
@@ -80,7 +85,7 @@ export const GET = (req: NextRequest) => {
     // Example filtering
     if (search) {
         filteredProjects = filteredProjects.filter(project =>
-            project.title.toLowerCase().includes(search.toLowerCase())
+            project.title.toLowerCase().includes(search)
         );
     }
 
@@ -104,9 +109,12 @@ export const GET = (req: NextRequest) => {
     }
 
     if (year) {
-        filteredProjects = filteredProjects.filter(project =>
-            project.year === Number(year)
-        );
+        const yearNum = parseInt(year, 10);
+        if (!isNaN(yearNum)) {
+            filteredProjects = filteredProjects.filter(project =>
+                project.year === yearNum
+            );
+        }
     }
 
     const sortedProjects = filteredProjects.sort(
@@ -114,11 +122,11 @@ export const GET = (req: NextRequest) => {
     );
 
     const paginatedProjects = sortedProjects.slice(
-        (Number(page) - 1) * Number(limit),
-        Number(page) * Number(limit)
+        (page - 1) * limit,
+        page * limit
     );
 
-    return NextResponse.json({ projects: paginatedProjects, meta: { total: sortedProjects.length, page: Number(page), limit: Number(limit) } });
+    return NextResponse.json({ projects: paginatedProjects, meta: { total: sortedProjects.length, page, limit } });
 };
 
 

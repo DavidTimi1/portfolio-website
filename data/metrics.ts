@@ -1,9 +1,16 @@
 import { BriefcaseBusiness, FolderKanban, Globe } from "lucide-react";
 
+const STARTED = new Date('2022-10-03');
+const today = new Date();
+
+const years = (today.getTime() - STARTED.getTime()) / (1000 * 60 * 60 * 24 * 365.25)
+
+const experience = Math.floor(years)
+
 export const STATS = [
     {
         title: "Years Experience",
-        value: "3+",
+        value: `${experience}+`,
         description: "Building scalable web & mobile apps",
         icon: BriefcaseBusiness
     },

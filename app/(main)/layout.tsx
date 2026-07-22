@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Ubuntu_Sans } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import { GlassNav } from "@/components/ui/glass-nav";
 import { MobileNav } from "@/components/ui/mobile-nav";
 import { CustomCursor } from "@/components/ui/custom-cursor";
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${jetbrainsMono.variable} ${ubuntu.variable} antialiased font-sans`}
+        className={`${jetbrainsMono.variable} ${ubuntu.variable} antialiased font-sans custom-cursor`}
       >
         <Toaster />
         <div className="fixed inset-0 z-[-1] bg-zinc-900" />

@@ -1,6 +1,7 @@
 "use client";
 
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
+
 import { useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowUpRight, ListIcon } from "lucide-react";
@@ -114,8 +115,9 @@ export default function Projects() {
                                         alt="Humorous meme indicating there are more projects available"
                                         width={200}
                                         height={200}
-                                        src="/assets/shy-laugh-meme.jfif"
+                                        src="/assets/shy-laugh-meme.webp"
                                         className="size-full object-top object-cover"
+
                                     />
                                 </div>
                                 <div className="p-8">
@@ -126,7 +128,7 @@ export default function Projects() {
                                         I have way more cool stuff than I can fit in this carousel without breaking your scroll wheel.
                                     </p>
                                     <div className="flex items-center gap-2 text-blue-400 font-bold group-hover:gap-4 transition-all">
-                                        View Complete Archive <ArrowUpRight />
+                                        View Archive <ArrowUpRight />
                                     </div>
 
                                 </div>

@@ -136,7 +136,7 @@
   }
 
   @media (min-width: 1280px) and (hover: hover) and (pointer: fine) {
-    body {
+    body.custom-cursor {
       @apply cursor-none;
       /* Hide default cursor when custom cursor is active (desktop, fine pointer) */
     }
