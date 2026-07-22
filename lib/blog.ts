@@ -62,3 +62,9 @@ export async function getBlogList(): Promise<string[]> {
 
     return files;
 }
+
+export async function getAllBlogsMetadata(): Promise<{ metadata: BlogMetadata; content: string }[]> {
+  const slugs = await getBlogList();
+  const results = await Promise.all(slugs.map((slug) => getDocContent(slug)));
+  return results.filter((item): item is { metadata: BlogMetadata; content: string } => item !== null);
+}
