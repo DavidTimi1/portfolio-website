@@ -29,7 +29,13 @@ export async function GET(
       });
     }
 
-    const statsResult = await db`SELECT COALESCE(SUM(claps), 0)::int as total_claps, COALESCE(SUM(views), 0)::int as total_views FROM blog_interactions WHERE slug = ${slug}`;
+    const statsResult = await db`
+      SELECT 
+        COALESCE(SUM(claps), 0)::int as total_claps, 
+        COALESCE(SUM(CASE WHEN views > 0 THEN 1 ELSE 0 END), 0)::int as total_views 
+      FROM blog_interactions 
+      WHERE slug = ${slug}
+    `;
 
     const userResult = await db`SELECT claps, bookmarked FROM blog_interactions WHERE slug = ${slug} AND user_id = ${userId}`;
 
@@ -100,25 +106,36 @@ export async function POST(
     let initialClaps = 0;
     let initialBookmarked = false;
     let initialViews = 0;
+    let initialImpressions = 0;
 
     if (action === 'clap') initialClaps = safeCount;
     if (action === 'bookmark') initialBookmarked = safeValue;
-    if (action === 'view') initialViews = 1;
+    if (action === 'view') {
+      initialViews = 1;
+      initialImpressions = 1;
+    }
 
-    // Upsert query
+    // Upsert query: views set to max 1 per user; impressions incremented on every view
     const result = await db`
-      INSERT INTO blog_interactions (slug, user_id, claps, bookmarked, views)
-      VALUES (${slug}, ${userId}, ${initialClaps}, ${initialBookmarked}, ${initialViews})
+      INSERT INTO blog_interactions (slug, user_id, claps, bookmarked, views, impressions)
+      VALUES (${slug}, ${userId}, ${initialClaps}, ${initialBookmarked}, ${initialViews}, ${initialImpressions})
       ON CONFLICT (slug, user_id)
       DO UPDATE SET
         claps = CASE WHEN ${action} = 'clap' THEN LEAST(50, blog_interactions.claps + ${safeCount}) ELSE blog_interactions.claps END,
         bookmarked = CASE WHEN ${action} = 'bookmark' THEN ${safeValue} ELSE blog_interactions.bookmarked END,
-        views = CASE WHEN ${action} = 'view' THEN blog_interactions.views + 1 ELSE blog_interactions.views END,
+        views = CASE WHEN ${action} = 'view' THEN GREATEST(blog_interactions.views, 1) ELSE blog_interactions.views END,
+        impressions = CASE WHEN ${action} = 'view' THEN COALESCE(blog_interactions.impressions, 0) + 1 ELSE COALESCE(blog_interactions.impressions, 0) END,
         updated_at = CURRENT_TIMESTAMP
-      RETURNING claps, bookmarked, views
+      RETURNING claps, bookmarked, views, impressions
     `;
 
-    const statsResult = await db`SELECT COALESCE(SUM(claps), 0)::int as total_claps, COALESCE(SUM(views), 0)::int as total_views FROM blog_interactions WHERE slug = ${slug}`;
+    const statsResult = await db`
+      SELECT 
+        COALESCE(SUM(claps), 0)::int as total_claps, 
+        COALESCE(SUM(CASE WHEN views > 0 THEN 1 ELSE 0 END), 0)::int as total_views 
+      FROM blog_interactions 
+      WHERE slug = ${slug}
+    `;
 
     return NextResponse.json({
       success: true,

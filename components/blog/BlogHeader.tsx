@@ -6,8 +6,7 @@ import { motion } from "framer-motion";
 import { CalendarIcon, ChevronRightIcon, ClockIcon } from "lucide-react";
 
 import { BlogMetadata } from "@/lib/blog";
-import { getReadingTime } from "@/hooks/use-blogs";
-import { cn } from "@/lib/utils";
+import { cn, getReadingTime } from "@/lib/utils";
 
 interface BlogHeaderProps {
   metadata: BlogMetadata;
@@ -67,7 +66,7 @@ export function BlogHeader({ metadata, content }: BlogHeaderProps) {
         transition={{ duration: 0.5, delay: 0.1 }}
         className="flex flex-wrap items-center gap-3"
       >
-        <span className="px-3 py-1 text-xs font-semibold tracking-wider text-accent bg-accent/5 border border-accent/20 rounded-full uppercase font-mono shadow-[0_0_15px_rgba(0,240,255,0.05)]">
+        <span className="px-3 py-1 text-xs font-semibold tracking-wider text-zinc-500 bg-zinc-500/5 border border-zinc-500/20 rounded-full uppercase font-mono shadow-[0_0_15px_rgba(0,240,255,0.05)]">
           {metadata.category.replace("-", " ")}
         </span>
         <span className="h-4 w-px bg-zinc-800 hidden sm:block" />

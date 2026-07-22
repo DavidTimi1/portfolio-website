@@ -22,14 +22,6 @@ export interface BlogComments {
   is_mock: boolean;
 }
 
-// Reading time calculator based on word count
-export function getReadingTime(content: string): string {
-  const cleanContent = content.replace(/[#*`_\[\]()\-]/g, ''); // strip markdown syntax
-  const words = cleanContent.trim().split(/\s+/).filter(Boolean).length;
-  const time = Math.ceil(words / 200); // 200 WPM
-  return `${time} min read`;
-}
-
 export function useBlogInteractions(slug: string) {
   const queryClient = useQueryClient();
   const queryKey = ['blog-interactions', slug];

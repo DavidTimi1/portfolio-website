@@ -4,7 +4,8 @@ CREATE TABLE IF NOT EXISTS blog_interactions (
     user_id VARCHAR(255) NOT NULL,
     claps INT DEFAULT 0,
     bookmarked BOOLEAN DEFAULT FALSE,
-    views INT DEFAULT 1,
+    views INT DEFAULT 0,
+    impressions INT DEFAULT 0,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     UNIQUE(slug, user_id)
 );

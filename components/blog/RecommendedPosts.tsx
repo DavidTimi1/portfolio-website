@@ -66,13 +66,12 @@ export function RecommendedPosts({ slug }: RecommendedPostsProps) {
       {/* Header */}
       <div className="space-y-2">
         <div className="flex items-center gap-2">
-          <Sparkles className="w-5 h-5 text-accent" />
           <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight font-sans">
             Recommended Next Reads
           </h3>
         </div>
         <p className="text-xs sm:text-sm text-zinc-400 font-mono">
-          Handpicked recommendations tailored for your reading journey.
+          Explore algorithm-picked articles by Dev_id
         </p>
       </div>
 
@@ -124,7 +123,7 @@ export function RecommendedPosts({ slug }: RecommendedPostsProps) {
                 {/* Content Details */}
                 <div className="p-5 space-y-3">
                   <div className="flex items-center justify-between text-[11px] text-zinc-400 font-mono">
-                    <span className="uppercase text-accent font-bold tracking-wider">
+                    <span className="uppercase text-zinc-500 font-bold tracking-wider">
                       {item.metadata.category}
                     </span>
                     <div className="flex items-center gap-1">

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getAllBlogsMetadata } from '@/lib/blog';
 import { db } from '@/lib/db';
 import { isValidSlug } from '@/lib/security';
-import { getReadingTime } from '@/hooks/use-blogs';
+import { getReadingTime } from '@/lib/utils';
 
 export async function GET(
   request: NextRequest,
@@ -29,7 +29,7 @@ export async function GET(
     if (db) {
       try {
         const statsResult = await db`
-          SELECT slug, COALESCE(SUM(claps), 0)::int as total_claps, COALESCE(SUM(views), 0)::int as total_views 
+          SELECT slug, COALESCE(SUM(claps), 0)::int as total_claps, COALESCE(SUM(CASE WHEN views > 0 THEN 1 ELSE 0 END), 0)::int as total_views 
           FROM blog_interactions 
           GROUP BY slug
         `;
