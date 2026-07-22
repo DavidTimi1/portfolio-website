@@ -24,7 +24,7 @@ export function CertificatesCarousel() {
     };
 
     return (
-        <div className="w-full h-full min-h-[300px] flex flex-col relative py-3 space-y-6">
+        <div className="w-full h-full min-h-[200px] flex flex-col relative py-3 space-y-6">
             <h3 className="text-xs text-zinc-500 font-mono tracking-widest uppercase px-4">Certifications</h3>
 
             <div className="grow flex flex-col w-full relative">

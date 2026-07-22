@@ -10,15 +10,13 @@ import { GlassShard } from "./glass-shard";
 import { useTypingName } from "@/hooks/use-typing";
 import { SectionDetector } from "../ui/section-detector";
 import { HeroImage } from "./hero-image";
+import { GHLink, XLink, MailLink } from "./contact"
 
-
-const GHLink = "https://github.com/DavidTimi1";
-const XLink = "https://x.com/DavidTimi_1";
-const MailLink = "mailto:duwagbale07@gmail.com";
 
 const ELEVATOR = <> Hi I&apos;m David Uwagbale — a 20x Full-stack Software Engineer. <br />
     <SeparatorVertical className="mx-auto" />
-    I have a talent for developing awesome user experiences and building scalable solutions. </>
+    I have a talent for developing awesome user experience, systems design and building scalable software. </>
+
 
 export default function Hero() {
     const targetRef = useRef<HTMLDivElement>(null);

@@ -7,6 +7,12 @@ import { Button } from "../ui/button";
 import { BsTwitterX } from "react-icons/bs";
 import ContactForm from "./contact-form"; // Adjust path as needed
 
+
+export const GHLink = "https://github.com/DavidTimi1";
+export const XLink = "https://x.com/DavidTimi_1";
+export const MailLink = "mailto:duwagbale07@gmail.com";
+export const BookCallLink = "https://calendly.com/duwagbale07/30min";
+
 export default function Contact() {
     return (
         <section id="contact" className="min-h-screen w-full sticky bottom-0 bg-black text-white border-t border-zinc-800 flex flex-col items-center justify-center">

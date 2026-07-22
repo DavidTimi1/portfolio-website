@@ -1,14 +1,17 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { CodeIcon, ServerIcon, LayersIcon } from "lucide-react"
+import { CodeIcon, ServerIcon, LayersIcon, UserStarIcon, BitcoinIcon } from "lucide-react"
 import { Button } from "../ui/button"
 import { SectionDetector } from "../ui/section-detector"
+import { BookCallLink } from "./contact"
+import Link from "next/link"
+
 
 const services = [
     {
         icon: <CodeIcon className="size-8 text-accent" />,
-        title: "Web Development",
+        title: "Web & Mobile Applications",
         description: "Building lightning-fast, SEO-optimized web applications using Next.js and React. Focusing on performance and accessibility.",
     },
     {
@@ -16,10 +19,22 @@ const services = [
         title: "Backend Engineering",
         description: "Designing scalable APIs and database architectures. Experienced with Node.js, Python, and cloud infrastructure.",
     },
+    // consulting
+    {
+        icon: <UserStarIcon className="size-8 text-accent" />,
+        title: "Technical Consulting",
+        description: "Providing expert advice and guidance to businesses on how to leverage technology to achieve their goals.",
+    },
     {
         icon: <LayersIcon className="size-8 text-accent" />,
         title: "UI/UX Design",
         description: "Creating intuitive and visually stunning user interfaces. Crafting smooth user journeys with modern design principles.",
+    },
+    // web3
+    {
+        icon: <BitcoinIcon className="size-8 text-accent" />,
+        title: "Web3 Development",
+        description: "Building decentralized applications using blockchain technology. Experienced with Ethereum, Solidity, and smart contracts.",
     },
 ]
 
@@ -52,14 +67,14 @@ export default function Services() {
                         viewport={{ once: true }}
                         className="group relative p-6 rounded-2xl bg-black border border-zinc-700 hover:scale-105 duration-300"
                     >
-                        <div className="relative flex flex-col items-start gap-4">
+                        <Link href={BookCallLink} target="_blank" rel="noopener noreferrer" className="relative flex flex-col items-start gap-4">
                             <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-accent transition-colors duration-300">
                                 Let&apos;s talk about your project
                             </h3>
-                            <Button>
-                                Let&apos;s build
+                            <Button asChild>
+                                <span> Let&apos;s build </span>
                             </Button>
-                        </div>
+                        </Link>
                     </motion.div>
 
                     {services.map((service, index) => (
