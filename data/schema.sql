@@ -18,3 +18,21 @@ CREATE TABLE IF NOT EXISTS blog_comments (
     content TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+-- =============================================================================
+-- Migration statements for existing databases (23 / 07 /2026)
+-- =============================================================================
+
+-- Add impressions column if it doesn't exist yet on existing tables
+ALTER TABLE blog_interactions ADD COLUMN IF NOT EXISTS impressions INT DEFAULT 0;
+
+-- Backfill impressions from existing accumulated view counts (if impressions is not set)
+UPDATE blog_interactions 
+SET impressions = views 
+WHERE (impressions IS NULL OR impressions = 0) AND views > 0;
+
+-- Normalize existing view counts so each user record represents max 1 unique view
+UPDATE blog_interactions 
+SET views = 1 
+WHERE views > 1;
+

@@ -6,40 +6,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRightIcon, PenToolIcon } from "lucide-react";
 import { BlogMetadata } from "@/lib/blog";
 
-function RadiatingPulse() {
-    return (
-        <span className="relative flex h-2.5 w-2.5 items-center justify-center">
-            {/* Custom Radiating Waves */}
-            <motion.span
-                className="absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"
-                animate={{
-                    scale: [1, 2.5],
-                    opacity: [0.8, 0],
-                }}
-                transition={{
-                    repeat: Infinity,
-                    duration: 2,
-                    ease: "easeOut",
-                }}
-            />
-            <motion.span
-                className="absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"
-                animate={{
-                    scale: [1, 2.2],
-                    opacity: [0.8, 0],
-                }}
-                transition={{
-                    repeat: Infinity,
-                    duration: 2,
-                    delay: 0.6,
-                    ease: "easeOut",
-                }}
-            />
-            {/* Core Glowing Orb */}
-            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent shadow-[0_0_8px_var(--accent)]"></span>
-        </span>
-    );
-}
 
 export function LatestBlogCarousel() {
     const [blogs, setBlogs] = useState<BlogMetadata[]>([]);
@@ -127,7 +93,6 @@ export function LatestBlogCarousel() {
                             <PenToolIcon className="w-3.5 h-3.5 text-zinc-400" /> Blog
                         </h3>
                         <div className="flex items-center gap-1 bg-accent/5 border border-accent/20 px-2 py-0.5 rounded-full shrink-0">
-                            <RadiatingPulse />
                             <span className="text-[8px] font-bold text-accent tracking-wider font-mono">
                                 NEW
                             </span>
@@ -209,7 +174,7 @@ export function LatestBlogCarousel() {
                             {/* Header inside right side */}
                             <div className="flex justify-between items-center mb-2">
                                 <h3 className="text-[10px] text-zinc-500 font-mono tracking-widest uppercase flex items-center gap-1">
-                                    <PenToolIcon className="w-3.5 h-3.5 text-zinc-400" /> Dev Log
+                                    <PenToolIcon className="w-3.5 h-3.5 text-zinc-400" /> Blog
                                 </h3>
                                 <ArrowUpRightIcon className="w-3.5 h-3.5 text-zinc-500 group-hover:text-white transition-colors duration-300" />
                             </div>

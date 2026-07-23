@@ -42,7 +42,7 @@ export function BlogListClient({ blogs }: { blogs: BlogMetadata[] }) {
           </Link>
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl md:text-5xl font-black tracking-tight text-white uppercase font-sans">
-              THE <span className="text-accent italic">DEV LOG</span>
+              THE <span className="text-accent italic">ENGINEERING LOG</span>
             </h1>
             <p className="text-zinc-400 max-w-xl text-sm sm:text-base font-light">
               Articles, software engineering tutorials, architectural insights, and thoughts on technology.
