@@ -41,6 +41,10 @@ export async function getDocContent(slug: string): Promise<{ metadata: BlogMetad
       metadata.title = match ? match[1] : slug;
     }
 
+    if (!metadata.cover_image){
+      metadata.cover_image = "/assets/blog/" + slug + ".png";
+    }
+
     return { metadata, content: blogContent };
 
   } catch (error) {

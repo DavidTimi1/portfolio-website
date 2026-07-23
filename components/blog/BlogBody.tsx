@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 import { CopyIcon, CheckIcon, TerminalIcon, X, ZoomIn } from "lucide-react";
 import { toast } from "sonner";
 import { motion, AnimatePresence } from "framer-motion";
@@ -16,6 +17,7 @@ export function BlogBody({ content }: BlogBodyProps) {
     <div className="prose prose-invert max-w-none pt-8 pb-16 font-sans">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeRaw]}
         components={{
           // Paragraphs
           p: ({ children }) => (
@@ -195,9 +197,9 @@ function ZoomableImage({ src, alt }: { src: string; alt: string }) {
 
   return (
     <>
-      <div 
+      <span 
         onClick={() => setIsOpen(true)}
-        className="relative group my-8 overflow-hidden rounded-xl border border-zinc-850 bg-zinc-900/10 cursor-zoom-in transition-all duration-300 hover:border-zinc-700/50 shadow-md"
+        className="relative block group my-8 overflow-hidden rounded-xl border border-zinc-850 bg-zinc-900/10 cursor-zoom-in transition-all duration-300 hover:border-zinc-700/50 shadow-md"
       >
         <img 
           src={src} 
@@ -205,17 +207,17 @@ function ZoomableImage({ src, alt }: { src: string; alt: string }) {
           className="w-full h-auto object-cover max-h-[500px] transition-transform duration-500 group-hover:scale-[1.01]"
         />
         {/* Hover overlay with ZoomIn Icon */}
-        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-          <div className="bg-black/60 backdrop-blur-sm border border-white/10 p-3 rounded-full text-white shadow-lg">
+        <span className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+          <span className="bg-black/60 backdrop-blur-sm border border-white/10 p-3 rounded-full text-white shadow-lg">
             <ZoomIn className="w-5 h-5 text-accent" />
-          </div>
-        </div>
+          </span>
+        </span>
         {alt && (
-          <div className="px-4 py-2 border-t border-zinc-850 bg-zinc-950/40 text-center">
-            <p className="text-xs text-zinc-500 italic font-mono">{alt}</p>
-          </div>
+          <span className="px-4 py-2 border-t border-zinc-850 bg-zinc-950/40">
+            <span className="text-xs mx-auto text-zinc-500 italic font-mono">{alt}</span>
+          </span>
         )}
-      </div>
+      </span>
 
       <AnimatePresence>
         {isOpen && (
@@ -302,7 +304,7 @@ function CodeBlock({ code, language }: { code: string; language: string }) {
       </div>
 
       {/* Code Body */}
-      <div className="overflow-x-auto p-4 font-mono text-sm leading-relaxed text-zinc-300 scrollbar-hide">
+      <div className="overflow-x-auto p-4 font-mono text-xs leading-relaxed text-zinc-300 scrollbar-hide">
         <pre className="bg-transparent p-0 m-0">
           <code>{code}</code>
         </pre>
