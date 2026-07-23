@@ -1,5 +1,6 @@
 "use client";
 
+import React, { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -27,17 +28,16 @@ export function BlogHeader({ metadata, content }: BlogHeaderProps) {
       <div className="flex gap-2 items-center">
         {
           crumbs.map((crumb, index) => (
-            <>
-            <Link
-              key={crumb.title}
-              href={crumb.href}
-              title={index === 0 ? "Return to Portfolio" : index === 1 ? "See all blog posts" : ""}
-              className={cn("text-sm text-zinc-400 font-mono transition-colors duration-300", index !== crumbs.length - 1 && "hover:text-accent hover:underline cursor-pointer")}
-            >
-              <span>{crumb.title}</span>
-            </Link>
-            {index !== crumbs.length - 1 && <ChevronRightIcon className="w-3 h-3" />}
-            </>
+            <Fragment key={crumb.href}>
+              <Link
+                href={crumb.href}
+                title={index === 0 ? "Return to Portfolio" : index === 1 ? "See all blog posts" : ""}
+                className={cn("text-sm text-zinc-400 font-mono transition-colors duration-300", index !== crumbs.length - 1 && "hover:text-accent hover:underline cursor-pointer")}
+              >
+                <span>{crumb.title}</span>
+              </Link>
+              {index !== crumbs.length - 1 && <ChevronRightIcon className="w-3 h-3 text-zinc-500" />}
+            </Fragment>
           ))
         }
       </div>
