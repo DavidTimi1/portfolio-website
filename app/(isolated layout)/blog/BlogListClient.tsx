@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { SearchIcon, BookOpenIcon, ArrowUpRightIcon, ArrowLeftIcon } from "lucide-react";
 import { BlogMetadata } from "@/lib/blog";
+import { Button } from "@/components/ui/button";
 
 const CATEGORIES = [
   { value: "all", label: "All" },
@@ -29,22 +30,19 @@ export function BlogListClient({ blogs }: { blogs: BlogMetadata[] }) {
   });
 
   return (
-    <main className="min-h-screen w-full bg-zinc-950 text-foreground selection:bg-accent/30 py-16 sm:py-24">
+    <main className="min-h-screen w-full bg-zinc-950 text-foreground selection:bg-accent/30 py-10">
       <div className="container max-w-5xl mx-auto px-4">
         {/* Header */}
-        <div className="space-y-4 mb-12">
-          <Link
-            href="/"
-            className="group inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-accent font-mono transition-colors duration-300 mb-2"
-          >
-            <ArrowLeftIcon className="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300" />
-            <span>BACK TO HOME</span>
+        <div className="">
+          <Link href="/" className="inline-flex items-center gap-2 text-zinc-400 hover:text-foreground mb-8 transition-colors group">
+            <ArrowLeftIcon className="group-hover:-translate-x-1 transition-transform" />
+            Back to Dev_id's Portfolio
           </Link>
-          <div className="flex flex-col gap-2">
-            <h1 className="text-4xl md:text-5xl font-black tracking-tight text-white uppercase font-sans">
-              THE <span className="text-accent italic">ENGINEERING LOG</span>
-            </h1>
-            <p className="text-zinc-400 max-w-xl text-sm sm:text-base font-light">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4">
+              THE ENGINEERING <span className="text-accent italic">LOG</span>
+            </h2>
+            <p className="text-zinc-400 max-w-2xl">
               Articles, software engineering tutorials, architectural insights, and thoughts on technology.
             </p>
           </div>
@@ -54,14 +52,18 @@ export function BlogListClient({ blogs }: { blogs: BlogMetadata[] }) {
         <div className="sticky top-0 z-20 py-6 bg-zinc-950/80 backdrop-blur-md -mx-4 px-4 border-b border-zinc-900 mb-10">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             {/* Search Input */}
-            <div className="relative w-full md:max-w-md">
-              <SearchIcon className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500" />
+            <div className="relative w-full md:max-w-md group">
+              <Button asChild className="rounded-md group-focus-within:bg-accent group-focus-within:text-background" variant="ghost" size="icon">
+                <div className="absolute top-1/2 -translate-y-1/2 left-1">
+                  <SearchIcon />
+                </div>
+              </Button>
               <input
-                type="text"
+                type="search"
                 placeholder="Search articles..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-zinc-900/50 border border-zinc-800 rounded-full pl-10 pr-4 py-2.5 text-sm text-zinc-200 focus:border-accent focus:outline-none transition-colors duration-200 shadow-[inset_0_2px_4px_rgba(0,0,0,0.4)]"
+                className="w-full pl-12 px-4 bg-zinc-900/50 border border-zinc-800 rounded-lg py-2.5 text-sm text-zinc-200 focus:border-accent focus:outline-none transition-colors duration-200 shadow-[inset_0_2px_4px_rgba(0,0,0,0.4)]"
               />
             </div>
 
@@ -73,11 +75,10 @@ export function BlogListClient({ blogs }: { blogs: BlogMetadata[] }) {
                   <button
                     key={cat.value}
                     onClick={() => setSelectedCategory(cat.value)}
-                    className={`px-4 py-1.5 rounded-full text-xs font-mono tracking-wider transition-all duration-300 whitespace-nowrap shrink-0 border cursor-pointer ${
-                      isActive
+                    className={`px-3 py-1 rounded-full text-xs font-mono tracking-wider transition-all duration-300 whitespace-nowrap shrink-0 border cursor-pointer ${isActive
                         ? "bg-accent border-accent text-black font-semibold shadow-[0_0_15px_rgba(0,240,255,0.3)]"
                         : "bg-zinc-900/30 border-zinc-800 text-zinc-400 hover:text-zinc-200 hover:border-zinc-700"
-                    }`}
+                      }`}
                   >
                     {cat.label.toUpperCase()}
                   </button>

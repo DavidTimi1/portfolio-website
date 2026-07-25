@@ -12,6 +12,11 @@ export function LatestBlogCarousel() {
     const [loading, setLoading] = useState(true);
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    const latestBlog = blogs[0];
+    const createdDate = new Date(latestBlog?.created_at);
+    const now = new Date();
+    const isNew = (now.getTime() - createdDate.getTime()) < 7 * 24 * 60 * 60 * 1000;
+
     useEffect(() => {
         fetch("/api/blog")
             .then((res) => res.json())
@@ -28,11 +33,6 @@ export function LatestBlogCarousel() {
     // Autoplay logic for sliding carousel (only when not frozen on a new blog post)
     useEffect(() => {
         if (blogs.length <= 1) return;
-
-        const latestBlog = blogs[0];
-        const createdDate = new Date(latestBlog.created_at);
-        const now = new Date();
-        const isNew = (now.getTime() - createdDate.getTime()) < 7 * 24 * 60 * 60 * 1000;
 
         if (isNew) return; // Do not cycle if frozen on the new post
 
@@ -55,16 +55,12 @@ export function LatestBlogCarousel() {
 
     if (!blogs || blogs.length === 0) return null;
 
-    const latestBlog = blogs[0];
-    const createdDate = new Date(latestBlog.created_at);
-    const now = new Date();
-    const isNew = (now.getTime() - createdDate.getTime()) < 7 * 24 * 60 * 60 * 1000;
 
     if (isNew) {
         // Frozen Mode on New Post
         return (
             <Link
-                href={latestBlog.redirect_to || `/blog/${latestBlog.slug}`}
+                href={`/blog/${latestBlog.slug}`}
                 className="w-full h-full min-h-[300px] flex flex-row relative group overflow-hidden bg-gradient-to-br from-zinc-900/40 to-black/80 rounded-xl"
             >
                 {/* Cover Image on Left */}
@@ -82,16 +78,14 @@ export function LatestBlogCarousel() {
                     </div>
                 )}
 
-                {/* Gradient Veil */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zinc-950/85 to-zinc-950 z-[5] pointer-events-none" />
+                <h3 className="absolute top-2 left-2 bg-zinc-900 px-3 py-1 rounded-md text-[10px] text-zinc-500 font-mono tracking-widest uppercase flex items-center gap-1">
+                    <PenToolIcon className="w-3.5 h-3.5 text-zinc-400" /> Blog
+                </h3>
 
                 {/* Right-aligned text content */}
-                <div className="w-[52%] md:w-[50%] ml-auto h-full flex flex-col justify-between py-5 pr-5 pl-2 z-10 relative">
+                <div className="w-[52%] md:w-[50%] ml-auto h-full flex flex-col justify-between py-2 pr-2 pl-2 z-10 relative">
                     {/* Header inside right side */}
-                    <div className="flex justify-between items-center mb-2">
-                        <h3 className="text-[10px] text-zinc-500 font-mono tracking-widest uppercase flex items-center gap-1">
-                            <PenToolIcon className="w-3.5 h-3.5 text-zinc-400" /> Blog
-                        </h3>
+                    <div className="flex justify-end mb-2">
                         <div className="flex items-center gap-1 bg-accent/5 border border-accent/20 px-2 py-0.5 rounded-full shrink-0">
                             <span className="text-[8px] font-bold text-accent tracking-wider font-mono">
                                 NEW
@@ -102,7 +96,7 @@ export function LatestBlogCarousel() {
                     {/* Title & Description */}
                     <div className="flex-grow flex flex-col justify-center space-y-2">
                         <div className="flex items-center gap-2">
-                            <span className="px-1.5 py-0.5 text-[8px] font-bold font-mono tracking-wider text-accent bg-accent/5 border border-accent/20 rounded uppercase">
+                            <span className="px-1.5 py-0.5 text-[8px] font-bold font-mono tracking-wider text-zinc-400 bg-zinc-800/50 border border-zinc-700/50 rounded uppercase">
                                 {latestBlog.category.replace("-", " ")}
                             </span>
                             <span className="text-[9px] text-zinc-500 font-mono">
@@ -167,15 +161,17 @@ export function LatestBlogCarousel() {
                         )}
 
                         {/* Gradient Veil */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zinc-950/85 to-zinc-950 z-[5] pointer-events-none" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-50% from-transparent via-zinc-950/85 to-zinc-950 z-[5] pointer-events-none" />
+
+
+                        <h3 className="absolute top-2 left-2 bg-zinc-900 px-3 py-1 rounded-md text-[10px] text-zinc-500 font-mono tracking-widest uppercase flex items-center gap-1">
+                            <PenToolIcon className="w-3.5 h-3.5 text-zinc-400" /> Blog
+                        </h3>
 
                         {/* Right-aligned text content */}
                         <div className="w-[52%] md:w-[50%] ml-auto h-full flex flex-col justify-between py-5 pr-5 pl-2 z-10 relative">
                             {/* Header inside right side */}
-                            <div className="flex justify-between items-center mb-2">
-                                <h3 className="text-[10px] text-zinc-500 font-mono tracking-widest uppercase flex items-center gap-1">
-                                    <PenToolIcon className="w-3.5 h-3.5 text-zinc-400" /> Blog
-                                </h3>
+                            <div className="flex justify-end items-center mb-2">
                                 <ArrowUpRightIcon className="w-3.5 h-3.5 text-zinc-500 group-hover:text-white transition-colors duration-300" />
                             </div>
 
@@ -211,9 +207,8 @@ export function LatestBlogCarousel() {
                                                 e.stopPropagation();
                                                 setCurrentIndex(idx);
                                             }}
-                                            className={`transition-all duration-300 rounded-full h-0.5 cursor-pointer ${
-                                                idx === currentIndex ? "w-4 bg-white" : "w-1 bg-zinc-700 hover:bg-zinc-500"
-                                            }`}
+                                            className={`transition-all duration-300 rounded-full h-0.5 cursor-pointer ${idx === currentIndex ? "w-4 bg-white" : "w-1 bg-zinc-700 hover:bg-zinc-500"
+                                                }`}
                                             aria-label={`Go to slide ${idx + 1}`}
                                         />
                                     ))}

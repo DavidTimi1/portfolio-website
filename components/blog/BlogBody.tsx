@@ -14,7 +14,7 @@ interface BlogBodyProps {
 
 export function BlogBody({ content }: BlogBodyProps) {
   return (
-    <div className="prose prose-invert max-w-none pt-8 pb-16 font-sans">
+    <div className="blog-body prose prose-invert max-w-none pt-8 pb-16 font-sans">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeRaw]}
@@ -221,7 +221,7 @@ function ZoomableImage({ src, alt }: { src: string; alt: string }) {
 
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -241,7 +241,7 @@ function ZoomableImage({ src, alt }: { src: string; alt: string }) {
             </button>
 
             {/* Image Container with entrance animation */}
-            <motion.div
+            <motion.span
               initial={{ scale: 0.95, y: 10 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 10 }}
@@ -255,12 +255,12 @@ function ZoomableImage({ src, alt }: { src: string; alt: string }) {
                 className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl border border-zinc-800"
               />
               {alt && (
-                <div className="mt-4 text-center">
+                <span className="mt-4 text-center">
                   <p className="text-sm text-zinc-400 font-mono tracking-wide">{alt}</p>
-                </div>
+                </span>
               )}
-            </motion.div>
-          </motion.div>
+            </motion.span>
+          </motion.span>
         )}
       </AnimatePresence>
     </>

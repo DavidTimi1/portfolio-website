@@ -218,3 +218,10 @@ body .container {
     opacity: 0.2;
   }
 }
+
+
+.blog-body {
+  b, strong {
+    font-weight: 700;
+  }
+}

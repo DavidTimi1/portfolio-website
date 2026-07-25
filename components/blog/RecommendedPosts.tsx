@@ -58,8 +58,8 @@ export function RecommendedPosts({ slug }: RecommendedPostsProps) {
     recommendations.length === 1
       ? "grid-cols-1 max-w-xl mx-auto"
       : recommendations.length === 2
-      ? "grid-cols-1 md:grid-cols-2"
-      : "grid-cols-1 md:grid-cols-3";
+        ? "grid-cols-1 md:grid-cols-2"
+        : "grid-cols-1 md:grid-cols-3";
 
   return (
     <section className="border-t border-zinc-800/80 pt-12 mt-16 space-y-8">
@@ -127,8 +127,14 @@ export function RecommendedPosts({ slug }: RecommendedPostsProps) {
                       {item.metadata.category}
                     </span>
                     <div className="flex items-center gap-1">
-                      <Clock className="w-3 h-3 text-zinc-500" />
-                      <span>{item.readTime}</span>
+                      {
+                        !!item.readTime && (
+                          <>
+                            <Clock className="w-3 h-3 text-zinc-500" />
+                            <span>{item.readTime}</span>
+                          </>
+                        )
+                      }
                     </div>
                   </div>
 

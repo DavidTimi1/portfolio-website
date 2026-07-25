@@ -29,7 +29,6 @@ export function Interactions({ slug }: InteractionsProps) {
   if (isLoading || !interactions) {
     return (
       <>
-
       {/* Desktop Sticky Left Bar */}
       <div className="hidden xl:flex flex-col items-center gap-6 fixed bottom-12 md:right-5 md:bottom-auto top-1/3 z-30 p-3 rounded-full border border-white/5 bg-zinc-950/40 backdrop-blur-md shadow-2xl">
           <div className="size-10 rounded-full animate-pulse border border-white/20"></div>
@@ -38,7 +37,7 @@ export function Interactions({ slug }: InteractionsProps) {
       </div>
 
       {/* Mobile/Tablet Horizontal Bottom Bar */}
-      <div className="xl:hidden flex items-center justify-between px-6 py-3 border-y border-zinc-800 bg-zinc-950/20 backdrop-blur-xs my-8">
+      <div className="xl:hidden flex items-center justify-center px-6 py-3 border-y border-zinc-800 bg-zinc-950/20 backdrop-blur-xs my-8">
         <div className="flex items-center gap-6">
           <div className="size-10 rounded-full animate-pulse border border-white/20"></div>
           <div className="size-10 rounded-full animate-pulse border border-white/20"></div>

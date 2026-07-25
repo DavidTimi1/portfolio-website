@@ -25,14 +25,14 @@ export function BlogHeader({ metadata, content }: BlogHeaderProps) {
 
   return (
     <div className="space-y-6 md:space-y-8 pb-8 border-b border-zinc-800">
-      <div className="flex gap-2 items-center">
+      <div className="flex gap-2 items-center overflow-hidden">
         {
           crumbs.map((crumb, index) => (
             <Fragment key={crumb.href}>
               <Link
                 href={crumb.href}
                 title={index === 0 ? "Return to Portfolio" : index === 1 ? "See all blog posts" : ""}
-                className={cn("text-sm text-zinc-400 font-mono transition-colors duration-300", index !== crumbs.length - 1 && "hover:text-accent hover:underline cursor-pointer")}
+                className={cn("text-sm text-zinc-400 font-mono transition-colors duration-300 text-nowrap", index !== crumbs.length - 1 && "hover:text-accent hover:underline cursor-pointer")}
               >
                 <span>{crumb.title}</span>
               </Link>
@@ -113,13 +113,16 @@ export function BlogHeader({ metadata, content }: BlogHeaderProps) {
             </p>
           </div>
         </Link>
-
-        <div className="flex items-center gap-4 text-xs text-zinc-400 font-mono">
-          <span className="flex items-center gap-1.5">
-            <ClockIcon className="w-4 h-4 text-zinc-500" />
-            {readingTime}
-          </span>
-        </div>
+        {
+          !!readingTime && (
+            <div className="flex items-center gap-4 text-xs text-zinc-400 font-mono">
+              <span className="flex items-center gap-1.5">
+                <ClockIcon className="w-4 h-4 text-zinc-500" />
+                {readingTime}
+              </span>
+            </div>
+          )
+        }
       </motion.div>
     </div>
   );

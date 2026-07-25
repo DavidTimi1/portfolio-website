@@ -20,10 +20,10 @@ export const ProjectsSearch = () => {
                 placeholder="Search projects..."
                 value={inputValue}
                 onChange={(e) => { setInputValue(e.target.value) }}
-                className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-4 py-2 pr-12 focus:border-accent focus:outline-none transition-colors"
+                className="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-4 py-2 pl-12 focus:border-accent focus:outline-none transition-colors"
             />
-            <div className="absolute right-1 top-1/2 -translate-y-1/2 text-zinc-400">
-                <Button className="rounded-md bg-accent/70 group-focus-within:bg-accent text-background" variant="ghost" size="icon">
+            <div className="absolute left-1 top-1/2 -translate-y-1/2 text-zinc-400">
+                <Button className="rounded-md group-focus-within:bg-accent/70 hover:bg-accent group-focus-within:text-background" variant="ghost" size="icon">
                     <SearchIcon />
                 </Button>
             </div>

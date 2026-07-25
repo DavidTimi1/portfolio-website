@@ -17,7 +17,7 @@ export const ProjectHeader = () => {
         >
             <Link href="/" className="inline-flex items-center gap-2 text-zinc-400 hover:text-foreground mb-8 transition-colors group">
                 <ArrowLeftIcon className="group-hover:-translate-x-1 transition-transform" />
-                Back to Home
+                Back to Portfolio
             </Link>
             <div>
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4">
