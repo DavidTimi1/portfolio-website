@@ -10,7 +10,7 @@
 `````
 
 
-## Life Before React
+### Life Before React
 
 I used to build a lot of cool projects with vanilla JavaScript and what I thought was really clever DOM manipulation. I was proud of it. I knew how to grab elements, trigger smooth slide-in animations, toggle classes, and chain event listeners together like a finely tuned machine.
 
@@ -30,7 +30,7 @@ At this point, I must have realized: **my model for building user interfaces was
 
 <br />
 
-## The Vanilla JS Trap: Imperative Step-by-Step
+### The Vanilla JS Trap: Imperative Step-by-Step
 
 When you learn web development, you start by thinking imperatively. You treat the DOM like a list of manual instructions you give to a worker.
 
@@ -73,7 +73,7 @@ As your application grows, this approach explodes in complexity. You end up with
 
 <br />
 
-## Changing the Question
+### Changing the Question
 
 React’s core value isn't JSX. It isn't Hooks. It isn't virtual DOM performance.
 
@@ -124,7 +124,7 @@ When the underlying data shifts from `Submitting` to `Success`, you don't touch 
 
 <br />
 
-## Why This Model Scales
+### Why This Model Scales
 
 When you stop manually modifying elements, an entire category of bugs disappears.
 
@@ -136,7 +136,7 @@ Instead of forcing every interaction yourself, you simply describe the different
 
 <br />
 
-## A Word of Caution: Don't Introduce Complexity Just Because You Can
+### A Word of Caution: Don't Introduce Complexity Just Because You Can
 
 Does this mean vanilla JavaScript is dead and you should throw React at every single project? Absolutely not.
 
@@ -149,7 +149,7 @@ React exists to solve UI *complexity*. More specifically when you have shared st
 
 <br />
 
-## Conclusion
+### Conclusion
 
 When I first struggled with React, I thought my issue was syntax and I  needed to memorize more Hooks, practice more context patterns, or master component lifecycles.
 

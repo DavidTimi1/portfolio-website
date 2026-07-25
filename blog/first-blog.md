@@ -10,14 +10,14 @@
 }
 `````
 
-## The Beginning of Something Great 
+### The Beginning of Something Great 
 
 Hi, I'm David, and I'm a software engineer based in Nigeria. I'm excited to start this blog and share my thoughts and ideas with you. I'll be writing about a variety of topics, including software engineering, sometimes the blockchain, and possibly even philosophical thoughts. 
 
 This isn't actually my first blog, but it's the first blog on this domain. I have always loved talking about things that take a lot of real estate on my mind, and I think it's about time I start sharing them with the world. 
 
 
-## Why this blog?
+### Why this blog?
 
 Well to be fair, this blog wasn't the first thing that came to my mind.
 
@@ -31,7 +31,7 @@ So, yeah I decided to go with this instead since it actually conveys a lot about
 > I might actually look into using Substack for this and then possibly refer readers here!
 
 
-## My Thoughts on Writing
+### My Thoughts on Writing
 
 Although writing has never been something I enjoyed doing and I would prefer to speak than actually write, I really love reading and I am constantly in awe of how different authors use words to paint pictures in my mind. 
 
