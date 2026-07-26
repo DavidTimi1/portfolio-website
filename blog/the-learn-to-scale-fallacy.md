@@ -9,7 +9,7 @@
 }
 `````
 
-Brief version on [Linkedin](https://www.linkedin.com/feed/update/urn:li:activity:7485227687859539968/)
+Brief version on [Linkedin](https://www.linkedin.com/posts/daviduwagbale_𝗜-𝘀𝗽𝗲𝗻𝘁-𝗺𝗼𝗻𝘁𝗵𝘀-𝘁𝗿𝘆𝗶𝗻𝗴-𝘁𝗼-share-7485219111556521984-ZTrk)
 
 > "Scale this codebase to handle 50,000 concurrent users. MAKE NO MISTAKES!"
 
