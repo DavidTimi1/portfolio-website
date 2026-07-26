@@ -14,9 +14,10 @@ import { toast } from "sonner";
 
 interface InteractionsProps {
   slug: string;
+  duplicate?: boolean;
 }
 
-export function Interactions({ slug }: InteractionsProps) {
+export function Interactions({ slug, duplicate = false }: InteractionsProps) {
   const {
     interactions,
     isLoading,
@@ -27,6 +28,7 @@ export function Interactions({ slug }: InteractionsProps) {
   const [bubbles, setBubbles] = useState<{ id: number; x: number }[]>([]);
 
   if (isLoading || !interactions) {
+    if (duplicate) return <></>;
     return (
       <>
       {/* Desktop Sticky Left Bar */}
@@ -82,7 +84,7 @@ export function Interactions({ slug }: InteractionsProps) {
   return (
     <>
       {/* Desktop Sticky Left Bar */}
-      <div className="hidden xl:flex flex-col items-center gap-6 fixed bottom-12 md:right-5 md:bottom-auto top-1/3 z-30 p-3 rounded-full border border-white/5 bg-zinc-950/40 backdrop-blur-md shadow-2xl">
+      <div className={`hidden ${duplicate ? '' : 'xl:flex'} flex-col items-center gap-6 fixed bottom-12 md:right-5 md:bottom-auto top-1/3 z-30 p-3 rounded-full border border-white/5 bg-zinc-950/40 backdrop-blur-md shadow-2xl`}>
         {/* Claps */}
         <div className="relative flex flex-col items-center">
           <motion.button

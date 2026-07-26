@@ -85,6 +85,9 @@ export function BlogClientPage({ metadata, content }: BlogClientPageProps) {
           <BlogBody content={content} />
         </motion.div>
 
+        {/* Interactions Sidebar & Mobile Docks */}
+        <Interactions duplicate={true} slug={metadata.slug} />
+
         {/* Recommended Posts Section */}
         <RecommendedPosts slug={metadata.slug} />
 
