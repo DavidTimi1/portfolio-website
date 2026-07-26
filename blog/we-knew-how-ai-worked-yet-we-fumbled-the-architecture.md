@@ -25,7 +25,7 @@ Let's cite a really easy example.
 
 Sometime in 2025, I had the opportunity of participating in a hackathon, and what we built was a user experience revision of what making payments should feel like, especially when trying to make sure that the user gets more utility from the payment app than just making payments.
 
-This seemed straightforward enough at first until we thought: what else would someone want to do aside make payments 😂.
+This seemed straightforward enough at first until we thought: **what else would someone want to do aside make payments** 😂.
 Regardless, we set out to build this.
 
 We made a redesign of what the User Flow and Experience might feel like to accomodate what we figured would help, among these was a pill section for easy and quick labelling of transactions (like Food, Transport, Subscription, etc).
@@ -39,7 +39,7 @@ Pause...
 
 If that sounded normal or typical to you, then you really need this next part.
 
-![Lazy transaction AI architecture](/assets/blog/in-lazy-transaction-ai-architecture.png)
+![Diagram showing a naive AI architecture dumping an entire transaction history straight into a large cloud AI model to generate insights](/assets/blog/in-lazy-transaction-ai-architecture.png)
 
 ### The true cost of our "lazy" architecture
 
@@ -51,7 +51,7 @@ Not too long ago, I came across something while reading online about using Fable
 
 > **Don't make your superpower do all the work.**
 
-Your strongest model shouldn't be doing everything. Let your application handle all the smaller, deterministic work so that the really good model only performs the part that actually needs that intelligence. You're saving tokens, saving time, saving resources, and honestly building a much better system in the process.
+Your strongest model shouldn't be doing everything. Let your application handle all the smaller, deterministic work so that the really good model only performs the part that actually needs that intelligence. You're saving tokens, time, resources, and honestly building a much better system in the process.
 
 ### Rethinking the Pipeline
 
@@ -64,7 +64,7 @@ Alright back to the project: remember, we already have knowledge of how AI works
 3. **Targeted Inference**: Pass only the condensed, anonymized summary metrics into a lightweight local model to generate a short, human-readable insight.
 
 
-![Redesigned transaction pipeline](/assets/blog/in-redesigned-transaction-ai-pipeline.png)
+![Architectural comparison diagram showing raw transactions processed through local classification and aggregation before triggering a small local LLM](/assets/blog/in-redesigned-transaction-ai-pipeline.png)
 
 See, there was really no need to send every single raw transaction to an enterprise LLM, and the data never even had to leave our system.
 
