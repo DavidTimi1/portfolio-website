@@ -5,7 +5,8 @@
   "created_at": "2026-07-26",
   "author": "David Uwagbale",
   "category": "software-engineering",
-  "slug": "we-knew-how-ai-worked-yet-we-fumbled-the-architecture"
+  "slug": "we-knew-how-ai-worked-yet-we-fumbled-the-architecture",
+  "keywords": ["ai architecture", "system design", "machine learning", "software pipelines", "ai integration"]
 }
 `````
 

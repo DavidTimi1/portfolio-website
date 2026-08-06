@@ -1,11 +1,12 @@
 `````
 {
-  "title": "The Mindset Shift That Finally Made React Click",
+  "title": "The Mindset Shift That Made React Finally Click",
   "description": "From DOM Manipulation to State Thinking",
   "created_at": "2025-03-20",
   "author": "David Uwagbale",
   "category": "software-engineering",
-  "slug": "the-mindset-shift-that-finally-made-react-click"
+  "slug": "the-mindset-shift-that-finally-made-react-click",
+  "keywords": ["react", "state management", "frontend development", "javascript", "dom manipulation", "react hooks"]
 }
 `````
 
@@ -86,33 +87,6 @@ Instead of viewing an application as a sequence of DOM edits, React encourages y
 To make this concrete: **State is simply the information that determines what your UI should look like at this exact moment.**
 
 Let's re-examine that same form, but modeled as state transitions instead of a sequence of DOM tweaks:
-
-<!-- ```
-+-----------------------------------------------------------------------+
-|                             FORM STATES                               |
-+-----------------------------------------------------------------------+
-|                                                                       |
-|  [INITIAL STATE]                                                      |
-|  • Inputs: Empty & Editable                                           |
-|  • Button: Enabled ("Submit")                                         |
-|  • Modal: Hidden                                                      |
-|                                                                       |
-|                                  ↓ (User Clicks Submit)               |
-|                                                                       |
-|  [SUBMITTING STATE]                                                   |
-|  • Inputs: Disabled                                                   |
-|  • Button: Disabled ("Loading...")                                    |
-|  • Modal: Hidden                                                      |
-|                                                                       |
-|                                  ↓ (API Responds 200 OK)              |
-|                                                                       |
-|  [SUCCESS STATE]                                                      |
-|  • Inputs: Hidden / Cleared                                           |
-|  • Button: Hidden                                                     |
-|  • Modal: Visible ("Success!")                                        |
-+-----------------------------------------------------------------------+
-
-``` -->
 
 ![React State Model](/assets/blog/in-form-state-changes-model.png)
 

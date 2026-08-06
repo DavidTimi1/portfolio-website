@@ -5,7 +5,8 @@
   "created_at": "2026-07-21",
   "author": "David Uwagbale",
   "category": "software-engineering",
-  "slug": "the-learn-to-scale-fallacy"
+  "slug": "the-learn-to-scale-fallacy",
+  "keywords": ["system scaling", "software architecture", "infrastructure", "performance bottlenecks", "system design"]
 }
 `````
 

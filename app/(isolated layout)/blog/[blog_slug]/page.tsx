@@ -27,6 +27,7 @@ export const generateMetadata = async ({
     return {
         title: `${blogMeta.title} | David Uwagbale`,
         description: blogMeta.description,
+        keywords: blogMeta.keywords,
         openGraph: {
             type: "article",
             title: blogMeta.title,

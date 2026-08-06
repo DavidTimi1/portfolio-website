@@ -10,6 +10,7 @@ export interface BlogMetadata {
   category: 'tech' | 'blockchain' | 'personal' | 'philosophy' | 'software-engineering';
   author?: string;
   redirect_to?: string;
+  keywords?: string[] | string;
 }
 
 const BLOG_DIR = path.join(process.cwd(), 'blog');

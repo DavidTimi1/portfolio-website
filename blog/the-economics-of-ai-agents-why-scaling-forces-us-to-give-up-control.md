@@ -5,7 +5,8 @@
   "created_at": "2026-07-24",
   "author": "David Uwagbale",
   "category": "philosophy",
-  "slug": "the-economics-of-ai-agents-why-scaling-forces-us-to-give-up-control"
+  "slug": "the-economics-of-ai-agents-why-scaling-forces-us-to-give-up-control",
+  "keywords": ["ai agents", "system architecture", "scaling", "delegation", "ai economics", "software philosophy"]
 }
 `````
 

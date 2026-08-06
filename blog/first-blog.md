@@ -6,7 +6,8 @@
   "created_at": "2026-07-17",
   "author": "David Uwagbale",
   "category": "personal",
-  "slug": "first-blog"
+  "slug": "first-blog",
+  "keywords": ["software engineering", "tech blog", "blockchain", "personal growth", "david uwagbale"]
 }
 `````
 
