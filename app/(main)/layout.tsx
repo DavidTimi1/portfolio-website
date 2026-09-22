@@ -19,9 +19,29 @@ const ubuntu = Ubuntu_Sans({
   subsets: ["latin"],
 })
 
+const title = "David Uwagbale | Full Stack Engineer | Dev_id";
+const description = "20x JS Developer | Python Programmer | Claude's Mentor"
+
 export const metadata: Metadata = {
-  title: "David Uwagbale | Full Stack Engineer | Dev_id",
-  description: "20x JS Developer | Python Programmer | Claude's Mentor",
+  title: title,
+  description: description,
+  keywords: 'software engineer, 20x dev, dev_id, user experience, pwa',
+  openGraph: {
+    type: "article",
+    title: title,
+    description: description,
+    images: '/assets/banner.png'
+  },
+  twitter: {
+  // field to add other socials of me
+    card: "summary_large_image",
+    site: "@DavidTimi_1",
+    creator: "@DavidTimi_1",
+    images: '/assets/banner.png'
+  },
+  alternates: {
+    canonical: 'https://davidtimi1-github-io.vercel.app'
+  },
 };
 
 export default function RootLayout({

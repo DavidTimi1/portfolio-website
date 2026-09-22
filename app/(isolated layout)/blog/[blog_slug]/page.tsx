@@ -9,6 +9,8 @@ const getBlogBySlug = cache((slug: string) => {
     return getDocContent(slug);
 });
 
+const fallbackBlogImage = '/assets/blog/index.png'
+
 export const generateMetadata = async ({
     params
 }: {
@@ -32,13 +34,13 @@ export const generateMetadata = async ({
             type: "article",
             title: blogMeta.title,
             description: blogMeta.description,
-            images: blogMeta.cover_image || "/assets/logo.jpg",
+            images: blogMeta.cover_image || fallbackBlogImage,
         },
         twitter: {
             card: "summary_large_image",
-            site: "@Davidtimi_1",
-            creator: "@Davidtimi_1",
-            images: blogMeta.cover_image || "/assets/logo.jpg"
+            site: "@DavidTimi_1",
+            creator: "@DavidTimi_1",
+            images: blogMeta.cover_image || fallbackBlogImage
         }
     };
 };
