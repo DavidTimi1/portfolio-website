@@ -22,7 +22,10 @@ const ubuntu = Ubuntu_Sans({
 const title = "David Uwagbale | Full Stack Engineer | Dev_id";
 const description = "20x JS Developer | Python Programmer | Claude's Mentor"
 
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://davidtimi.tech";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
   title: title,
   description: description,
   keywords: 'software engineer, 20x dev, dev_id, user experience, pwa',

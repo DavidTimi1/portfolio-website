@@ -1,4 +1,5 @@
 import { getBlogList, getDocContent } from "@/lib/blog";
+import { generateBlogPostingSchema } from "@/lib/json-ld";
 import { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import { cache } from 'react';
@@ -82,10 +83,23 @@ export default async function BlogPage({
         redirect(blogData.metadata.redirect_to);
     }
 
+    const blogSchema = generateBlogPostingSchema({
+        ...blogData.metadata,
+        slug: blogSlug
+    });
+
     return (
-        <BlogClientPage 
-            metadata={blogData.metadata} 
-            content={blogData.content} 
-        />
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(blogSchema),
+                }}
+            />
+            <BlogClientPage 
+                metadata={blogData.metadata} 
+                content={blogData.content} 
+            />
+        </>
     );
 }

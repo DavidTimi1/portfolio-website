@@ -32,24 +32,24 @@ export const ProjectsList = ({ }) => {
         }
     }, [isError, errorMessage]);
 
-    const updateLimit = () => {
+    const updateLimit = useCallback(() => {
         const limit = projectsData?.meta?.limit;
-        if (!limit || !moreToLoad) return;
+        if (!limit || !moreToLoad || isLoading) return;
 
         const params = new URLSearchParams(searchParams.toString());
         params.set("limit", String(limit + 20));
 
-        router.replace(`/projects?${params.toString()}`);
-    }
+        router.replace(`/projects?${params.toString()}`, { scroll: false });
+    }, [projectsData?.meta?.limit, moreToLoad, isLoading, searchParams, router]);
 
     const handleObserver = useCallback(
         (entries: IntersectionObserverEntry[]) => {
             const [target] = entries;
-            if (target.isIntersecting && !isLoading) {
+            if (target.isIntersecting && !isLoading && moreToLoad) {
                 updateLimit();
             }
         },
-        [isLoading, updateLimit]
+        [isLoading, moreToLoad, updateLimit]
     );
 
     useEffect(() => {

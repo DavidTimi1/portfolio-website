@@ -42,6 +42,6 @@ export const ProjectsSearch = () => {
             params.delete("search");
         }
 
-        router.replace(`/projects?${params.toString()}`);
+        router.replace(`/projects?${params.toString()}`, { scroll: false });
     }
 }

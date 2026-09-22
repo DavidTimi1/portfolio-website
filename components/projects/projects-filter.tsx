@@ -82,6 +82,6 @@ export const ProjectsFilter = () => {
             params.delete("skill");
         }
 
-        router.replace(`/projects?${params.toString()}`);
+        router.replace(`/projects?${params.toString()}`, { scroll: false });
     }
 }
