@@ -10,12 +10,12 @@ const SECTION_TITLES: Record<string, { title: string; description: string }> = {
   services: {
     title: "Services & Technical Expertise | David Uwagbale",
     description:
-      "Full stack web development, mobile app building, API design, performance optimization, and custom AI integration services by David Uwagbale.",
+      "Full stack web development, mobile app building, Consultation, performance optimization, and custom AI integration services by David Uwagbale.",
   },
   skills: {
     title: "Technical Skills & Stack | David Uwagbale",
     description:
-      "Full list of languages, frameworks, and developer tools used by David Uwagbale, including Next.js, React, TypeScript, Python, and PostgreSQL.",
+      "Full list of languages, frameworks, and developer tools used by David Uwagbale",
   },
   contact: {
     title: "Contact & Hire David Uwagbale",
@@ -80,7 +80,7 @@ export async function generateMetadata({
       description: sectionInfo.description,
     },
     alternates: {
-      canonical: canonicalUrl,
+      canonical: `https://davidtimi1-github-io.vercel.app/${sectionKey}`,
     },
   };
 }

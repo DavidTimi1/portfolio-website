@@ -12,9 +12,9 @@ export function generatePersonSchema() {
     "@id": `${SITE_URL}/#person`,
     name: AUTHOR_NAME,
     alternateName: ["Dev_id", "DavidTimi1", "David Timi"],
-    jobTitle: "Full Stack Engineer & Software Developer",
+    jobTitle: "Full Stack Software Engineer",
     description:
-      "Full Stack Software Engineer specializing in Next.js, React Native, TypeScript, Python, and high-performance Web and Mobile Applications.",
+      "Full Stack Software Engineer specializing in high-performance PWA and Mobile Applications.",
     url: SITE_URL,
     sameAs: [
       "https://github.com/DavidTimi1",
@@ -24,6 +24,7 @@ export function generatePersonSchema() {
     knowsAbout: [
       "Software Engineering",
       "Full Stack Development",
+      "Progressive Web Apps",
       "Next.js",
       "React",
       "React Native",

@@ -14,12 +14,11 @@ const ALL_PROJECTS = ALL_PROJECTS_DATA as Project[];
 export const metadata: Metadata = {
   title: "Projects & Software Portfolio | David Uwagbale",
   description:
-    "Explore software engineering projects, web applications, mobile apps, and open-source software built by David Uwagbale (Dev_id) using Next.js, React Native, Python, TypeScript, and more.",
+    "Explore software engineering projects, web applications, mobile apps, and open-source software built by David Uwagbale (Dev_id)",
   keywords: [
     "David Uwagbale Projects",
     "Dev_id Software",
     "Full Stack Projects",
-    "Next.js Projects",
     "React Native Apps",
     "Open Source",
     "Python Projects",
@@ -44,7 +43,7 @@ export const metadata: Metadata = {
     images: `${BASE_URL}/assets/banner.png`,
   },
   alternates: {
-    canonical: `${BASE_URL}/projects`,
+    canonical: `https://davidtimi1-github-io.vercel.app/projects`,
   },
 };
 
