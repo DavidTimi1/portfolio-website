@@ -16,7 +16,7 @@ export const experiences = [
     {
         role: "Full-stack Developer",
         logo: "/assets/brands/deeplab.svg", // Using existing brand logo if available or generic
-        company: "DeepLab",
+        company: "DeepFunding (DEEPLabs)",
         period: ["09/2025", "04/2026"],
         description: [
             `AI-to-Web Integration: Architected production-ready MVPs in high-velocity pods, bridging complex AI
